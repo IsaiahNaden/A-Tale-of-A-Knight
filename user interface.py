@@ -34,13 +34,10 @@ while True:
         break
     except ValueError:
         print("Please enter a valid gender.")
+    i= profilesheet
+    if i.max_row > 0:
+        i.insert_rows(2)
 
-    if profilesheet.max_row > 0:
-        profilesheet.insert_rows(2)
-
-profilesheet.cell(row=2, column=1, value=user_name)
-profilesheet.cell(row=2, column=2, value=user_age)
-profilesheet.cell(row=2, column=3, value=user_gender)
     
 profilesheet.append([user_name, user_age, user_gender])
 userprofile.save("userprofile.xlsx")
