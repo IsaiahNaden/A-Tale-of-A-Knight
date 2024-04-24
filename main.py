@@ -1,35 +1,16 @@
 import pygame 
+from sprites import *
+from config import *
+import sys
 
-pygame.init()
+class Game:
+    def __init__(self):
+        pygame.init()
+        self.screen = pygame.display.set_mode((screen_width, screen_height))
+        self.clock = pygame.time.Clock()
+        self.font = pygame.font.Font('Arial', 32)
+        self.player = pygame.draw.rect((250, 0, 0))
+        self.running = True
 
-screen_width = 800
-screen_height = 600
-screen = pygame.display.set_mode((screen_width, screen_height))
-
-player = pygame.Rect((300,250, 50, 50))
-
-run = True
-
-while run :
-
-    screen.fill((0, 0, 0))
-
-    pygame.draw.rect(screen, (250, 0, 0), player)
-
-    key = pygame.key.get_pressed()
-    if key[pygame.K_a] == True:
-        player.move_ip(-1, 0)
-    elif key[pygame.K_d] == True :
-        player.move_ip(1, 0)
-    elif key[pygame.K_w] == True :
-        player.move_ip(0, -1)
-    elif key[pygame.K_s] == True :
-        player.move_ip(0, 1)
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-    
-    pygame.display.update()
-
-pygame.quit()
+    def new(self):
+        self.playing = True
