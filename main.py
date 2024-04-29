@@ -3,16 +3,31 @@ from sprites import *
 from config import *
 import sys
 
-pygame.init()
 
 screen_width = 800
 screen_height = 600
-screen = pygame.display.set_mode((screen_width, screen_height))
+tilesize = 32
+RED = (255, 0, 0)
 
-run = True 
-while run:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
+class Game():
+    def __init__(self):
+        pygame.init()
+        self.screen = pygame.display.set_mode((screen_width, screen_height))
+        self.clock = pygame.time.Clock()
+        self.running = True
+        self.width = tilesize
+        self.height = tilesize
+        self.image = pygame.Surface([self.width, self.height])
+        self.image.fill(RED)
+        self.rect = self.image.get_rect()
+        while self.running :
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    self.running = False
 
-pygame.quit()
+    def NewGame(self):
+        self.playing = True
+
+Game()
+
+        
