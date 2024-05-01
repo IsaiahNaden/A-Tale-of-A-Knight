@@ -5,15 +5,7 @@ from config import *
 import sys
 
 
-<<<<<<< HEAD
 
-
-=======
-screen_width = 800
-screen_height = 600
-tilesize = 32
-RED = (255, 0, 0)
->>>>>>> 9ee64df4f64d0b5f78afa276539e819f5d3d662e
 
 class Game():
 
@@ -28,7 +20,6 @@ class Game():
         self.image = pygame.Surface([self.width, self.height])
         self.image.fill(RED)
         self.rect = self.image.get_rect()
-<<<<<<< HEAD
 
 
 
@@ -43,15 +34,6 @@ class Game():
 
     def new(self):
 
-=======
-        while self.running :
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.running = False
-
-
-    def NewGame(self):
->>>>>>> 9ee64df4f64d0b5f78afa276539e819f5d3d662e
         self.playing = True
 
         self.all_sprites = pygame.sprite.LayeredUpdates()

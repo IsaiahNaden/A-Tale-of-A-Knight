@@ -53,6 +53,3 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_DOWN]:
             self.y_change += 4
             self.facing = 'down'
-
-
-
