@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk
-import requests
-from io import BytesIO
 import openpyxl
 
 def get_user_name():
@@ -38,9 +36,6 @@ def get_user_gender():
     else:
         return combo_gender.get()
 
-def get_image_from_url(url):
-    response = requests.get(url)
-    return ImageTk.PhotoImage(Image.open(BytesIO(response.content)))
 
 def save_user_profile():
     user_name = get_user_name()
