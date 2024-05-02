@@ -60,22 +60,16 @@ def save_user_profile():
 root = tk.Tk()
 root.attributes('-fullscreen', True)
 
-# Background Image
 image_path = "background2.jpg"
 image = Image.open(image_path)
-# Get the screen dimensions
+
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
-# Resize the image to fit the screen without preserving the aspect ratio
 image = image.resize((screen_width, screen_height))
-
-# Alternatively, if you want to resize while preserving the aspect ratio:
-# Calculate the aspect ratio of the image
 image_width, image_height = image.size
 aspect_ratio = image_width / image_height
 
-# Calculate new dimensions to fit the screen while maintaining the aspect ratio
 if screen_width / screen_height > aspect_ratio:
     new_width = int(screen_height * aspect_ratio)
     new_height = screen_height
@@ -83,16 +77,13 @@ else:
     new_width = screen_width
     new_height = int(screen_width / aspect_ratio)
 
-# Resize the image
 image = image.resize((new_width, new_height))
-
 photo = ImageTk.PhotoImage(image)
 
 label = tk.Label(root, image=photo)
-label.image = photo  # keep a reference to prevent garbage collection
+label.image = photo 
 label.place(x=0, y=0)
 
-# Input Frame
 frame_canvas = tk.Frame(root, bg="sky blue")
 frame_canvas.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
 
