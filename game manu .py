@@ -11,14 +11,10 @@ def exit_game():
     root.destroy()
 
 def get_most_common_color(image):
-    # Convert the image to numpy array
     image_np = np.array(image)
-
-    # Flatten the array and find the most common color
     colors, counts = np.unique(image_np.reshape(-1, image_np.shape[2]), axis=0, return_counts=True)
     most_common_color = colors[np.argmax(counts)]
 
-    # Convert the most common color to hexadecimal
     hex_color = '#{:02x}{:02x}{:02x}'.format(*most_common_color)
     return hex_color
 
@@ -48,7 +44,6 @@ photo = ImageTk.PhotoImage(image)
 canvas = tk.Canvas(root, width=screen_width, height=screen_height, highlightthickness=0)
 canvas.pack()
 
-# Place the image on the canvas with a transparent background
 canvas.create_image(screen_width // 2, screen_height // 2, image=photo, anchor=tk.CENTER)
 
 menu = tk.Frame(root, bg="sky blue")
