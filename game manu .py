@@ -1,52 +1,65 @@
 import tkinter as tk
-import openpyxl
+import subprocess
+from PIL import Image, ImageTk
+import numpy as np
+
+def start_game():
+    subprocess.Popen(["python", "user interface.py"])
+    root.destroy()
+
+def exit_game():
+    root.destroy()
+
+def get_most_common_color(image):
+    # Convert the image to numpy array
+    image_np = np.array(image)
+
+    # Flatten the array and find the most common color
+    colors, counts = np.unique(image_np.reshape(-1, image_np.shape[2]), axis=0, return_counts=True)
+    most_common_color = colors[np.argmax(counts)]
+
+    # Convert the most common color to hexadecimal
+    hex_color = '#{:02x}{:02x}{:02x}'.format(*most_common_color)
+    return hex_color
 
 root = tk.Tk()
-root.title("User Profile")
-root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
-root.config(bg="black")
+root.attributes('-fullscreen', True)
 
-# Add labels and entries for user input
-label_name = tk.Label(root, text="What is your character's name?", fg="black")
-label_name.config(font=("Times New Roman", 18, "bold"))
-label_name.place(relx=0.5, rely=0.3, anchor="center")
+image_path = "background2.jpg"
+image = Image.open(image_path)
 
-entry_name = tk.Entry(root)
-entry_name.config(font=("Times New Roman", 13, "bold"))
-entry_name.place(relx=0.5, rely=0.35, anchor="center")
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 
-label_age = tk.Label(root, text="What is your age?", fg="black")
-label_age.config(font=("Times New Roman", 18, "bold"))
-label_age.place(relx=0.5, rely=0.45, anchor="center")
+image = image.resize((screen_width, screen_height))
+image_width, image_height = image.size
+aspect_ratio = image_width / image_height
 
-entry_age = tk.Entry(root)
-entry_age.config(font=("Times New Roman", 13, "bold"))
-entry_age.place(relx=0.5, rely=0.5, anchor="center")
+if screen_width / screen_height > aspect_ratio:
+    new_width = int(screen_height * aspect_ratio)
+    new_height = screen_height
+else:
+    new_width = screen_width
+    new_height = int(screen_width / aspect_ratio)
 
-label_gender = tk.Label(root, text="What is your gender? (1 for male, 2 for female)", fg="black")
-label_gender.config(font=("Times New Roman", 18, "bold"))
-label_gender.place(relx=0.5, rely=0.6, anchor="center")
+image = image.resize((new_width, new_height))
+photo = ImageTk.PhotoImage(image)
 
-entry_gender = tk.Entry(root)
-entry_age.config(font=("Times New Roman", 13, "bold"))
-entry_gender.place(relx=0.5, rely=0.65, anchor="center")
+canvas = tk.Canvas(root, width=screen_width, height=screen_height, highlightthickness=0)
+canvas.pack()
 
-button_done = tk.Button(root, text="Done", command=lambda: save_user_profile(entry_name(), entry_age(), entry_gender()))
-button_done.place(relx=0.5, rely=0.8, anchor="center")
+# Place the image on the canvas with a transparent background
+canvas.create_image(screen_width // 2, screen_height // 2, image=photo, anchor=tk.CENTER)
+
+menu = tk.Frame(root, bg="sky blue")
+menu.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+
+start_button = tk.Button(menu, text="Start Game", command=start_game, bg="white", fg="black")
+start_button.config(font=("Times New Roman", 18)) 
+start_button.pack(pady=10)
+
+exit_button = tk.Button(menu, text="Exit", command=exit_game, bg="white", fg="black")
+exit_button.config(font=("Times New Roman ", 18)) 
+exit_button.pack(pady=10)
 
 root.mainloop()
-
-if button_done.click == True:
-    exit()
-
-def save_user_profile(user_name, user_age, user_gender):
-    userprofile = openpyxl.load_workbook("userprofile.xlsx")
-    profilesheet = userprofile.active
-
-    profilesheet[f'A{profilesheet.max_row + 1}'] = user_name
-    profilesheet[f'B{profilesheet.max_row}'] = user_age
-    profilesheet[f'C{profilesheet.max_row}']  = user_gender
-
-    userprofile.save("userprofile.xlsx")
-
-    #print("Data saved")

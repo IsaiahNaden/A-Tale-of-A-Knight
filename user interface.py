@@ -1,83 +1,126 @@
 import tkinter as tk
+from tkinter import ttk
+from PIL import Image, ImageTk
+import requests
+from io import BytesIO
 import openpyxl
 
 def get_user_name():
     user_name = entry_name.get()
     if len(user_name) > 10:
-        print("Please enter a name with less than 10 characters.")
+        label_error_name.config(text="*Please enter a name less than 10 characters.", fg="red", font=("Times New Roman", 15))
+        return get_user_name()
+    elif user_name == "":
+        label_error_name.config(text="*Please enter a name.", fg="red", font=("Times New Roman", 15))
         return get_user_name()
     else:
+        label_error_name.config(text="")
         return user_name
 
 def get_user_age():
-    try:
-        user_age = int(entry_age.get())
-        return user_age
-    except ValueError:
-        print("Please enter a valid age.")
+    if entry_age.get().isdigit() == False:
+        label_error_age.config(text="*Please enter a number.", fg="red", font=("Times New Roman", 15))
         return get_user_age()
+    elif entry_age.get() == "":
+        label_error_age.config(text="*Please enter your age.", fg="red", font=("Times New Roman", 15))
+        return get_user_name()
+    elif int(entry_age.get()) < 1 or int(entry_age.get()) > 100:
+        label_error_age.config(text="*Please enter a valid number between 1 and 100.", fg="red", font=("Times New Roman", 15))
+        return get_user_age()
+    else:
+        label_error_age.config(text="")
+        return int(entry_age.get())
 
 def get_user_gender():
-    try:
-        user_gender = int(entry_gender.get())
-        if user_gender == 1:
-            user_gender = "male"
-        elif user_gender == 2:
-            user_gender = "female"
-        else:
-            print("Please enter a valid gender.")
-            return get_user_gender()
-        return user_gender
-    except ValueError:
-        print("Please enter a valid gender.")
+    if combo_gender.get() == "":
+        label_error_gender.config(text="*Please select a gender.", fg="red", font=("Times New Roman", 15))
         return get_user_gender()
+    else:
+        return combo_gender.get()
 
-def save_user_profile(user_name, user_age, user_gender):
-    userprofile = openpyxl.load_workbook("userprofile.xlsx")
-    profilesheet = userprofile.active
+def get_image_from_url(url):
+    response = requests.get(url)
+    return ImageTk.PhotoImage(Image.open(BytesIO(response.content)))
 
-    profilesheet[f'A{profilesheet.max_row + 1}'] = user_name
-    profilesheet[f'B{profilesheet.max_row}'] = user_age
-    profilesheet[f'C{profilesheet.max_row}']  = user_gender
-    
-    userprofile.save("userprofile.xlsx")
+def save_user_profile():
+    user_name = get_user_name()
+    user_age = get_user_age()
+    user_gender = get_user_gender()
+
+    user_profile = openpyxl.load_workbook("userprofile.xlsx")
+    profile_sheet = user_profile.active
+
+    profile_sheet[f'A{profile_sheet.max_row + 1}'] = user_name
+    profile_sheet[f'B{profile_sheet.max_row}'] = user_age
+    profile_sheet[f'C{profile_sheet.max_row}'] = user_gender
+
+    user_profile.save("userprofile.xlsx")
+    root.destroy()
+
 root = tk.Tk()
-root.title("User Profile")
-root.geometry("{0}x{1}+0+0".format(root.winfo_screenwidth(), root.winfo_screenheight()))
-root.config(bg="black")
+root.attributes('-fullscreen', True)
 
-label_name = tk.Label(root, text="What is your character's name?", fg="black")
-label_name.config(font=("Times New Roman", 18, "bold"))
-label_name.place(relx=0.5, rely=0.3, anchor="center")
+# Background Image
+image_path = "background2.jpg"
+image = Image.open(image_path)
+# Get the screen dimensions
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
 
-entry_name = tk.Entry(root)
-entry_name.config(font=("Times New Roman", 13, "bold"))
-entry_name.place(relx=0.5, rely=0.35, anchor="center")
+# Resize the image to fit the screen without preserving the aspect ratio
+image = image.resize((screen_width, screen_height))
 
-label_age = tk.Label(root, text="What is your age?", fg="black")
-label_age.config(font=("Times New Roman", 18, "bold"))
-label_age.place(relx=0.5, rely=0.45, anchor="center")
+# Alternatively, if you want to resize while preserving the aspect ratio:
+# Calculate the aspect ratio of the image
+image_width, image_height = image.size
+aspect_ratio = image_width / image_height
 
-entry_age = tk.Entry(root)
-entry_age.config(font=("Times New Roman", 13, "bold"))
-entry_age.place(relx=0.5, rely=0.5, anchor="center")
+# Calculate new dimensions to fit the screen while maintaining the aspect ratio
+if screen_width / screen_height > aspect_ratio:
+    new_width = int(screen_height * aspect_ratio)
+    new_height = screen_height
+else:
+    new_width = screen_width
+    new_height = int(screen_width / aspect_ratio)
 
-label_gender = tk.Label(root, text="What is your gender? (1 for male, 2 for female)", fg="black")
-label_gender.config(font=("Times New Roman", 18, "bold"))
-label_gender.place(relx=0.5, rely=0.6, anchor="center")
+# Resize the image
+image = image.resize((new_width, new_height))
 
-entry_gender = tk.Entry(root)
-entry_age.config(font=("Times New Roman", 13, "bold"))
-entry_gender.place(relx=0.5, rely=0.65, anchor="center")
+photo = ImageTk.PhotoImage(image)
 
-#root.withdraw()
-button_done = tk.Button(root, text="Done", command=lambda: save_user_profile(get_user_name(), get_user_age(), get_user_gender()))
-button_done.place(relx=0.5, rely=0.8, anchor="center")
+label = tk.Label(root, image=photo)
+label.image = photo  # keep a reference to prevent garbage collection
+label.place(x=0, y=0)
+
+# Input Frame
+frame_canvas = tk.Frame(root, bg="sky blue")
+frame_canvas.place(relx=0.5, rely=0.5, anchor=tk.CENTER)
+
+label_name = tk.Label(frame_canvas, text="What is your character's name?", fg="black", bg="sky blue", font=("Times New Roman", 18))
+label_name.grid(row=0, column=0, padx=10, pady=10)
+entry_name = tk.Entry(frame_canvas)
+entry_name.grid(row=0, column=1, padx=10, pady=10)
+
+label_error_name = tk.Label(frame_canvas, text="", fg="red", bg="sky blue")
+label_error_name.grid(row=0, column=2, padx=10, pady=10)
+
+label_age = tk.Label(frame_canvas, text="What is your age?", fg="black", bg="sky blue", font=("Times New Roman", 18))
+label_age.grid(row=1, column=0, padx=10, pady=10)
+entry_age = tk.Entry(frame_canvas)
+entry_age.grid(row=1, column=1, padx=10, pady=10)
+
+label_error_age = tk.Label(frame_canvas, text="", fg="red", bg="sky blue")
+label_error_age.grid(row=1, column=2, padx=10, pady=10)
+
+label_gender = tk.Label(frame_canvas, text="What is your gender?", fg="black", bg="sky blue", font=("Times New Roman", 18))
+label_gender.grid(row=2, column=0, padx=10, pady=10)
+combo_gender = ttk.Combobox(frame_canvas, values=["Male", "Female"], state="readonly")
+combo_gender.grid(row=2, column=1, padx=7, pady=10)
+
+label_error_gender = tk.Label(frame_canvas, text="", fg="red", bg="sky blue")
+label_error_gender.grid(row=2, column=2, padx=10, pady=10)
+
+button_submit = tk.Button(frame_canvas, text="Done", command=save_user_profile, fg="black", bg="white", font=("Times New Roman", 18))
+button_submit.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
 
 root.mainloop()
-
-
-    
-
-    #print("Data saved")
-
