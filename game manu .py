@@ -10,14 +10,6 @@ def start_game():
 def exit_game():
     root.destroy()
 
-def get_most_common_color(image):
-    image_np = np.array(image)
-    colors, counts = np.unique(image_np.reshape(-1, image_np.shape[2]), axis=0, return_counts=True)
-    most_common_color = colors[np.argmax(counts)]
-
-    hex_color = '#{:02x}{:02x}{:02x}'.format(*most_common_color)
-    return hex_color
-
 root = tk.Tk()
 root.attributes('-fullscreen', True)
 
