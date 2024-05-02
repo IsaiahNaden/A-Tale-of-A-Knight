@@ -1,7 +1,6 @@
 import tkinter as tk
 import subprocess
 from PIL import Image, ImageTk
-import numpy as np
 
 def start_game():
     subprocess.Popen(["python", "user interface.py"])
