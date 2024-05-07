@@ -467,6 +467,5 @@ script = ExtResource("1_ud55d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hm43t")
-animation = &"new_animation"
-frame = 2
-frame_progress = 0.758118
+animation = &"back_walk"
+frame_progress = 0.789122
