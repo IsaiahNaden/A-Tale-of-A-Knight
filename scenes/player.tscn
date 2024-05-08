@@ -469,7 +469,9 @@ script = ExtResource("1_ud55d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hm43t")
 animation = &"side_walk"
+offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 13)
+y_sort_enabled = true
+position = Vector2(1, -2)
 shape = SubResource("CircleShape2D_pbybx")
