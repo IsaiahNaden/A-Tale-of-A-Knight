@@ -372,8 +372,6 @@ script = ExtResource("1_ljwkj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_45sec")
 animation = &"idle"
-frame = 10
-frame_progress = 0.553385
 
 [node name="detection_area" type="Area2D" parent="."]
 collision_layer = 2

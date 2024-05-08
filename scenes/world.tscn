@@ -164,7 +164,7 @@ layer_1/tile_data = PackedInt32Array(-262140, 2, 5, -327668, 2, 5, -65549, 2, 5,
 
 [node name="player" parent="." instance=ExtResource("4_g8dvc")]
 y_sort_enabled = true
-position = Vector2(2094, 1753)
+position = Vector2(2030, 1777)
 
 [node name="enemy" parent="." instance=ExtResource("5_hnt83")]
-position = Vector2(2118, 1821)
+position = Vector2(2301, 1868)
