@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://da4xxv2lsbn2i"]
+[gd_scene load_steps=40 format=3 uid="uid://da4xxv2lsbn2i"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ud55d"]
 [ext_resource type="Texture2D" uid="uid://di0b66h30ti0s" path="res://art/character/Knight1_Attack.png" id="2_yiclo"]
@@ -270,10 +270,13 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_gcrdh"]
 radius = 2.63008
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_46ao1"]
+radius = 17.5772
+
 [node name="player" type="CharacterBody2D"]
 y_sort_enabled = true
 position = Vector2(18, 36)
-scale = Vector2(1.966, 1.2)
+scale = Vector2(1.966, 1.199)
 collision_layer = 3
 script = ExtResource("1_ud55d")
 
@@ -288,3 +291,15 @@ offset = Vector2(0, -8)
 position = Vector2(0.508646, -0.833335)
 scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_gcrdh")
+
+[node name="player_hitbox" type="Area2D" parent="."]
+position = Vector2(0.508646, -0.833334)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
+position = Vector2(0, -6.66667)
+scale = Vector2(0.725, 0.725)
+shape = SubResource("CircleShape2D_46ao1")
+
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

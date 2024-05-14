@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://b4vcpj0a2svmr"]
+[gd_scene load_steps=57 format=3 uid="uid://b4vcpj0a2svmr"]
 
 [ext_resource type="Texture2D" uid="uid://cvsmqx55kcqci" path="res://art/character/Enemy-Melee-Death.png" id="1_htyxr"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_ljwkj"]
@@ -365,6 +365,9 @@ radius = 133.821
 [sub_resource type="CircleShape2D" id="CircleShape2D_cyo7w"]
 radius = 34.4046
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6xe34"]
+radius = 82.9064
+
 [node name="enemy" type="CharacterBody2D"]
 scale = Vector2(0.35, 0.35)
 script = ExtResource("1_ljwkj")
@@ -383,6 +386,12 @@ shape = SubResource("CircleShape2D_mgard")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.85714, 11.4286)
 shape = SubResource("CircleShape2D_cyo7w")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(-5.71429, 0)
+shape = SubResource("CircleShape2D_6xe34")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
