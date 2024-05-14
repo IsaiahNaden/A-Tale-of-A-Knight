@@ -166,7 +166,6 @@ layer_1/y_sort_enabled = true
 layer_1/tile_data = PackedInt32Array(-262140, 2, 5, -327668, 2, 5, -65549, 2, 5, -262151, 2, 5, 327658, 2, 5, -327702, 393218, 7, -327698, 393218, 7, 65528, 393218, 7, -327691, 393218, 7, -262136, 393218, 7, 327691, 393218, 7, -327695, 655362, 7, 131062, 2, 0, 65514, 655362, 7, -5, 524290, 6, -131082, 524290, 6, 327687, 2, 5, 327683, 393218, 7)
 
 [node name="player" parent="." instance=ExtResource("4_g8dvc")]
-y_sort_enabled = true
 position = Vector2(2030, 1778)
 
 [node name="enemy" parent="." instance=ExtResource("5_hnt83")]
