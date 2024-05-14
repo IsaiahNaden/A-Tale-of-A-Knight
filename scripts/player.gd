@@ -12,6 +12,12 @@ var current_dir = "none"
 func _physics_process(delta):
 	player_movement(delta)
 	enemy_attack()
+	
+	if health <= 0:
+		player_alive = false  #add respawn screen
+		health = 0
+		print("player has died")
+		self.queue_free()
 
 func player_movement(delta):
 	
@@ -86,6 +92,11 @@ func _on_player_hitbox_body_exited(body):
 		enemy_inattack_range = false
 
 func enemy_attack():
-	if enemy_inattack_range:
-		print("player minus health")
+	if enemy_inattack_range and enemy_attack_cooldown == true:
+		health = health - 20
+		enemy_attack_cooldown = false
+		$attack_cooldown.start()
+		print(health)
 
+func _on_attack_cooldown_timeout():
+	enemy_attack_cooldown = true
