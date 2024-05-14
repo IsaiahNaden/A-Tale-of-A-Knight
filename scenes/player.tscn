@@ -271,16 +271,20 @@ animations = [{
 radius = 2.63008
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(18, 36)
 scale = Vector2(1.966, 1.2)
 collision_layer = 3
 script = ExtResource("1_ud55d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 0.833)
 scale = Vector2(1.1, 1.1)
 sprite_frames = SubResource("SpriteFrames_hm43t")
 animation = &"front_walk"
-offset = Vector2(0, -15)
+offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.508647, -9.16667)
+position = Vector2(0.508646, -0.833335)
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_gcrdh")

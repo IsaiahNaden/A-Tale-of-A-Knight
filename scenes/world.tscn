@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bf1y0v846m4ly" path="res://art/tilesets/grass.png" id="2_5iwr1"]
 [ext_resource type="Texture2D" uid="uid://cl3ojmivaqvfe" path="res://art/objects/objects.png" id="3_re3ec"]
 [ext_resource type="PackedScene" uid="uid://da4xxv2lsbn2i" path="res://scenes/player.tscn" id="4_g8dvc"]
-[ext_resource type="PackedScene" uid="uid://b4vcpj0a2svmr" path="res://enemy.tscn" id="5_hnt83"]
+[ext_resource type="PackedScene" uid="uid://b4vcpj0a2svmr" path="res://scenes/enemy.tscn" id="5_hnt83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8e8or"]
 texture = ExtResource("1_i21it")
@@ -155,7 +155,7 @@ position = Vector2(-1975, -1695)
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
-position = Vector2(2320, 1809)
+position = Vector2(2310, 1813)
 tile_set = SubResource("TileSet_ipjbg")
 format = 2
 layer_0/name = "ground"
