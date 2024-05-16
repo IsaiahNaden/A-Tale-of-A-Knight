@@ -62,7 +62,7 @@ func _on_play_button_pressed():
 	login_screen.show()
 	
 func _on_exit_pressed():
-	get_tree().exit # Replace with function body.
+	get_tree().quit() # Replace with function body.
 	
 	
 func _on_comfirm_pressed():
@@ -113,8 +113,3 @@ func _save_user_data(username, password):
 
 	file.store_line(json_text)
 	file.close()
-
-
-
-
-
