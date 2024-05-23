@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1716451996
+background1.jpg::CompressedTexture2D::2991956555710482148::1716451757::1716451996::1::::<><>::
+::res://manu/::1716452214
+exit.tres::StyleBoxFlat::2545648846054426904::1716451176::0::1::::<><>::
+global_script_class_cache.cfg::TextFile::-1::1716451161::0::1::::<><>::
+Jaro-Regular-VariableFont_opsz.ttf::FontFile::2110988345677599125::1716452187::1716452217::1::::<><>::
+new_style_box_flat.tres::StyleBoxFlat::5706174319042207504::1716451176::0::1::::<><>::
+press1.tres::StyleBoxFlat::3820269760820845616::1716451176::0::1::::<><>::
+press.tres::StyleBoxFlat::8554771285878549726::1716451176::0::1::::<><>::
+SaveandLoad.gd::GDScript::-1::1716451174::0::1::::<>Node<>::
+savegame.gd::GDScript::-1::1716451174::0::1::::SaveGame<>Resource<>::
+userprofile.json::JSON::-1::1716451174::0::1::::<><>::
+user_interface.gd::GDScript::-1::1716451174::0::1::::<>Control<>::
+user_interface.tscn::PackedScene::4042378926149218059::1716452097::0::1::::<><>::res://manu/user_interface.gd<>uid://bivlc775tf1gy::::res://background1.jpg<>uid://cnkd4fdmriu21::::res://manu/new_style_box_flat.tres<>uid://dt483lgrpdu4m::::res://manu/press.tres<>uid://bcjep2bqmu6wq::::res://manu/exit.tres<>uid://buotjxii7u26g::::res://manu/press1.tres

@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://bxufnjg6vbcch"]
 
-[ext_resource type="Script" path="res://manu/user_interface.gd" id="1_1gu67"]
-[ext_resource type="Texture2D" path="res://background1.jpg" id="1_yvfmy"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://manu/new_style_box_flat.tres" id="3_f1qb2"]
-[ext_resource type="FontFile" path="res://manu/Jaro-Regular-VariableFont_opsz.ttf" id="3_qvboc"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://manu/press.tres" id="4_b2r4a"]
-[ext_resource type="StyleBox" uid="uid://bcjep2bqmu6wq" path="res://manu/exit.tres" id="5_gx21u"]
-[ext_resource type="StyleBox" uid="uid://buotjxii7u26g" path="res://manu/press1.tres" id="7_8wfhh"]
+[ext_resource type="Script" path="res://manu/user_interface.gd" id="1_yim6d"]
+[ext_resource type="Texture2D" uid="uid://bivlc775tf1gy" path="res://background1.jpg" id="2_qgjfg"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://manu/new_style_box_flat.tres" id="4_nwq3y"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://manu/press.tres" id="5_28g4q"]
+[ext_resource type="FontFile" uid="uid://5ctw1dkdeacb" path="res://manu/Jaro-Regular-VariableFont_opsz.ttf" id="5_homhg"]
+[ext_resource type="StyleBox" uid="uid://bcjep2bqmu6wq" path="res://manu/exit.tres" id="6_0iwc8"]
+[ext_resource type="StyleBox" uid="uid://buotjxii7u26g" path="res://manu/press1.tres" id="7_oqq0k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luio3"]
 bg_color = Color(1, 1, 1, 1)
@@ -45,12 +45,12 @@ offset_left = 8.0
 offset_right = 8.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1gu67")
+script = ExtResource("1_yim6d")
 
 [node name="Background1" type="Sprite2D" parent="."]
-position = Vector2(1030, 544)
-scale = Vector2(4.7258, 5.37)
-texture = ExtResource("1_yvfmy")
+position = Vector2(1043, 550.5)
+scale = Vector2(4.84332, 5.515)
+texture = ExtResource("2_qgjfg")
 
 [node name="Mainmanu" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -73,31 +73,28 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 100
 text = "A-Tale-of-A-Knight"
 
 [node name="PlayButton" type="Button" parent="Mainmanu"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("3_f1qb2")
-theme_override_styles/hover = ExtResource("3_f1qb2")
-theme_override_styles/pressed = ExtResource("4_b2r4a")
-theme_override_styles/focus = ExtResource("4_b2r4a")
+theme_override_styles/normal = ExtResource("4_nwq3y")
+theme_override_styles/hover = ExtResource("4_nwq3y")
+theme_override_styles/pressed = ExtResource("5_28g4q")
+theme_override_styles/focus = ExtResource("5_28g4q")
 text = "Start Game"
 
 [node name="exit" type="Button" parent="Mainmanu"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
+theme_override_fonts/font = ExtResource("5_homhg")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = ExtResource("5_gx21u")
-theme_override_styles/hover = ExtResource("5_gx21u")
-theme_override_styles/pressed = ExtResource("7_8wfhh")
-theme_override_styles/disabled = ExtResource("5_gx21u")
-theme_override_styles/focus = ExtResource("5_gx21u")
+theme_override_styles/normal = ExtResource("6_0iwc8")
+theme_override_styles/hover = ExtResource("6_0iwc8")
+theme_override_styles/pressed = ExtResource("7_oqq0k")
+theme_override_styles/focus = ExtResource("6_0iwc8")
 text = "Exit Game"
 
 [node name="LoginScreen" type="VBoxContainer" parent="."]
@@ -119,20 +116,17 @@ theme_override_constants/separation = 28
 [node name="Label3" type="Label" parent="LoginScreen"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 100
 text = "User login"
 
 [node name="askname" type="Label" parent="LoginScreen"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 40
 text = "What is your name ?"
 
 [node name="username" type="LineEdit" parent="LoginScreen"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_luio3")
 alignment = 1
@@ -140,13 +134,11 @@ alignment = 1
 [node name="askid" type="Label" parent="LoginScreen"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 40
 text = "What is your ID ?"
 
 [node name="id" type="LineEdit" parent="LoginScreen"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_xwtym")
 alignment = 1
@@ -157,12 +149,11 @@ layout_mode = 2
 [node name="login" type="Button" parent="LoginScreen/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("3_f1qb2")
-theme_override_styles/hover = ExtResource("3_f1qb2")
-theme_override_styles/pressed = ExtResource("4_b2r4a")
-theme_override_styles/focus = ExtResource("4_b2r4a")
+theme_override_styles/normal = ExtResource("4_nwq3y")
+theme_override_styles/hover = ExtResource("4_nwq3y")
+theme_override_styles/pressed = ExtResource("5_28g4q")
+theme_override_styles/focus = ExtResource("5_28g4q")
 button_mask = 0
 text = "Login
 "
@@ -170,12 +161,11 @@ text = "Login
 [node name="create account" type="Button" parent="LoginScreen/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("5_gx21u")
-theme_override_styles/hover = ExtResource("5_gx21u")
-theme_override_styles/pressed = ExtResource("7_8wfhh")
-theme_override_styles/focus = ExtResource("7_8wfhh")
+theme_override_styles/normal = ExtResource("6_0iwc8")
+theme_override_styles/hover = ExtResource("6_0iwc8")
+theme_override_styles/pressed = ExtResource("7_oqq0k")
+theme_override_styles/focus = ExtResource("7_oqq0k")
 text = "Create account
 "
 
@@ -198,21 +188,18 @@ theme_override_constants/separation = 18
 [node name="Label" type="Label" parent="CreateAccount"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 75
 text = "Create Account"
 
 [node name="c_askname" type="Label" parent="CreateAccount"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 45
 text = "What is your name ?"
 
 [node name="id" type="LineEdit" parent="CreateAccount"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_ry3hv")
 
@@ -220,14 +207,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ry3hv")
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 45
 text = "What is your ID ?"
 
 [node name="c_id" type="LineEdit" parent="CreateAccount"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_6qr2f")
 
@@ -239,23 +224,21 @@ theme_override_constants/separation = 39
 [node name="Back" type="Button" parent="CreateAccount/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = ExtResource("3_f1qb2")
-theme_override_styles/hover = ExtResource("3_f1qb2")
-theme_override_styles/pressed = ExtResource("4_b2r4a")
-theme_override_styles/focus = ExtResource("4_b2r4a")
+theme_override_styles/normal = ExtResource("4_nwq3y")
+theme_override_styles/hover = ExtResource("4_nwq3y")
+theme_override_styles/pressed = ExtResource("5_28g4q")
+theme_override_styles/focus = ExtResource("5_28g4q")
 text = "  Back  "
 
 [node name="comfirm" type="Button" parent="CreateAccount/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_qvboc")
 theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = ExtResource("5_gx21u")
-theme_override_styles/hover = ExtResource("5_gx21u")
-theme_override_styles/pressed = ExtResource("7_8wfhh")
-theme_override_styles/focus = ExtResource("7_8wfhh")
+theme_override_styles/normal = ExtResource("6_0iwc8")
+theme_override_styles/hover = ExtResource("6_0iwc8")
+theme_override_styles/pressed = ExtResource("7_oqq0k")
+theme_override_styles/focus = ExtResource("7_oqq0k")
 text = "Create"
 
 [connection signal="pressed" from="Mainmanu/PlayButton" to="." method="_on_play_button_pressed"]
