@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://bxufnjg6vbcch"]
 
 [ext_resource type="Script" path="res://manu/user_interface.gd" id="1_1gu67"]
-[ext_resource type="Texture2D" uid="uid://cadq7iqbg3eeq" path="res://background1.jpg" id="1_yvfmy"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://new_style_box_flat.tres" id="3_f1qb2"]
-[ext_resource type="FontFile" uid="uid://dwixn5dcjwsar" path="res://manu/Jaro-Regular-VariableFont_opsz.ttf" id="3_qvboc"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://press.tres" id="4_b2r4a"]
+[ext_resource type="Texture2D" path="res://background1.jpg" id="1_yvfmy"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://manu/new_style_box_flat.tres" id="3_f1qb2"]
+[ext_resource type="FontFile" path="res://manu/Jaro-Regular-VariableFont_opsz.ttf" id="3_qvboc"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://manu/press.tres" id="4_b2r4a"]
 [ext_resource type="StyleBox" uid="uid://bcjep2bqmu6wq" path="res://manu/exit.tres" id="5_gx21u"]
 [ext_resource type="StyleBox" uid="uid://buotjxii7u26g" path="res://manu/press1.tres" id="7_8wfhh"]
 
@@ -48,7 +48,7 @@ grow_vertical = 2
 script = ExtResource("1_1gu67")
 
 [node name="Background1" type="Sprite2D" parent="."]
-position = Vector2(1016, 541)
+position = Vector2(1030, 544)
 scale = Vector2(4.7258, 5.37)
 texture = ExtResource("1_yvfmy")
 
