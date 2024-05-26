@@ -302,7 +302,7 @@ scale = Vector2(0.725, 0.725)
 shape = SubResource("CircleShape2D_46ao1")
 
 [node name="attack_cooldown" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.7
 
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
