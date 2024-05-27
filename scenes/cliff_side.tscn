@@ -666,5 +666,11 @@ position = Vector2(256, 124)
 position = Vector2(121, 261)
 shape = SubResource("RectangleShape2D_wb7he")
 
+[node name="enemy2" parent="." instance=ExtResource("6_v1che")]
+position = Vector2(121, 65)
+
+[node name="enemy3" parent="." instance=ExtResource("6_v1che")]
+position = Vector2(-4, 112)
+
 [connection signal="body_entered" from="cliffside_exitpoint" to="." method="_on_cliffside_exitpoint_body_entered"]
 [connection signal="body_exited" from="cliffside_exitpoint" to="." method="_on_cliffside_exitpoint_body_exited"]
