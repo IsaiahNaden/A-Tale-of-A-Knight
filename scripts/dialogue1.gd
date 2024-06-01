@@ -61,4 +61,4 @@ func _on_second_timeout():
 		$first.start()
 		
 func _on_done_pressed():
-	get_tree().change_scene_to_file("res://scene/dialogue2.tscn")
+	get_tree().change_scene_to_file("res://scenes/dialogue2.tscn")

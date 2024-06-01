@@ -153,7 +153,7 @@ func _on_end_background_timeout():
 		$start_background.start()
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scene/dialogue1.tscn")
+	get_tree().change_scene_to_file("res://scenes/dialogue1.tscn")
 
 
 func _on__pressed():
@@ -164,7 +164,7 @@ func _on__pressed():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scene/dialogue1.tscn")
+	get_tree().change_scene_to_file("res://scenes/dialogue1.tscn")
 
 
 	

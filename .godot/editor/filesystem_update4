@@ -1,5 +1,8 @@
-res://scene/manu.tscn
-res://scene/setting.tscn
-res://scene/dialogue2.tscn
-res://scene/dialogue.tscn
-res://scene/dialogue1.tscn
+res://scenes/dialogue1.tscn
+res://scenes/dialogue2.tscn
+res://scenes/dialogue.tscn
+res://scenes/manu.tscn
+res://scenes/setting.tscn
+res://scripts/manu.gd
+res://scripts/dialogue1.gd
+res://scripts/dialogue.gd

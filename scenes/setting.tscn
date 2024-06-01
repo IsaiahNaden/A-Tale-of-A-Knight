@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://d2k7qmpyqy6jm"]
 
-[ext_resource type="Script" path="res://script/setting.gd" id="1_mp2v3"]
+[ext_resource type="Script" path="res://scripts/setting.gd" id="1_mp2v3"]
 [ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="2_o0hax"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_11mtm"]
 [ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_k52id"]
