@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcae2k6asb6bg"]
+
+[ext_resource type="Script" path="res://script/dialogue2.gd" id="1_8wxxf"]
+[ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="2_xtq57"]
+[ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="3_6hojr"]
+[ext_resource type="Texture2D" uid="uid://n372d5b8rytk" path="res://background/nobody.png" id="3_qg6go"]
+[ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_s12h8"]
+[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scene/setting.tscn" id="6_w844k"]
+
+[node name="dialogue2" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_8wxxf")
+
+[node name="dialogue" type="VBoxContainer" parent="."]
+process_mode = 1
+offset_left = 457.0
+offset_top = 421.0
+offset_right = 1305.0
+offset_bottom = 549.0
+size_flags_vertical = 4
+
+[node name="room" type="Sprite2D" parent="dialogue"]
+position = Vector2(500.5, 118.5)
+scale = Vector2(1.915, 2.16667)
+texture = ExtResource("2_xtq57")
+
+[node name="Dialog" type="Sprite2D" parent="dialogue"]
+position = Vector2(463, 74)
+scale = Vector2(4.02743, 0.78481)
+texture = ExtResource("3_6hojr")
+
+[node name="Nobody" type="Sprite2D" parent="dialogue"]
+position = Vector2(-64, 287)
+scale = Vector2(0.87, 0.914445)
+texture = ExtResource("3_qg6go")
+
+[node name="name" type="Label" parent="dialogue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "King :"
+
+[node name="text" type="Label" parent="dialogue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_s12h8")
+theme_override_font_sizes/font_size = 25
+
+[node name="dialogue2_start" type="Timer" parent="."]
+
+[node name="dialogue2_end" type="Timer" parent="."]
+
+[node name="setting" parent="." instance=ExtResource("6_w844k")]
+visible = false
+
+[connection signal="timeout" from="dialogue2_start" to="." method="_on_dialogue_2_start_timeout"]
+[connection signal="timeout" from="dialogue2_end" to="." method="_on_dialogue_2_end_timeout"]
