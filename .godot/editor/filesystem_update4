@@ -1,3 +1,5 @@
-res://manu/user_interface.tscn
-res://manu/exit.tres
-res://manu/press1.tres
+res://scene/manu.tscn
+res://scene/setting.tscn
+res://scene/dialogue2.tscn
+res://scene/dialogue.tscn
+res://scene/dialogue1.tscn
