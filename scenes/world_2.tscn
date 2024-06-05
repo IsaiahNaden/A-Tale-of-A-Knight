@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=3 uid="uid://67452o7ambwi"]
 
 [ext_resource type="Texture2D" uid="uid://5hkg5plw4n4o" path="res://art/tilesets/TX Plant.png" id="1_dfybt"]
-[ext_resource type="Script" path="res://scenes/world_2.gd" id="1_fjctb"]
+[ext_resource type="Script" path="res://scripts/world_2.gd" id="1_fjctb"]
 [ext_resource type="Texture2D" uid="uid://b885dv0n0nysc" path="res://art/tilesets/TX Props.png" id="2_onprd"]
 [ext_resource type="Texture2D" uid="uid://b8xcuoyh1pqw4" path="res://art/tilesets/TX Tileset Grass.png" id="3_adqfq"]
 [ext_resource type="Texture2D" uid="uid://bmx1lsqtkp3r3" path="res://art/tilesets/TX Tileset Stone Ground.png" id="4_7okbx"]
@@ -1267,9 +1267,6 @@ polygon = PackedVector2Array(161, 2, 159, -113, 273, -113, 275, 3, 414, 3, 415, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_transition_point"]
 position = Vector2(218.5, -56)
 shape = SubResource("RectangleShape2D_ga3xn")
-
-[node name="enemy2" parent="." instance=ExtResource("9_32fnn")]
-position = Vector2(150, 212)
 
 [connection signal="body_entered" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_entered"]
 [connection signal="body_exited" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_exited"]

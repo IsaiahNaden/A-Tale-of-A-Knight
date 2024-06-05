@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://grc4ax72hw7k"]
+[gd_scene load_steps=15 format=3 uid="uid://grc4ax72hw7k"]
 
-[ext_resource type="Script" path="res://scenes/cliff_side.gd" id="1_574sg"]
+[ext_resource type="Script" path="res://scripts/cliff_side.gd" id="1_574sg"]
 [ext_resource type="Texture2D" uid="uid://b885dv0n0nysc" path="res://art/tilesets/TX Props.png" id="2_40fex"]
 [ext_resource type="Texture2D" uid="uid://b8xcuoyh1pqw4" path="res://art/tilesets/TX Tileset Grass.png" id="3_24i1b"]
 [ext_resource type="PackedScene" uid="uid://da4xxv2lsbn2i" path="res://scenes/player.tscn" id="4_ilvw8"]
 [ext_resource type="Texture2D" uid="uid://cl3ojmivaqvfe" path="res://art/objects/objects.png" id="5_vh2fx"]
 [ext_resource type="PackedScene" uid="uid://b4vcpj0a2svmr" path="res://scenes/enemy.tscn" id="6_v1che"]
 [ext_resource type="Texture2D" uid="uid://b6tose6sla23h" path="res://art/tilesets/plains.png" id="7_fwhr1"]
+[ext_resource type="PackedScene" uid="uid://df1a45v1tilib" path="res://scenes/asimole.tscn" id="8_qn0w6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q6vp8"]
 texture = ExtResource("3_24i1b")
@@ -658,7 +659,7 @@ position = Vector2(120, 223)
 position = Vector2(416, 135)
 
 [node name="enemy" parent="." instance=ExtResource("6_v1che")]
-position = Vector2(256, 124)
+position = Vector2(387, 118)
 
 [node name="cliffside_exitpoint" type="Area2D" parent="."]
 
@@ -666,11 +667,8 @@ position = Vector2(256, 124)
 position = Vector2(121, 261)
 shape = SubResource("RectangleShape2D_wb7he")
 
-[node name="enemy2" parent="." instance=ExtResource("6_v1che")]
-position = Vector2(121, 65)
-
-[node name="enemy3" parent="." instance=ExtResource("6_v1che")]
-position = Vector2(-4, 112)
+[node name="asimole" parent="." instance=ExtResource("8_qn0w6")]
+position = Vector2(121, 63)
 
 [connection signal="body_entered" from="cliffside_exitpoint" to="." method="_on_cliffside_exitpoint_body_entered"]
 [connection signal="body_exited" from="cliffside_exitpoint" to="." method="_on_cliffside_exitpoint_body_exited"]
