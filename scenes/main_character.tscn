@@ -44,6 +44,7 @@ animations = [{
 radius = 5.09902
 
 [node name="MainCharacter" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_qpm8l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
