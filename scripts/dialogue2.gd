@@ -21,6 +21,11 @@ var current_char = 0
 
 func _ready():
 	start_dialogue()
+	$text_full.hide()
+	$text_full2.hide()
+	$">>>Two".hide()
+	$setting.hide()
+	$"next>".hide()
 
 func start_dialogue():
 	current_message = 0
@@ -31,7 +36,7 @@ func start_dialogue():
 	$dialogue2_start.start()
 	
 func stop_dialogue():
-	queue_free()
+	$"../manu".show()
 
 
 func _on_dialogue_2_start_timeout():
@@ -59,4 +64,18 @@ func _on_dialogue_2_end_timeout():
 		current_char = 0           
 		$dialogue2_start.start()
 
+func _on__pressed():
+	$text_full.show()
+	$dialogue/text.hide()
+	$">>>".hide()
+	$">>>Two".show()
 
+func _on_next_pressed():
+	get_tree().change_scene_to_file("res://scenes/manu.tscn")
+
+
+func _on_two_pressed():
+	$">>>Two".hide()
+	$"next>".show()
+	$text_full2.show()
+	$text_full.hide()

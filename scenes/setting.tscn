@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://d2k7qmpyqy6jm"]
 
-[ext_resource type="Script" path="res://scripts/setting.gd" id="1_mp2v3"]
+[ext_resource type="Script" path="res://scripts/setting.gd" id="1_ia8b5"]
 [ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="2_o0hax"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_11mtm"]
 [ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_k52id"]
@@ -40,7 +40,7 @@
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_mp2v3")
+script = ExtResource("1_ia8b5")
 
 [node name="stop" type="VBoxContainer" parent="."]
 process_mode = 3
@@ -153,6 +153,7 @@ layout_mode = 2
 [node name="screenmode" type="OptionButton" parent="setting/Fullscreen"]
 custom_minimum_size = Vector2(265, 64)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_11mtm")
 
 [node name="resolution" type="HBoxContainer" parent="setting"]
 layout_mode = 2
@@ -172,6 +173,7 @@ layout_mode = 2
 [node name="resolutionmode" type="OptionButton" parent="setting/resolution"]
 custom_minimum_size = Vector2(265, 64)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_11mtm")
 
 [node name="volume" type="Label" parent="setting"]
 layout_mode = 2

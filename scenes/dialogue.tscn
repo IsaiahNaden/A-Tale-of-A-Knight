@@ -1,13 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://qf8vpqbnf03m"]
+[gd_scene load_steps=15 format=3 uid="uid://qf8vpqbnf03m"]
 
 [ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_137sj"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_268d6"]
 [ext_resource type="Texture2D" uid="uid://dkh7piu30wxwb" path="res://background/parchment.png" id="3_uwxhc"]
-[ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="4_06jvt"]
-[ext_resource type="Texture2D" uid="uid://n372d5b8rytk" path="res://background/nobody.png" id="5_jpb7i"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="5_q8131"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="6_cxt43"]
-[ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="6_g4mlt"]
 [ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="9_dkvgq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sl6ip"]
@@ -95,105 +90,9 @@ In this age of knights and sorcery, you are the kingdom's last hope. Will you ri
 realm so desperately needs? The fate of Princess Eliza and the Crescent Kingdom rests in your hands.
 "
 
-[node name="dialogue" type="VBoxContainer" parent="."]
-offset_left = 465.0
-offset_top = 424.0
-offset_right = 1320.0
-offset_bottom = 518.0
-
-[node name="41094850" type="Sprite2D" parent="dialogue"]
-position = Vector2(494.5, 115)
-scale = Vector2(1.911, 2.16867)
-texture = ExtResource("4_06jvt")
-
-[node name="Nobody" type="Sprite2D" parent="dialogue"]
-position = Vector2(-63, 272)
-scale = Vector2(0.78, 0.828889)
-texture = ExtResource("5_jpb7i")
-
-[node name="Dialog" type="Sprite2D" parent="dialogue"]
-position = Vector2(462.75, 78)
-scale = Vector2(4.00211, 0.801688)
-texture = ExtResource("6_g4mlt")
-
-[node name="name" type="Label" parent="dialogue"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 35
-text = "KIng :"
-
-[node name="text" type="Label" parent="dialogue"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 25
-
-[node name="first" type="Timer" parent="."]
-wait_time = 30.0
-
-[node name="second" type="Timer" parent="."]
-wait_time = 5.0
-
 [node name="start_background" type="Timer" parent="."]
 
 [node name="end_background" type="Timer" parent="."]
-
-[node name="profile" type="VBoxContainer" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 750.044
-offset_top = 343.025
-offset_right = 1155.04
-offset_bottom = 700.025
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="41094850" type="Sprite2D" parent="profile"]
-position = Vector2(207.458, 196.475)
-scale = Vector2(1.915, 2.16667)
-texture = ExtResource("4_06jvt")
-
-[node name="name" type="Label" parent="profile"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 50
-text = "What is your name ?"
-
-[node name="input_name" type="LineEdit" parent="profile"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 50
-
-[node name="ID" type="Label" parent="profile"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 50
-text = "What is your ID?"
-
-[node name="input_ID" type="LineEdit" parent="profile"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 50
-
-[node name="Button" type="Button" parent="profile"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_268d6")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("5_q8131")
-theme_override_styles/hover = ExtResource("5_q8131")
-theme_override_styles/pressed = ExtResource("6_cxt43")
-theme_override_styles/focus = ExtResource("6_cxt43")
-text = "Done"
 
 [node name="next" type="Button" parent="."]
 offset_left = 1703.0
@@ -224,12 +123,8 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_vsmcw")
 text = ">>>"
 
 [node name="setting" parent="." instance=ExtResource("9_dkvgq")]
-visible = false
 
-[connection signal="timeout" from="first" to="." method="_on_first_timeout"]
-[connection signal="timeout" from="second" to="." method="_on_second_timeout"]
 [connection signal="timeout" from="start_background" to="." method="_on_start_background_timeout"]
 [connection signal="timeout" from="end_background" to="." method="_on_end_background_timeout"]
-[connection signal="pressed" from="profile/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from=">>>" to="." method="_on__pressed"]

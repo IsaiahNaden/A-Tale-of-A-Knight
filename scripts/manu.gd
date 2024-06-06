@@ -35,8 +35,14 @@ func _on_button_pressed():
 
 func _on_exit_pressed():
 	get_tree().quit()
-	
-	
 
 
-
+func _on_loadgame_pressed():
+	$tips.hide()
+	$move.hide()
+	$other.hide()
+	$rules.hide()
+	$Background.hide()
+	$GameName.hide()
+	$VBoxContainer.hide()
+	$back.hide()

@@ -47,7 +47,7 @@ border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 200
 corner_radius_top_right = 200
 
-[node name="Node2D" type="Node2D"]
+[node name="manu" type="Node2D"]
 script = ExtResource("1_w0fmo")
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -67,12 +67,24 @@ text = "A-Tale-of-A-Knight"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 539.0
-offset_top = 545.0
+offset_top = 463.0
 offset_right = 1431.0
-offset_bottom = 809.0
+offset_bottom = 874.0
 theme_override_constants/separation = 30
 
 [node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ybg5i")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = ExtResource("3_bgfhf")
+theme_override_styles/hover = ExtResource("3_bgfhf")
+theme_override_styles/pressed = ExtResource("4_tgq6v")
+theme_override_styles/focus = ExtResource("4_tgq6v")
+text = "New Game"
+
+[node name="loadgame" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
@@ -109,6 +121,7 @@ theme_override_styles/focus = ExtResource("7_fmlug")
 text = "!"
 
 [node name="tips" type="VBoxContainer" parent="."]
+visible = false
 offset_right = 1958.0
 offset_bottom = 239.0
 theme_override_constants/separation = 20
@@ -134,6 +147,7 @@ text = "How To Play  ?"
 horizontal_alignment = 1
 
 [node name="move" type="Label" parent="."]
+visible = false
 offset_left = 34.0
 offset_top = 355.0
 offset_right = 536.0
@@ -142,12 +156,14 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 35
 text = "Control your character 
-E = move up
-S = move down
-A = move left 
-D = move right"
+ = move up
+ = move down
+ = move left 
+ = move right
+= attack"
 
 [node name="other" type="Label" parent="."]
+visible = false
 offset_left = 430.0
 offset_top = 360.0
 offset_right = 778.0
@@ -157,10 +173,11 @@ theme_override_font_sizes/font_size = 35
 text = "Setting
 pause game = Esc
 resume game = Esc
-open inventory = 
+open bag = 
 "
 
 [node name="rules" type="Label" parent="."]
+visible = false
 offset_left = 51.0
 offset_top = 687.0
 offset_right = 1878.0
@@ -173,6 +190,7 @@ The princess will  fall in love with you......
 Maybe la ......"
 
 [node name="back" type="Button" parent="."]
+visible = false
 offset_left = 651.0
 offset_top = 990.0
 offset_right = 1275.0
@@ -185,7 +203,24 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_co30v")
 theme_override_styles/focus = SubResource("StyleBoxFlat_hryob")
 text = "I know already !"
 
+[node name="loadgame" type="VBoxContainer" parent="."]
+visible = false
+offset_right = 1918.0
+offset_bottom = 1060.0
+
+[node name="BlackTexture" type="Sprite2D" parent="loadgame"]
+position = Vector2(957, 538.5)
+scale = Vector2(8.54464, 4.80804)
+texture = ExtResource("8_8ilsq")
+
+[node name="Label" type="Label" parent="loadgame"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ybg5i")
+theme_override_font_sizes/font_size = 100
+text = "  Your Game ;"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/loadgame" to="." method="_on_loadgame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="how_to_play" to="." method="_on_how_to_play_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
