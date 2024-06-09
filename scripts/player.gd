@@ -11,24 +11,43 @@ var attack_ip = false
 const normal_speed = 100
 const boosted_speed = 200
 var current_speed = normal_speed
+
 var speed_boost_active = false
 
+var invulnerable = false
+
 var current_dir = "none"
+
 var speed_boost_timer: Timer
+var speed_boost_label: Label
 var speed_boost_label_timer: Timer
 var speed_boost_inactive_label_timer: Timer
-var speed_boost_label: Label
 var speed_boost_inactive_label: Label
+
+var invulnerability_timer: Timer
+var invulnerability_label: Label
+var invulnerability_label_timer: Timer
+var invulnerability_inactive_label: Label
+var invulnerability_inactive_label_timer: Timer
+
 
 
 func _ready():
 	speed_boost_timer = $speed_boost_timer
-	speed_boost_label_timer = $speed_boost_label_timer
-	speed_boost_inactive_label_timer = $speed_boost_inactive_label_timer
 	speed_boost_label = $SpeedBoostLabel
+	speed_boost_label_timer = $speed_boost_label_timer
 	speed_boost_inactive_label = $SpeedBoostInactiveLabel
+	speed_boost_inactive_label_timer = $speed_boost_inactive_label_timer
 	speed_boost_label.visible = false
 	speed_boost_inactive_label.visible = false
+	
+	invulnerability_timer = $invulnerability_timer
+	invulnerability_label = $InvulnerabilityLabel
+	invulnerability_label_timer = $invulnerability_label_timer
+	invulnerability_inactive_label = $InvulnerabilityInactiveLabel
+	invulnerability_inactive_label_timer = $invulnerability_inactive_label_timer
+	invulnerability_label.visible = false
+	invulnerability_inactive_label.visible = false
 
 
 func _physics_process(delta):
@@ -64,11 +83,26 @@ func player_movement(delta):
 			speed_boost_label.visible = false
 		
 	if speed_boost_active:
-		print("speed boost active")
 		current_speed = boosted_speed
 	else:
-		print("speed boost inactive")
 		current_speed = normal_speed
+		
+	if Input.is_action_just_pressed("ui_invulnerability"):
+		invulnerable = !invulnerable
+		if invulnerable:
+			invulnerable = true
+			invulnerability_timer.start()
+			invulnerability_label.visible = true
+			invulnerability_label_timer.start()
+			$AnimatedSprite2D.modulate = Color(1, 1, 1, 0.5)
+			print("Player is now invulnerable")
+		else:
+			invulnerable = false
+			invulnerability_timer.stop()
+			invulnerability_label.visible = false
+			$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
+			print("Player is no longer invulnerable")
+	
 
 	
 	if Input.is_action_pressed("ui_right"):
@@ -146,7 +180,7 @@ func _on_player_hitbox_body_exited(body):
 		enemy_inattack_range = false
 
 func enemy_attack():
-	if enemy_inattack_range and enemy_attack_cooldown == true:
+	if enemy_inattack_range and enemy_attack_cooldown and not invulnerable == true:
 		health = health - 20
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
@@ -229,4 +263,22 @@ func _on_speed_boost_label_timer_timeout():
 
 func _on_speed_boost_inactive_label_timer_timeout():
 	speed_boost_inactive_label.visible = false
+
+
+
+func _on_invulnerability_timer_timeout():
+	invulnerable = false
+	invulnerability_inactive_label.visible = true
+	invulnerability_inactive_label_timer.start()
+	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
+
+
+
+
+func _on_invulnerability_label_timer_timeout():
+	invulnerability_label.visible = false
+
+
+func _on_invulnerability_inactive_label_timer_timeout():
+	invulnerability_inactive_label.visible = false
 
