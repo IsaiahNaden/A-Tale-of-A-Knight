@@ -30,7 +30,7 @@ func LoadLevel(path :String , spawnIndex : int):
 	var loadScene : PackedScene = ResourceLoader.load("res://scenes/game.tscn")
 	var loadSceneNode = loadScene.instantiate()
 	get_tree().root.add_child(loadSceneNode)
-	loadSceneNode.LoadLevel(path , spawnIndex)
+	loadSceneNode.LoadLevel(path , spawnIndex) #***
 
 func CheckForPlayer():
 	if (Player == null ):
@@ -47,3 +47,4 @@ func MovePlayer(targetIndex : int):
 		if i.SpawnIndex == targetIndex :
 			Player.global_positon = i.global_position
 			Player.rotation_degrees = i.rotation_degrees
+			
