@@ -87,7 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="41094850" type="Sprite2D" parent="profile"]
-position = Vector2(207.458, 221.975)
+position = Vector2(207.958, 255.475)
 scale = Vector2(1.915, 2.23494)
 texture = ExtResource("1_x8w30")
 
@@ -210,6 +210,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_4llf6")
 text = " next >"
 
 [node name="setting" parent="." instance=ExtResource("8_l5ky5")]
+visible = false
 
 [connection signal="pressed" from="profile/Done" to="." method="_on_done_pressed"]
 [connection signal="timeout" from="first" to="." method="_on_first_timeout"]

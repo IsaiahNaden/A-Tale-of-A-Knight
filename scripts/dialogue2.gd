@@ -2,7 +2,7 @@ extends Node2D
 
 
 var message =[
-" your reputation precedes you. We have heard tales of your valor and skill. 
+" Your reputation precedes you. We have heard tales of your valor and skill. 
   You are indeed the champion we prayed for.",
 " May the gods be with you. Your bravery is the beacon of hope we 
   desperately need. 
@@ -36,7 +36,9 @@ func start_dialogue():
 	$dialogue2_start.start()
 	
 func stop_dialogue():
-	$"../manu".show()
+	$">>>".hide()
+	$">>>Two".hide()
+	$"next>".show()
 
 
 func _on_dialogue_2_start_timeout():
@@ -71,7 +73,7 @@ func _on__pressed():
 	$">>>Two".show()
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/manu.tscn")
+	queue_free()
 
 
 func _on_two_pressed():

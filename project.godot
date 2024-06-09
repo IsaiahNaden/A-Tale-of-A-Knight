@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-SaveLoader="*res://scripts/SaveLoader.gd"
+SaveLoader="*res://scripts/SaveLoadManager.gd"
 
 [display]
 

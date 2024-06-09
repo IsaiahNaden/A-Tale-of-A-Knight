@@ -1,10 +1,7 @@
 res://scenes/game.tscn
-res://scripts/dialogue1.gd
-res://scenes/dialogue.tscn
-res://scenes/dialogue1.tscn
+res://scripts/GameManager.gd
 res://scripts/SaveLoader.gd
-res://scenes/SaveLoader.gd
-res://scripts/userdata.json
+res://scripts/manu.gd
+res://scripts/SaveLoadManager.gd
 res://scenes/manu.tscn
-res://scripts/game.gd
-res://scripts/dialogue2.gd
+res://scripts/SaveandLoad.gd

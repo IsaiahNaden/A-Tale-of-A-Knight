@@ -1,11 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcae2k6asb6bg"]
+[gd_scene load_steps=17 format=3 uid="uid://dcae2k6asb6bg"]
 
 [ext_resource type="Script" path="res://scripts/dialogue2.gd" id="1_8wxxf"]
 [ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="2_xtq57"]
 [ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="3_6hojr"]
 [ext_resource type="Texture2D" uid="uid://n372d5b8rytk" path="res://background/nobody.png" id="3_qg6go"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="6_iyn3a"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_s12h8"]
 [ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="6_w844k"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="7_dv2kc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ni2w"]
 
@@ -14,14 +16,6 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fd7hr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7aa7g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rpwx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d3v3x"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugqq6"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydo8d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbf03"]
 
@@ -90,21 +84,20 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_7aa7g")
 text = ">>>"
 
 [node name="next>" type="Button" parent="."]
-offset_left = 1331.0
-offset_top = 402.0
-offset_right = 1398.0
-offset_bottom = 458.0
+offset_left = 739.0
+offset_top = 792.0
+offset_right = 1026.0
+offset_bottom = 912.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_s12h8")
-theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxEmpty_7rpwx")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_d3v3x")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ugqq6")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ydo8d")
-text = "Start >"
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("6_iyn3a")
+theme_override_styles/hover = ExtResource("6_iyn3a")
+theme_override_styles/pressed = ExtResource("7_dv2kc")
+theme_override_styles/focus = ExtResource("7_dv2kc")
+text = "Start "
 
 [node name="setting" parent="." instance=ExtResource("6_w844k")]
-visible = false
 
 [node name="text_full" type="Label" parent="."]
 offset_left = 460.0
@@ -114,7 +107,7 @@ offset_bottom = 535.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_s12h8")
 theme_override_font_sizes/font_size = 25
-text = "your reputation precedes you. We have heard tales of your valor and skill. 
+text = "Your reputation precedes you. We have heard tales of your valor and skill. 
  You are indeed the champion we prayed for."
 
 [node name="text_full2" type="Label" parent="."]
@@ -131,10 +124,10 @@ desperately need.
 "
 
 [node name=">>>Two" type="Button" parent="."]
-offset_left = 1327.0
-offset_top = 403.0
-offset_right = 1397.0
-offset_bottom = 459.0
+offset_left = 1323.0
+offset_top = 404.0
+offset_right = 1393.0
+offset_bottom = 460.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_s12h8")
 theme_override_font_sizes/font_size = 25

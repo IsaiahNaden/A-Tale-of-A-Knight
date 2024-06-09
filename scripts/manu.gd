@@ -46,3 +46,5 @@ func _on_loadgame_pressed():
 	$GameName.hide()
 	$VBoxContainer.hide()
 	$back.hide()
+	get_node("loadgame").loadgame()#scene level onew wakeup ,0 
+	
