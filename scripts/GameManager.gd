@@ -23,7 +23,7 @@ func get_userid ():
 	userid = $"../../interface/dailgue1".userid
 
 func LoadLevel(path :String , spawnIndex : int):
-	
+
 	LoadedLevel = path
 	SpawnIndex = SpawnIndex
 	
@@ -31,7 +31,7 @@ func LoadLevel(path :String , spawnIndex : int):
 	var loadSceneNode = loadScene.instantiate()
 	get_tree().root.add_child(loadSceneNode)
 	loadSceneNode.LoadLevel(path , spawnIndex)
-	
+
 func CheckForPlayer():
 	if (Player == null ):
 		var playerScene : PackedScene = ResourceLoader.load(playerScenePath)

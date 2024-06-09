@@ -14,12 +14,10 @@ func SaveGame(name):
 	
 	var username = $GameManager.get_username()
 	var saveData = {
-		username: {
-			"username": $GameManager.get_username(),
-			"user_id": $GameManager.get_userid(),
-			"scene": $GameManager.LoadedLevel,
-			"spawnIndex": $GameManager.SpawnIndex
-		}
+		"username": $GameManager.get_username(),
+		"user_id": $GameManager.get_userid(),
+		"scene": $GameManager.LoadedLevel,
+		"spawnIndex": $GameManager.SpawnIndex
 	}
 
 	var saveJson = JSON.stringify(saveData)
@@ -28,22 +26,22 @@ func SaveGame(name):
 	file.close()
 
 func LoadGame(name):
-	var username = $GameManager.get_username()
-	var file = FileAccess.open("user://savedGames/" + username + ".json", FileAccess.READ)
+	var file = FileAccess.open("user://savedGames/" + name + ".json", FileAccess.READ)
 	if file.error != OK:
-		print("Failed to open save file.")
-		return
-		
-	var saveJson = file.get_as_text()
-	var saveData = JSON.parse_string(saveJson)
-	if saveData.error != OK:
 		return
 	
-	var userData = saveData.result.get(name)
-	if userData:
-		$GameManager.get_username(userData["username"])
-		$GameManager.get_userid(userData["user_id"])
-		$GameManager.LoadedLevel = userData["scene"]
-		$GameManager.SpawnIndex = userData["spawnIndex"]
+	var saveJson = file.get_as_text()
+	var json_parser = JSON.new()
+	var parse_result = json_parser.parse_string(saveJson)
+	if parse_result != OK:
+		return
+	
+	var saveData = json_parser.get_data()
+	if saveData:
+		$GameManager.username = saveData["username"]
+		$GameManager.user_id = saveData["user_id"]
+		$GameManager.LoadedLevel = saveData["scene"]
+		$GameManager.SpawnIndex = saveData["spawnIndex"]
 	else:
-		file.close()
+		print("No data found for user:", name)
+	file.close()

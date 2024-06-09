@@ -1,7 +1,6 @@
 res://scenes/game.tscn
-res://scripts/GameManager.gd
-res://scripts/SaveLoader.gd
-res://scripts/manu.gd
-res://scripts/SaveLoadManager.gd
+res://scripts/game.gd
+res://scripts/setting.gd
 res://scenes/manu.tscn
-res://scripts/SaveandLoad.gd
+res://scenes/setting.tscn
+res://scripts/GameManager.gd
