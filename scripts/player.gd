@@ -8,8 +8,28 @@ var player_alive = true
 var attack_ip = false
 
 
-const speed = 100
+const normal_speed = 100
+const boosted_speed = 200
+var current_speed = normal_speed
+var speed_boost_active = false
+
 var current_dir = "none"
+var speed_boost_timer: Timer
+var speed_boost_label_timer: Timer
+var speed_boost_inactive_label_timer: Timer
+var speed_boost_label: Label
+var speed_boost_inactive_label: Label
+
+
+func _ready():
+	speed_boost_timer = $speed_boost_timer
+	speed_boost_label_timer = $speed_boost_label_timer
+	speed_boost_inactive_label_timer = $speed_boost_inactive_label_timer
+	speed_boost_label = $SpeedBoostLabel
+	speed_boost_inactive_label = $SpeedBoostInactiveLabel
+	speed_boost_label.visible = false
+	speed_boost_inactive_label.visible = false
+
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -24,27 +44,52 @@ func _physics_process(delta):
 		print("player has died")
 		self.queue_free()
 
+			
+	   
+ 
+		
+		
+		
+
 func player_movement(delta):
+	
+	if Input.is_action_just_pressed("ui_select"):
+		speed_boost_active = !speed_boost_active
+		if speed_boost_active:
+			speed_boost_timer.start()
+			speed_boost_label.visible = true
+			speed_boost_label_timer.start()
+		else:
+			speed_boost_timer.stop()
+			speed_boost_label.visible = false
+		
+	if speed_boost_active:
+		print("speed boost active")
+		current_speed = boosted_speed
+	else:
+		print("speed boost inactive")
+		current_speed = normal_speed
+
 	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
-		velocity.x = speed
+		velocity.x = current_speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_left"):
 		current_dir = "left"
 		play_anim(1)
-		velocity.x = -speed
+		velocity.x = -current_speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_down"):
 		current_dir = "down"
 		play_anim(1)
-		velocity.y = speed
+		velocity.y = current_speed
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
 		play_anim(1)
-		velocity.y = -speed
+		velocity.y = -current_speed
 		velocity.x = 0
 	else:
 		play_anim(0)
@@ -113,6 +158,7 @@ func _on_attack_cooldown_timeout():
 func attack():
 	var dir = current_dir
 	
+	
 	if Input.is_action_just_pressed("attack"):
 		global.player_current_attack = true
 		attack_ip = true
@@ -167,3 +213,20 @@ func _on_regen_timer_timeout():
 			health = 100
 	if health <= 0:
 		health = 0
+
+
+func _on_speed_boost_timer_timeout():
+	speed_boost_active = false
+	speed_boost_inactive_label.visible = true
+	speed_boost_inactive_label_timer.start()
+
+
+
+func _on_speed_boost_label_timer_timeout():
+	speed_boost_label.visible = false
+
+
+
+func _on_speed_boost_inactive_label_timer_timeout():
+	speed_boost_inactive_label.visible = false
+

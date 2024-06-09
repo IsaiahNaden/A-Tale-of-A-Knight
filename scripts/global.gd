@@ -2,6 +2,8 @@ extends Node
 
 var player_current_attack = false
 
+
+
 var current_scene = "world_2" #world cliff_side
 var transition_scene = false
 
@@ -13,6 +15,10 @@ var player_start_posy = 143
 var game_first_loadin = true
 
 
+
+
+
+
 func finish_changescenes():
 	if transition_scene == true:
 		transition_scene = false
@@ -20,4 +26,7 @@ func finish_changescenes():
 			current_scene = "cliff_side"
 		else:
 			current_scene = "world_2"
+
+
+
 
