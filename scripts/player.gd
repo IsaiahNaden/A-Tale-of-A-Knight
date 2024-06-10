@@ -32,6 +32,7 @@ var invulnerability_inactive_label_timer: Timer
 
 
 
+
 func _ready():
 	speed_boost_timer = $speed_boost_timer
 	speed_boost_label = $SpeedBoostLabel
@@ -48,6 +49,8 @@ func _ready():
 	invulnerability_inactive_label_timer = $invulnerability_inactive_label_timer
 	invulnerability_label.visible = false
 	invulnerability_inactive_label.visible = false
+	
+	
 
 
 func _physics_process(delta):
@@ -102,6 +105,8 @@ func player_movement(delta):
 			invulnerability_label.visible = false
 			$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 			print("Player is no longer invulnerable")
+			
+	
 	
 
 	
@@ -181,7 +186,8 @@ func _on_player_hitbox_body_exited(body):
 
 func enemy_attack():
 	if enemy_inattack_range and enemy_attack_cooldown and not invulnerable == true:
-		health = health - 20
+		var damage = 10
+		health -= damage
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
 		print("player health = ", health)
@@ -196,6 +202,8 @@ func attack():
 	if Input.is_action_just_pressed("attack"):
 		global.player_current_attack = true
 		attack_ip = true
+		
+		
 		if dir =="right":
 			$AnimatedSprite2D.flip_h = false
 			$AnimatedSprite2D.play("side_attack")
@@ -216,6 +224,8 @@ func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.start()
 	global.player_current_attack = false
 	attack_ip = false
+	
+
 
 
 func current_camera():
@@ -281,4 +291,10 @@ func _on_invulnerability_label_timer_timeout():
 
 func _on_invulnerability_inactive_label_timer_timeout():
 	invulnerability_inactive_label.visible = false
+
+
+
+
+
+
 
