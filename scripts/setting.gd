@@ -38,7 +38,6 @@ func _process(delta):
 		$stop.visible = !$stop.visible
 
 	
-	
 func _on_stop_pressed():
 	get_tree().paused = !get_tree().paused
 	$stop.visible = !$stop.visible
@@ -99,15 +98,4 @@ func _on_button_pressed():
 	$Button.hide()
 	$stop_button.hide()
 	
-
-
-
-
-
-
-
-
-
-
-
-
+	
