@@ -75,7 +75,7 @@ func _physics_process(delta):
 
 func player_movement(delta):
 	
-	if Input.is_action_just_pressed("ui_select"):
+	if Input.is_action_just_pressed("ui_speed_boost"):
 		speed_boost_active = !speed_boost_active
 		if speed_boost_active:
 			speed_boost_timer.start()
