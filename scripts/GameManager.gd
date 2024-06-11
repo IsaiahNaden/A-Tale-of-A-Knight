@@ -1,11 +1,11 @@
 extends Node
 
 var LavelBase : Node
-var Player :Node2D
-var playerScenePath #="scene character "
+var Player : CharacterBody2D
+var playerScenePath = "res://scenes/main_character.tscn"
 var LoadedLevel : String 
 var SpawnIndex : int
-var Inventory #:Inventory
+
 var username 
 var userid 
 
@@ -22,15 +22,15 @@ func get_username ():
 func get_userid ():
 	userid = $"../../interface/dailgue1".userid
 
-func LoadLevel(path :String , spawnIndex : int):
+func LoadLevel(path :String , SpawnIndex : int):
 
 	LoadedLevel = path
 	SpawnIndex = SpawnIndex
 	
-	var loadScene : PackedScene = ResourceLoader.load("res://scenes/game.tscn")
+	var loadScene : PackedScene = ResourceLoader.load("res://scenes/level_1_start.tscn")
 	var loadSceneNode = loadScene.instantiate()
 	get_tree().root.add_child(loadSceneNode)
-	loadSceneNode.LoadLevel(path , spawnIndex) #***
+	loadSceneNode.LoadLevel(path , SpawnIndex) #***
 
 func CheckForPlayer():
 	if (Player == null ):

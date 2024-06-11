@@ -98,6 +98,7 @@ theme_override_styles/focus = ExtResource("7_dv2kc")
 text = "Start "
 
 [node name="setting" parent="." instance=ExtResource("6_w844k")]
+visible = false
 
 [node name="text_full" type="Label" parent="."]
 offset_left = 460.0

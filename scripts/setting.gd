@@ -64,6 +64,7 @@ const RESOLUTION_DICTIONARY :Dictionary = {
 	"1920 × 1080" : Vector2i(1920 ,1080)
 }
 
+
 func add_window_mode_item() -> void :
 	for window_mode in WiNDOW_MODE_ARRAY:
 		screen_mode.add_item(window_mode)

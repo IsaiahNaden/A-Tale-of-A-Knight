@@ -9,6 +9,7 @@ func _ready():
 	$GameName.show()
 	$VBoxContainer.show()
 	$back.hide()
+	
 
 func _on_how_to_play_pressed():
 	$Background.hide()
@@ -39,9 +40,9 @@ func _on_exit_pressed():
 
 var loadgame
 var path : String
-var spawnIndex : int 
+var SpawnIndex : int 
 func _on_loadgame_pressed():
-	loadgame = $"../../Saveandload/GameManager".LoadLevel(path , spawnIndex)
+	loadgame = GameManager.LoadLevel(path , SpawnIndex)
 	
 	$tips.hide()
 	$move.hide()
@@ -51,5 +52,6 @@ func _on_loadgame_pressed():
 	$GameName.hide()
 	$VBoxContainer.hide()
 	$back.hide()
-	get_node("loadgame").loadgame("res://scenes/dialogue2.tscn" , 0)#scene level onew wakeup ,0 
-	pass
+	var base_game 
+	base_game = $"../../base_game"
+	get_node("loadgame").loadgame(base_game, 0)#scene level onew wakeup ,0 
