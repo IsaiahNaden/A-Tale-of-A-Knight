@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bow3j83f0b888"]
+
+[ext_resource type="Script" path="res://scripts/king.gd" id="1_mbavs"]
+[ext_resource type="Texture2D" uid="uid://c3nc32ig6tydl" path="res://art/character/King_Sprite.png" id="2_ip3k2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb5s1"]
+atlas = ExtResource("2_ip3k2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03lax"]
+atlas = ExtResource("2_ip3k2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sb6w"]
+atlas = ExtResource("2_ip3k2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vhf7a"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb5s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03lax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sb6w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="king" type="CharacterBody2D"]
+script = ExtResource("1_mbavs")
+
+[node name="king_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vhf7a")
+animation = &"idle"
+frame_progress = 0.439983
