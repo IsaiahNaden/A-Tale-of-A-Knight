@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ctail755e3vf2"]
+[gd_scene load_steps=51 format=3 uid="uid://ctail755e3vf2"]
 
 [ext_resource type="Texture2D" uid="uid://8io38ubyl880" path="res://assets/Texture/TX Tileset Grass.png" id="1_bj5en"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="2_h7shu"]
@@ -24,8 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cm1i1wh43nkpn" path="res://assets/AdventureBegins_Demo.png" id="20_7xrax"]
 [ext_resource type="Texture2D" uid="uid://b2yvdv7ftadl3" path="res://assets/gentle animations/gentle waterfall A v01.png" id="22_q054c"]
 [ext_resource type="PackedScene" uid="uid://co7lr0pqtyw7v" path="res://scenes/main_character.tscn" id="22_upvti"]
-[ext_resource type="PackedScene" uid="uid://ckf3mnm5u5646" path="res://scenes/basic_sword.tscn" id="25_5u8p2"]
-[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="26_fe67u"]
+[ext_resource type="PackedScene" uid="uid://da4xxv2lsbn2i" path="res://scenes/player.tscn" id="26_fe67u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]
 texture = ExtResource("7_4syo5")
@@ -16774,10 +16773,6 @@ limit_top = -416
 limit_right = 2096
 limit_bottom = 1072
 script = SubResource("GDScript_f1ktg")
-
-[node name="Basic Sword" parent="." instance=ExtResource("25_5u8p2")]
-z_index = 1
-position = Vector2(427, 191)
 
 [node name="player" parent="." instance=ExtResource("26_fe67u")]
 z_index = 1

@@ -18,8 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://c5h0yyefl1kgr" path="res://assets/Forest BETA V3/Settlement.png" id="11_fg7xb"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="12_btek2"]
 [ext_resource type="PackedScene" uid="uid://co7lr0pqtyw7v" path="res://scenes/main_character.tscn" id="13_ywou6"]
-[ext_resource type="PackedScene" uid="uid://blteaycwa68jy" path="res://scenes/basic_sword.tscn" id="19_vhaja"]
 [ext_resource type="PackedScene" uid="uid://b7theumw5lf2j" path="res://scenes/level_second_to_third.tscn" id="20_2svhu"]
+[ext_resource type="Script" path="res://scripts/daynightcyclelevel2.gd" id="20_vwfjm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q16hc"]
 texture = ExtResource("1_kfnil")
@@ -8964,6 +8964,7 @@ sources/15 = SubResource("TileSetAtlasSource_oeoww")
 sources/16 = SubResource("TileSetAtlasSource_gpayw")
 
 [node name="level_2" type="Node2D"]
+position = Vector2(-16, 0)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 47)
@@ -8982,13 +8983,15 @@ layer_3/tile_data = PackedInt32Array(524360, 196610, 19, 524367, 196610, 19, 458
 position = Vector2(55, 81)
 
 [node name="Camera2D" type="Camera2D" parent="MainCharacter"]
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_top = 0
 limit_right = 1904
 limit_bottom = 1120
 
-[node name="Basic Sword" parent="." instance=ExtResource("19_vhaja")]
-position = Vector2(49, 141)
-
 [node name="level_second_to_third" parent="." instance=ExtResource("20_2svhu")]
 position = Vector2(1224, 73)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0705882, 0.243137, 0.741176, 1)
+script = ExtResource("20_vwfjm")
