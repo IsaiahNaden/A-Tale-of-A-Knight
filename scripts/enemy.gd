@@ -12,6 +12,8 @@ var can_take_damage = true
 var double_damage_active = false
 var double_damage_timer = Timer
 
+@onready var global
+
 
 func _ready():
 	double_damage_timer = $double_damage_timer
@@ -54,7 +56,7 @@ func _on_enemy_hitbox_body_entered(body):
 
 func _on_enemy_hitbox_body_exited(body):
 	if body.has_method("player"):
-		player_inattack_range = true
+		player_inattack_range = false
 
 func deal_with_damage():
 	if player_inattack_range and global.player_current_attack == true:

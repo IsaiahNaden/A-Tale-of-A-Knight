@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://boniygjfkwbaa"]
+[gd_scene load_steps=53 format=3 uid="uid://boniygjfkwbaa"]
 
 [ext_resource type="Texture2D" uid="uid://bgmcwamawklrg" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_iyb3u"]
 [ext_resource type="Texture2D" uid="uid://ds3ycel3pa5p4" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="2_tamri"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://co7lr0pqtyw7v" path="res://scenes/main_character.tscn" id="24_0j5d7"]
 [ext_resource type="Script" path="res://scripts/daynightcyclelevel1.gd" id="26_3twpc"]
 [ext_resource type="PackedScene" uid="uid://c5nhhagqr2d3c" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
+[ext_resource type="PackedScene" uid="uid://da4xxv2lsbn2i" path="res://scenes/player.tscn" id="27_6chb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]
 texture = ExtResource("1_iyb3u")
@@ -16721,18 +16722,23 @@ layer_7/tile_data = PackedInt32Array()
 [node name="MainCharacter" parent="." instance=ExtResource("24_0j5d7")]
 position = Vector2(425, -77)
 
-[node name="Camera2D" type="Camera2D" parent="MainCharacter"]
-z_index = 1
-zoom = Vector2(2, 2)
-limit_left = 0
-limit_top = -416
-limit_right = 2096
-limit_bottom = 1072
-script = SubResource("GDScript_f1ktg")
-
 [node name="level_first_to_second" parent="." instance=ExtResource("26_ki325")]
 z_index = 1
 position = Vector2(1871, -337)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("26_3twpc")
+
+[node name="player" parent="." instance=ExtResource("27_6chb6")]
+position = Vector2(430, 365)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+z_index = 1
+position = Vector2(-2.54324, -368.641)
+scale = Vector2(0.508647, 0.834028)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = -416
+limit_right = 2096
+limit_bottom = 1072
+script = SubResource("GDScript_f1ktg")
