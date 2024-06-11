@@ -1,6 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718102142
+::res://::1718103378
 icon.svg::CompressedTexture2D::434307766447290347::1718010348::1718010386::1::::<><>::
+::res://art/::1718103242
+::res://art/character/::1718103450
+Asimole 1D[anim].png::CompressedTexture2D::4125211027013704614::1718103242::1718103449::1::::<><>::
+Demonpot D[anim].png::CompressedTexture2D::6612641504639472358::1718103242::1718103449::1::::<><>::
+Enemy-Melee-Attack-S.png::CompressedTexture2D::8646772260033943163::1718103242::1718103450::1::::<><>::
+Genie 1B[anim].png::CompressedTexture2D::9147144175597472148::1718103242::1718103449::1::::<><>::
+King_Sprite.png::CompressedTexture2D::6765138767072458777::1718103242::1718103448::1::::<><>::
+princess.png::CompressedTexture2D::5345609640417103169::1718103242::1718103448::1::::<><>::
+Snowloff B[anim].png::CompressedTexture2D::2291870722045776190::1718103242::1718103449::1::::<><>::
+Treant 1E[anim].png::CompressedTexture2D::4127209111050202465::1718103242::1718103449::1::::<><>::
+Zombie 1B[anim].png::CompressedTexture2D::7880078805105064074::1718103242::1718103449::1::::<><>::
 ::res://assets/::1718010386
 AdventureBegins_Demo.png::CompressedTexture2D::5669314646914705723::1718010347::1718010386::1::::<><>::
 ::res://assets/48x48 resize/::1718010389
@@ -555,14 +566,19 @@ nobody.png::CompressedTexture2D::972248908616467752::1717272054::1717272054::1::
 parchment.png::CompressedTexture2D::7877571314804527497::1717272054::1717272054::1::::<><>::
 press.tres::StyleBoxFlat::8554771285878549726::1717272054::0::1::::<><>::
 room.jpg::CompressedTexture2D::4626091931858915394::1717272054::1717272054::1::::<><>::
-::res://scenes/::1718102236
+::res://scenes/::1718103378
+asimole.tscn::PackedScene::-1::1718103242::0::1::::<><>::
 basic_sword.tscn::PackedScene::-1::1718010348::0::1::::<><>::
+cliff_side.tscn::PackedScene::-1::1718103242::0::1::::<><>::
+demonpot.tscn::PackedScene::-1::1718103242::0::1::::<><>::
 dialogue1.tscn::PackedScene::1081783324904194131::1718102226::0::1::::<><>::res://scripts/dialogue1.gd<>uid://b656b8k7rct7w::::res://background/room.jpg<>uid://n372d5b8rytk::::res://background/nobody.png<>uid://d1wimca0mlx68::::res://background/dialog.png<>uid://cnkd4fdmriu21::::res://background/new_style_box_flat.tres<>uid://dt483lgrpdu4m::::res://background/press.tres<>uid://dmcupxn2vy5sx::::res://background/Jaro-Regular-VariableFont_opsz.ttf<>uid://d2k7qmpyqy6jm::::res://scenes/setting.tscn
 dialogue2.tscn::PackedScene::7299931395908433548::1718024236::0::1::::<><>::res://scripts/dialogue2.gd<>uid://b656b8k7rct7w::::res://background/room.jpg<>uid://d1wimca0mlx68::::res://background/dialog.png<>uid://n372d5b8rytk::::res://background/nobody.png<>uid://cnkd4fdmriu21::::res://background/new_style_box_flat.tres<>uid://dmcupxn2vy5sx::::res://background/Jaro-Regular-VariableFont_opsz.ttf<>uid://d2k7qmpyqy6jm::::res://scenes/setting.tscn<>uid://dt483lgrpdu4m::::res://background/press.tres
 dialogue.tscn::PackedScene::1135385362042270144::1717920509::0::1::::<><>::res://scripts/dialogue.gd<>uid://dmcupxn2vy5sx::::res://background/Jaro-Regular-VariableFont_opsz.ttf<>uid://dkh7piu30wxwb::::res://background/parchment.png<>uid://d2k7qmpyqy6jm::::res://scenes/setting.tscn
-enemy.tscn::PackedScene::2519527244929211646::1718027457::0::1::::<><>::res://scripts/enemy.gd
+enemy.tscn::PackedScene::2519527244929211646::1718103378::0::1::::<><>::res://scripts/enemy.gd
 game.tscn::PackedScene::414309887682022361::1718102225::0::1::::<><>::res://scripts/game.gd<>uid://dtgiby6u0ej0v::::res://scenes/manu.tscn<>uid://qf8vpqbnf03m::::res://scenes/dialogue.tscn<>uid://poa2wgmkif4f::::res://scenes/dialogue1.tscn<>uid://dcae2k6asb6bg::::res://scenes/dialogue2.tscn<>uid://boniygjfkwbaa::::res://scenes/level_1.tscn<>res://scripts/GameManager.gd<>uid://bwpv5528mrm8x::::res://scenes/main_character.tscn
+genie.tscn::PackedScene::-1::1718103242::0::1::::<><>::
 healthbar.tscn::PackedScene::1319501831440427299::1718097095::0::1::::<><>::res://scripts/healthbar.gd
+king.tscn::PackedScene::-1::1718103242::0::1::::<><>::
 level_1.tscn::PackedScene::3396430329708927668::1718102228::0::1::::<><>::uid://bgmcwamawklrg::::res://assets/Backgrounds/Tilesets/TilesetFloor.png<>uid://ds3ycel3pa5p4::::res://assets/Backgrounds/Tilesets/TilesetHouse.png<>uid://b62ecpfslq606::::res://assets/Forest BETA V3/Forest Props.png<>uid://djdgad12furxc::::res://assets/Forest BETA V3/Forest Structures.png<>uid://xkp8sv14qrjf::::res://assets/Forest BETA V3/Trees.png<>uid://dt8qbm8qqvtf7::::res://assets/Forest BETA V3/Water Tileset.png<>uid://dbamdo3hcvqq2::::res://assets/48x48 resize/gentle animations (48x48 resize) v03.png<>uid://cm1i1wh43nkpn::::res://assets/AdventureBegins_Demo.png<>uid://chcj3gqx0rxc4::::res://assets/Backgrounds/Animated/Water Ripples/SpriteSheet16x16.png<>uid://b2ncfcf3d332m::::res://assets/Backgrounds/Vehicles/Boat.png<>uid://cbocfexdbqovn::::res://assets/Backgrounds/Tilesets/TilesetNature.png<>uid://bjidft403v2wk::::res://assets/Backgrounds/Animated/Tilesets/Interior/TilesetInterior.png<>uid://og3capxkgino::::res://assets/Backgrounds/Animated/Tilesets/Interior/Elements.png<>uid://dat5605gfu14r::::res://assets/Backgrounds/Animated/Tilesets/Interior/TilesetWallSimple.png<>uid://dvhfs7httxhe5::::res://assets/Forest BETA V3/Forest Cliff.png<>uid://b7yixl5fhdd7o::::res://assets/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>uid://dsifk3m81x16v::::res://assets/Backgrounds/Tilesets/TilesetElement.png<>uid://bvu7nef0oy7db::::res://assets/Texture/TX Props.png<>uid://bxm136a2ifvfi::::res://assets/Texture/TX Struct.png<>uid://8io38ubyl880::::res://assets/Texture/TX Tileset Grass.png<>uid://bx6s1xmiae67i::::res://assets/Texture/TX Tileset Stone Ground.png<>uid://daxhe4sqvy2cs::::res://assets/Texture/TX Tileset Wall.png<>uid://b2yvdv7ftadl3::::res://assets/gentle animations/gentle waterfall A v01.png<>uid://bwpv5528mrm8x::::res://scenes/main_character.tscn<>uid://d2k7qmpyqy6jm::::res://scenes/setting.tscn<>uid://cheqyyhjj1s3::::res://scenes/level_first_to_second.tscn
 level_1_start.tscn::PackedScene::6683362784071176957::1718102231::0::1::::<><>::uid://8io38ubyl880::::res://assets/Texture/TX Tileset Grass.png<>uid://bxm136a2ifvfi::::res://assets/Texture/TX Struct.png<>uid://b62ecpfslq606::::res://assets/Forest BETA V3/Forest Props.png<>uid://djdgad12furxc::::res://assets/Forest BETA V3/Forest Structures.png<>uid://xkp8sv14qrjf::::res://assets/Forest BETA V3/Trees.png<>uid://dsifk3m81x16v::::res://assets/Backgrounds/Tilesets/TilesetElement.png<>uid://dt8qbm8qqvtf7::::res://assets/Forest BETA V3/Water Tileset.png<>uid://bgmcwamawklrg::::res://assets/Backgrounds/Tilesets/TilesetFloor.png<>uid://dbamdo3hcvqq2::::res://assets/48x48 resize/gentle animations (48x48 resize) v03.png<>uid://chcj3gqx0rxc4::::res://assets/Backgrounds/Animated/Water Ripples/SpriteSheet16x16.png<>uid://ds3ycel3pa5p4::::res://assets/Backgrounds/Tilesets/TilesetHouse.png<>uid://b2ncfcf3d332m::::res://assets/Backgrounds/Vehicles/Boat.png<>uid://cbocfexdbqovn::::res://assets/Backgrounds/Tilesets/TilesetNature.png<>uid://bjidft403v2wk::::res://assets/Backgrounds/Animated/Tilesets/Interior/TilesetInterior.png<>uid://bvu7nef0oy7db::::res://assets/Texture/TX Props.png<>uid://og3capxkgino::::res://assets/Backgrounds/Animated/Tilesets/Interior/Elements.png<>uid://dat5605gfu14r::::res://assets/Backgrounds/Animated/Tilesets/Interior/TilesetWallSimple.png<>uid://dvhfs7httxhe5::::res://assets/Forest BETA V3/Forest Cliff.png<>uid://bx6s1xmiae67i::::res://assets/Texture/TX Tileset Stone Ground.png<>uid://b7yixl5fhdd7o::::res://assets/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>uid://daxhe4sqvy2cs::::res://assets/Texture/TX Tileset Wall.png<>uid://cm1i1wh43nkpn::::res://assets/AdventureBegins_Demo.png<>uid://b2yvdv7ftadl3::::res://assets/gentle animations/gentle waterfall A v01.png<>uid://bwpv5528mrm8x::::res://scenes/main_character.tscn<>uid://c5313xc72yt17::::res://scenes/player.tscn
 level_2.tscn::PackedScene::5440099046185337192::1718102235::0::1::::<><>::uid://d0568dsqyphy0::::res://assets/Backgrounds/Tilesets/TilesetField.png<>uid://bgmcwamawklrg::::res://assets/Backgrounds/Tilesets/TilesetFloor.png<>uid://bx6s1xmiae67i::::res://assets/Texture/TX Tileset Stone Ground.png<>uid://daxhe4sqvy2cs::::res://assets/Texture/TX Tileset Wall.png<>uid://cm1i1wh43nkpn::::res://assets/AdventureBegins_Demo.png<>uid://ds3ycel3pa5p4::::res://assets/Backgrounds/Tilesets/TilesetHouse.png<>uid://cexvyotnth6gu::::res://assets/Backgrounds/Tilesets/TilesetLogic.png<>uid://d3x06joru72u8::::res://assets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/HOUSE 2 - DAY.png<>uid://cbocfexdbqovn::::res://assets/Backgrounds/Tilesets/TilesetNature.png<>uid://djdgad12furxc::::res://assets/Forest BETA V3/Forest Structures.png<>uid://dvhfs7httxhe5::::res://assets/Forest BETA V3/Forest Cliff.png<>uid://b2ncfcf3d332m::::res://assets/Backgrounds/Vehicles/Boat.png<>uid://u5lqkcvuc06b::::res://assets/Backgrounds/Vehicles/Sail.png<>uid://b62ecpfslq606::::res://assets/Forest BETA V3/Forest Props.png<>uid://yjfna0o3234r::::res://assets/Forest BETA V3/Sample.png<>uid://c5h0yyefl1kgr::::res://assets/Forest BETA V3/Settlement.png<>uid://bxm136a2ifvfi::::res://assets/Texture/TX Struct.png<>uid://bwpv5528mrm8x::::res://scenes/main_character.tscn<>uid://btn3l86455we1::::res://scenes/level_second_to_third.tscn
@@ -572,24 +588,37 @@ level_second_to_third.tscn::PackedScene::3748567125667322026::1718102236::0::1::
 main_character.tscn::PackedScene::3962871159632264529::1718101721::0::1::::<><>::uid://uibhbx87uxah::::res://assets/sprites/knight.png<>res://scripts/main_character.gd<>uid://s2gac0vn8gvj::::res://scenes/healthbar.tscn
 manu.tscn::PackedScene::8505725177853939451::1718102225::0::1::::<><>::uid://duyttffmb03wx::::res://background/background.jpg<>res://scripts/manu.gd<>uid://dmcupxn2vy5sx::::res://background/Jaro-Regular-VariableFont_opsz.ttf<>uid://cnkd4fdmriu21::::res://background/new_style_box_flat.tres<>uid://dt483lgrpdu4m::::res://background/press.tres<>uid://g5sbuuit4dj3::::res://background/manu.tres<>uid://b07y6p24p8tn5::::res://background/manu_press'.tres<>uid://cwhgest3ym4my::::res://background/black_texture.jpeg
 player.tscn::PackedScene::6937939110299755472::1718102226::0::1::::<><>::res://scripts/player.gd
+princess.tscn::PackedScene::-1::1718103258::0::1::::<><>::
 setting.tscn::PackedScene::9076976777882859450::1718102226::0::1::::<><>::res://scripts/setting.gd<>uid://cwhgest3ym4my::::res://background/black_texture.jpeg<>uid://dmcupxn2vy5sx::::res://background/Jaro-Regular-VariableFont_opsz.ttf<>uid://cnkd4fdmriu21::::res://background/new_style_box_flat.tres<>uid://dt483lgrpdu4m::::res://background/press.tres
+snowman.tscn::PackedScene::-1::1718103258::0::1::::<><>::
 teleport_basement.tscn::PackedScene::-1::1718010348::0::1::::<><>::
 world_2.tscn::PackedScene::4779033910526770571::1718102236::0::1::::<><>::uid://c5313xc72yt17::::res://scenes/player.tscn<>uid://bb5qil6ydnuru::::res://scenes/enemy.tscn
-::res://scripts/::1718102809
+zombie.tscn::PackedScene::-1::1718103258::0::1::::<><>::
+::res://scripts/::1718103378
+asimole.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::
 basic_sword.gd::GDScript::-1::1718010348::0::1::::<>Area2D<>::
+cliff_side.gd::GDScript::-1::1718103258::0::1::::<>Node2D<>::
+demonpot.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::
 dialogue1.gd::GDScript::-1::1717920509::0::1::::<>Node2D<>::
 dialogue2.gd::GDScript::-1::1718097815::0::1::::<>Node2D<>::
 dialogue.gd::GDScript::-1::1717920509::0::1::::<>Node2D<>::
-enemy.gd::GDScript::-1::1718010348::0::1::::<>CharacterBody2D<>::
+enemy.gd::GDScript::-1::1718103378::0::1::::<>CharacterBody2D<>::
 game.gd::GDScript::-1::1718102013::0::1::::<>Node2D<>::
 GameManager.gd::GDScript::-1::1718101220::0::1::::<>Node<>::
+genie.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::
 global.gd::GDScript::-1::1718010348::0::1::::<>Node<>::
 healthbar.gd::GDScript::-1::1718010348::0::1::::<>ProgressBar<>::
+king.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::
 level_first_to_second.gd::GDScript::-1::1718010348::0::1::::<>Area2D<>::
 level_second_to_third.gd::GDScript::-1::1718010348::0::1::::<>Area2D<>::
 main_character.gd::GDScript::-1::1718010348::0::1::::<>CharacterBody2D<>::
 manu.gd::GDScript::-1::1718101220::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1718101220::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1718103378::0::1::::<>CharacterBody2D<>::
+princess.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::
+Saveandload.gd::GDScript::-1::1718102838::0::1::::<>Node<>::
 SaveLoadManager.gd::GDScript::-1::1717920509::0::1::::<>Node<>::
 setting.gd::GDScript::-1::1718097609::0::1::::<>Control<>::
+snowman.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::
 userdata.json::JSON::-1::1717920509::0::1::::<><>::
+world_2.gd::GDScript::-1::1718103258::0::1::::<>Node2D<>::
+zombie.gd::GDScript::-1::1718103258::0::1::::<>CharacterBody2D<>::

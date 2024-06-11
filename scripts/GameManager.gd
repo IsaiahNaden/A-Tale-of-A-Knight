@@ -2,7 +2,7 @@ extends Node
 
 var LavelBase : Node
 var Player : CharacterBody2D
-var playerScenePath = "res://scenes/main_character.tscn"
+var playerScenePath = "res://scripts/player.gd"
 var LoadedLevel : String 
 var SpawnIndex : int
 

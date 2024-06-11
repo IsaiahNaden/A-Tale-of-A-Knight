@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://f5xvgs6hacpd"]
+[gd_scene load_steps=10 format=3 uid="uid://f5xvgs6hacpd"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_i3x2i"]
 [ext_resource type="PackedScene" uid="uid://dtgiby6u0ej0v" path="res://scenes/manu.tscn" id="2_o23qk"]
@@ -7,13 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://dcae2k6asb6bg" path="res://scenes/dialogue2.tscn" id="5_7eb44"]
 [ext_resource type="PackedScene" uid="uid://boniygjfkwbaa" path="res://scenes/level_1.tscn" id="6_eid0o"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="7_j0q4q"]
+[ext_resource type="Script" path="res://scripts/Saveandload.gd" id="8_dna0b"]
 [ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="13_8c7wv"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_i3x2i")
-
-[node name="GameManager" type="Node" parent="."]
-script = ExtResource("7_j0q4q")
 
 [node name="interface" type="Node" parent="."]
 
@@ -31,3 +29,9 @@ process_mode = 1
 [node name="level_1_start" parent="base_game" instance=ExtResource("6_eid0o")]
 
 [node name="MainCharacter" parent="base_game" instance=ExtResource("13_8c7wv")]
+
+[node name="Saveandload" type="Node" parent="."]
+script = ExtResource("8_dna0b")
+
+[node name="GameManager" type="Node" parent="Saveandload"]
+script = ExtResource("7_j0q4q")

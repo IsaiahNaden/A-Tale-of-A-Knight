@@ -19,3 +19,4 @@ res://scenes/level_second_to_third.tscn
 res://scripts/dialogue2.gd
 res://scripts/SaveandLoad.gd
 res://scripts/player.gd
+res://scripts/Saveandload.gd
