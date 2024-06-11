@@ -1,0 +1,28 @@
+[gd_scene load_steps=8 format=3 uid="uid://f5xvgs6hacpd"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_i3x2i"]
+[ext_resource type="PackedScene" uid="uid://dtgiby6u0ej0v" path="res://scenes/manu.tscn" id="2_o23qk"]
+[ext_resource type="PackedScene" uid="uid://qf8vpqbnf03m" path="res://scenes/dialogue.tscn" id="3_efhkc"]
+[ext_resource type="PackedScene" uid="uid://poa2wgmkif4f" path="res://scenes/dialogue1.tscn" id="4_ywaw2"]
+[ext_resource type="PackedScene" uid="uid://dcae2k6asb6bg" path="res://scenes/dialogue2.tscn" id="5_7eb44"]
+[ext_resource type="Script" path="res://scripts/SaveandLoad.gd" id="6_rp4pe"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="7_j0q4q"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_i3x2i")
+
+[node name="interface" type="Node" parent="."]
+
+[node name="manu" parent="interface" instance=ExtResource("2_o23qk")]
+
+[node name="dialogue" parent="interface" instance=ExtResource("3_efhkc")]
+
+[node name="dailgue1" parent="interface" instance=ExtResource("4_ywaw2")]
+
+[node name="dialogue2" parent="interface" instance=ExtResource("5_7eb44")]
+
+[node name="Saveandload" type="Node" parent="."]
+script = ExtResource("6_rp4pe")
+
+[node name="GameManager" type="Node" parent="Saveandload"]
+script = ExtResource("7_j0q4q")

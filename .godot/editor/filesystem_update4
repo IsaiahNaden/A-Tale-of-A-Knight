@@ -1,0 +1,7 @@
+res://scenes/game.tscn
+res://scripts/game.gd
+res://scripts/setting.gd
+res://scenes/manu.tscn
+res://scenes/setting.tscn
+res://scripts/GameManager.gd
+res://scripts/SaveandLoad.gd
