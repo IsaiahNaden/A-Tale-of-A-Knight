@@ -12,8 +12,9 @@ func SaveGame():
 		username :{
 		"username": $interface/dailgue1.username,
 		"user_id": $interface/dailgue1.userid,
-		"scene": $GameManager.LoadedLevel,
-		"position" : $base_game/MainCharacter.player_movement()
+		"position": $"../base_game/MainCharacter".position , 
+		"scene" : $GameManager.LoadLevel()
+
 		}
 	}
 

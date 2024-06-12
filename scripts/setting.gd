@@ -1,6 +1,10 @@
 extends Control
 
+var background 
+var music_12 = AudioServer.get_bus_index("music1-2")
+
 func _ready():
+
 	$stop.hide()
 	$stop_button.show()
 	$setting.hide()
@@ -10,9 +14,7 @@ func _ready():
 	add_resolution_item()
 	screen_mode.item_selected.connect(on_window_mode_seleced)
 	resolutionmode.item_selected.connect(on_resolution_selected)
-
-	
-
+	$setting/HSlider.value = db_to_linear(AudioServer.get_bus_volume_db(0))
 
 func _on_resume_pressed():
 	$stop.hide()
@@ -90,7 +92,7 @@ func on_resolution_selected(index : int) -> void:
 	DisplayServer.window_set_size(RESOLUTION_DICTIONARY.values()[index])
 
 func _on_h_slider_value_changed(value):
-	AudioServer.set_bus_volume_db(music , linear_to_db(value))
+	release_focus()
 
 
 func _on_button_pressed():
@@ -98,5 +100,3 @@ func _on_button_pressed():
 	$stop.show()
 	$Button.hide()
 	$stop_button.hide()
-	
-	

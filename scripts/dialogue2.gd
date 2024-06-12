@@ -24,7 +24,6 @@ func _ready():
 	$text_full.hide()
 	$text_full2.hide()
 	$">>>Two".hide()
-	$setting.hide()
 	$"next>".hide()
 
 func start_dialogue():

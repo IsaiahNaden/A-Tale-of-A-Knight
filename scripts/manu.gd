@@ -42,8 +42,7 @@ var loadgame
 var path : String
 var SpawnIndex : int 
 func _on_loadgame_pressed():
-	loadgame = GameManager.LoadLevel(path , SpawnIndex)
-	
+
 	$tips.hide()
 	$move.hide()
 	$other.hide()
@@ -52,6 +51,4 @@ func _on_loadgame_pressed():
 	$GameName.hide()
 	$VBoxContainer.hide()
 	$back.hide()
-	var base_game 
-	base_game = $"../../base_game"
-	get_node("loadgame").loadgame(base_game, 0)#scene level onew wakeup ,0 
+	

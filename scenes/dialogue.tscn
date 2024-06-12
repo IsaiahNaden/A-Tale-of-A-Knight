@@ -1,9 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://qf8vpqbnf03m"]
+[gd_scene load_steps=14 format=3 uid="uid://qf8vpqbnf03m"]
 
 [ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_137sj"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_268d6"]
 [ext_resource type="Texture2D" uid="uid://dkh7piu30wxwb" path="res://background/parchment.png" id="3_uwxhc"]
-[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="9_dkvgq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sl6ip"]
 
@@ -121,8 +120,6 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_dqshs")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_4dj5k")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vsmcw")
 text = ">>>"
-
-[node name="setting" parent="." instance=ExtResource("9_dkvgq")]
 
 [connection signal="timeout" from="start_background" to="." method="_on_start_background_timeout"]
 [connection signal="timeout" from="end_background" to="." method="_on_end_background_timeout"]

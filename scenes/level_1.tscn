@@ -1,5 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://boniygjfkwbaa"]
+[gd_scene load_steps=54 format=3 uid="uid://boniygjfkwbaa"]
 
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_022y7"]
 [ext_resource type="Texture2D" uid="uid://bgmcwamawklrg" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_iyb3u"]
 [ext_resource type="Texture2D" uid="uid://ds3ycel3pa5p4" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="2_tamri"]
 [ext_resource type="Texture2D" uid="uid://b62ecpfslq606" path="res://assets/Forest BETA V3/Forest Props.png" id="3_xcir1"]
@@ -26,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="24_0j5d7"]
 [ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="26_j4k54"]
 [ext_resource type="PackedScene" uid="uid://cheqyyhjj1s3" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
+[ext_resource type="AudioStream" uid="uid://csn4cbeiuyu68" path="res://background/chilling-time-200497.mp3" id="27_bn4sf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]
 texture = ExtResource("1_iyb3u")
@@ -16693,6 +16695,7 @@ sources/25 = SubResource("TileSetAtlasSource_rndad")
 process_mode = 1
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("1_022y7")
 metadata/_edit_vertical_guides_ = [23.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -16733,3 +16736,11 @@ z_index = 1
 position = Vector2(1871, -337)
 
 [node name="setting" parent="." instance=ExtResource("26_j4k54")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("27_bn4sf")
+volume_db = -20.0
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
