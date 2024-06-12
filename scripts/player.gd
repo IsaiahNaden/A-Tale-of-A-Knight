@@ -48,13 +48,11 @@ func _ready():
 	invulnerability_inactive_label_timer = $invulnerability_inactive_label_timer
 	invulnerability_label.visible = false
 	invulnerability_inactive_label.visible = false
-
-
+	
 func _physics_process(delta):
 	player_movement(delta)
 	enemy_attack()
 	attack()
-	current_camera()
 	update_health()
 	
 	if health <= 0:
@@ -218,16 +216,7 @@ func _on_deal_attack_timer_timeout():
 	attack_ip = false
 
 
-func current_camera():
-	if global.current_scene == "world":
-		$world_camera.enabled = true
-		$cliffside_camera.enabled = false
-	elif global.current_scene == "cliff_side":
-		$world_camera.enabled = false
-		$cliffside_camera.enabled = true
-		
-		
-		
+
 		
 func update_health():
 	var healthbar = $healthbar
@@ -282,3 +271,9 @@ func _on_invulnerability_label_timer_timeout():
 func _on_invulnerability_inactive_label_timer_timeout():
 	invulnerability_inactive_label.visible = false
 
+
+
+func _on_player_hitbox_area_entered(area):
+	if area.is_in_group('Teleport basement'):
+		position.x = 570
+		position.y = 180

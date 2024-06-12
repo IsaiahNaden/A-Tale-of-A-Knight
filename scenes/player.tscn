@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://da4xxv2lsbn2i"]
+[gd_scene load_steps=40 format=3 uid="uid://cfitma21jjg3q"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ud55d"]
 [ext_resource type="Texture2D" uid="uid://di0b66h30ti0s" path="res://art/character/Knight1_Attack.png" id="2_yiclo"]
@@ -273,7 +273,7 @@ radius = 2.63008
 [sub_resource type="CircleShape2D" id="CircleShape2D_46ao1"]
 radius = 17.5772
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 position = Vector2(18, 36)
 scale = Vector2(1.966, 1.199)
@@ -304,22 +304,6 @@ wait_time = 1.2
 
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
-
-[node name="world_camera" type="Camera2D" parent="."]
-limit_left = 0
-limit_top = 0
-limit_right = 415
-limit_bottom = 256
-limit_smoothed = true
-rotation_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
-[node name="cliffside_camera" type="Camera2D" parent="."]
-limit_left = -80
-limit_top = 0
-limit_right = 416
-limit_bottom = 239
 
 [node name="healthbar" type="ProgressBar" parent="."]
 modulate = Color(0.223529, 0.129412, 0.964706, 1)
@@ -367,6 +351,7 @@ one_shot = true
 wait_time = 10.0
 
 [node name="InvulnerabilityLabel" type="Label" parent="."]
+visible = false
 offset_left = -34.588
 offset_top = -33.3611
 offset_right = 129.412
@@ -379,6 +364,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="InvulnerabilityInactiveLabel" type="Label" parent="."]
+visible = false
 offset_left = -35.0966
 offset_top = -32.5271
 offset_right = 141.903
@@ -389,6 +375,7 @@ text = "Invulnerability Inactive"
 [node name="invulnerability_inactive_label_timer" type="Timer" parent="."]
 wait_time = 3.0
 
+[connection signal="area_entered" from="player_hitbox" to="." method="_on_player_hitbox_area_entered"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bow3j83f0b888"]
+[gd_scene load_steps=8 format=3 uid="uid://bow3j83f0b888"]
 
 [ext_resource type="Script" path="res://scripts/king.gd" id="1_mbavs"]
 [ext_resource type="Texture2D" uid="uid://c3nc32ig6tydl" path="res://art/character/King_Sprite.png" id="2_ip3k2"]
@@ -37,6 +37,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6idd"]
+size = Vector2(24, 27)
+
 [node name="king" type="CharacterBody2D"]
 script = ExtResource("1_mbavs")
 
@@ -44,3 +47,11 @@ script = ExtResource("1_mbavs")
 sprite_frames = SubResource("SpriteFrames_vhf7a")
 animation = &"idle"
 frame_progress = 0.439983
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_c6idd")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
