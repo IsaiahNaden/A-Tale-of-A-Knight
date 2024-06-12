@@ -30,6 +30,9 @@ var invulnerability_label_timer: Timer
 var invulnerability_inactive_label: Label
 var invulnerability_inactive_label_timer: Timer
 
+var teleport_destination: Vector2
+var is_teleporting = false
+
 
 
 
@@ -49,6 +52,8 @@ func _ready():
 	invulnerability_inactive_label_timer = $invulnerability_inactive_label_timer
 	invulnerability_label.visible = false
 	invulnerability_inactive_label.visible = false
+	
+	teleport_destination = Vector2(100, 100)
 	
 	
 
@@ -105,6 +110,10 @@ func player_movement(delta):
 			invulnerability_label.visible = false
 			$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 			print("Player is no longer invulnerable")
+			
+			
+	if Input.is_action_just_pressed("ui_teleport") and not is_teleporting:
+		teleport_player()
 			
 	
 	
@@ -248,6 +257,25 @@ func update_health():
 		healthbar.visible = false
 	else:
 		healthbar.visible = true
+		
+		
+func teleport_player():
+	is_teleporting = true
+	var teleport_distance = 50
+	
+	var teleport_offset = Vector2.ZERO
+	if current_dir == "right":
+		teleport_offset.x = teleport_distance
+	elif current_dir == "left":
+		teleport_offset.x = -teleport_distance
+	elif current_dir == "down":
+		teleport_offset.y = teleport_distance
+	elif current_dir == "up":
+		teleport_offset.y = -teleport_distance
+		
+	position += teleport_offset
+	
+	$teleport_reset_timer.start()
 
 
 func _on_regen_timer_timeout():
@@ -298,3 +326,7 @@ func _on_invulnerability_inactive_label_timer_timeout():
 
 
 
+
+
+func _on_teleport_reset_timer_timeout():
+	is_teleporting = false

@@ -13,6 +13,8 @@ var double_damage_active = false
 var double_damage_timer = Timer
 
 
+
+
 func _ready():
 	double_damage_timer = $double_damage_timer
 

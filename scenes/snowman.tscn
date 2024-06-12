@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://d1j43tehahhl0"]
 
 [ext_resource type="Script" path="res://scripts/snowman.gd" id="1_qpnbv"]
-[ext_resource type="Texture2D" uid="uid://7wg1m81a6kio" path="res://art/character/Snowloff B[anim].png" id="2_a1m7g"]
+[ext_resource type="Texture2D" path="res://art/character/Snowloff B[anim].png" id="2_a1m7g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1wfi"]
 atlas = ExtResource("2_a1m7g")

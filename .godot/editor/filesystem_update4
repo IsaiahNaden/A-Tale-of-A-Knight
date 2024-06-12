@@ -1,0 +1,8 @@
+res://scenes/player.tscn
+res://scenes/enemy.tscn
+res://scenes/world_2.tscn
+res://scenes/cliff_side.tscn
+res://scenes/boss.tscn
+res://scripts/boss.gd
+res://scripts/enemy.gd
+res://scripts/player.gd

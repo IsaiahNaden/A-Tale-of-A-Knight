@@ -1,0 +1,14 @@
+Timer
+ProgressBar
+CollisionShape2D
+Area2D
+AnimatedSprite2D
+CharacterBody2D
+Node2D
+Label
+AnimationPlayer
+Sprite2D
+Node
+CanvasLayer
+AudioStreamPlayer2D
+Camera2D

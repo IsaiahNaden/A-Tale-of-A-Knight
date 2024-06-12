@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cpudwd1ytdntk"]
 
 [ext_resource type="Script" path="res://scripts/zombie.gd" id="1_1liws"]
-[ext_resource type="Texture2D" uid="uid://dkjf0ndnoc2gc" path="res://art/character/Zombie 1B[anim].png" id="1_e62v6"]
+[ext_resource type="Texture2D" path="res://art/character/Zombie 1B[anim].png" id="1_e62v6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ahdmi"]
 atlas = ExtResource("1_e62v6")

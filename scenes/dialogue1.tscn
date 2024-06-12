@@ -1,0 +1,220 @@
+[gd_scene load_steps=22 format=3 uid="uid://poa2wgmkif4f"]
+
+[ext_resource type="Script" path="res://scripts/dialogue1.gd" id="1_kd8r2"]
+[ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="1_x8w30"]
+[ext_resource type="Texture2D" uid="uid://n372d5b8rytk" path="res://background/nobody.png" id="2_8x6r5"]
+[ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="3_j4r4h"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_53xl5"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="5_bv6ys"]
+[ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_okj5x"]
+[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="8_l5ky5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r05yx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s1s1r"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ip5je"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sppjp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p85gv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o83mg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ir7ad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfrrj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfmgh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_amj4u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uf314"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_muvop"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4llf6"]
+
+[node name="dailgue1" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_kd8r2")
+
+[node name="dialogue" type="VBoxContainer" parent="."]
+offset_left = 465.0
+offset_top = 424.0
+offset_right = 1320.0
+offset_bottom = 518.0
+
+[node name="41094850" type="Sprite2D" parent="dialogue"]
+position = Vector2(492.5, 115.5)
+scale = Vector2(1.915, 2.16667)
+texture = ExtResource("1_x8w30")
+
+[node name="Nobody" type="Sprite2D" parent="dialogue"]
+position = Vector2(-72.75, 278.25)
+scale = Vector2(0.9, 0.891111)
+texture = ExtResource("2_8x6r5")
+
+[node name="Dialog" type="Sprite2D" parent="dialogue"]
+position = Vector2(462.25, 74)
+scale = Vector2(4.02321, 0.793249)
+texture = ExtResource("3_j4r4h")
+
+[node name="name" type="Label" parent="dialogue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 35
+text = "King :"
+
+[node name="text" type="Label" parent="dialogue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+
+[node name="profile" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 750.044
+offset_top = 343.025
+offset_right = 1155.04
+offset_bottom = 700.025
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="41094850" type="Sprite2D" parent="profile"]
+position = Vector2(207.958, 255.475)
+scale = Vector2(1.915, 2.23494)
+texture = ExtResource("1_x8w30")
+
+[node name="name" type="Label" parent="profile"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 50
+text = "What is your name ?"
+
+[node name="input_name" type="LineEdit" parent="profile"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 50
+
+[node name="label_error" type="Label" parent="profile"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.952941, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+text = "*Please enter a valid name "
+
+[node name="ID" type="Label" parent="profile"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 50
+text = "What is your ID?"
+
+[node name="input_ID" type="LineEdit" parent="profile"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 50
+
+[node name="label_error2" type="Label" parent="profile"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+text = "*Please enter a valid id"
+
+[node name="Done" type="Button" parent="profile"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("4_53xl5")
+theme_override_styles/hover = ExtResource("4_53xl5")
+theme_override_styles/disabled = ExtResource("5_bv6ys")
+theme_override_styles/focus = ExtResource("5_bv6ys")
+text = "Done"
+
+[node name="first" type="Timer" parent="."]
+
+[node name="second" type="Timer" parent="."]
+
+[node name="text_full" type="Label" parent="."]
+offset_left = 464.0
+offset_top = 473.0
+offset_right = 1280.0
+offset_bottom = 540.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+text = "Ah, brave warrior, you have answered the call in our kingdom's darkest hour. 
+Your courage is a beacon of hope amidst the shadows that now encroach upon us."
+
+[node name="text_full2" type="Label" parent="."]
+offset_left = 467.0
+offset_top = 472.0
+offset_right = 1265.0
+offset_bottom = 539.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+text = "Brave warrior, before you embark on this perilous quest, may I have the honor
+of knowing your name and hearing of your lineage?"
+
+[node name=">>>" type="Button" parent="."]
+offset_left = 1329.0
+offset_top = 410.0
+offset_right = 1406.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r05yx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_s1s1r")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ip5je")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sppjp")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p85gv")
+text = ">>>"
+
+[node name=">>>two" type="Button" parent="."]
+offset_left = 1342.0
+offset_top = 410.0
+offset_right = 1393.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o83mg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ir7ad")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tfrrj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tfmgh")
+text = ">>>"
+
+[node name="next >" type="Button" parent="."]
+offset_left = 1330.0
+offset_top = 410.0
+offset_right = 1401.0
+offset_bottom = 450.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_okj5x")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxEmpty_amj4u")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uf314")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_muvop")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4llf6")
+text = " next >"
+
+[node name="setting" parent="." instance=ExtResource("8_l5ky5")]
+visible = false
+
+[connection signal="pressed" from="profile/Done" to="." method="_on_done_pressed"]
+[connection signal="timeout" from="first" to="." method="_on_first_timeout"]
+[connection signal="timeout" from="second" to="." method="_on_second_timeout"]
+[connection signal="pressed" from=">>>" to="." method="_on__pressed"]
+[connection signal="pressed" from=">>>two" to="." method="_on_two_pressed"]
+[connection signal="pressed" from="next >" to="." method="_on_next__pressed"]

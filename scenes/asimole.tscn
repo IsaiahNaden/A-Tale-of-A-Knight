@@ -1,38 +1,29 @@
-[gd_scene load_steps=15 format=3 uid="uid://df1a45v1tilib"]
+[gd_scene load_steps=14 format=3 uid="uid://df1a45v1tilib"]
 
 [ext_resource type="Script" path="res://scripts/asimole.gd" id="1_joqrb"]
-[ext_resource type="Texture2D" uid="uid://by1jvgdapuwpa" path="res://art/character/Asimole 1D[anim].png" id="1_takph"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5t3lv"]
-atlas = ExtResource("1_takph")
 region = Rect2(0, 640, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lyamd"]
-atlas = ExtResource("1_takph")
 region = Rect2(192, 640, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r6gb"]
-atlas = ExtResource("1_takph")
 region = Rect2(384, 640, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qpqyh"]
-atlas = ExtResource("1_takph")
 region = Rect2(576, 640, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_algj8"]
-atlas = ExtResource("1_takph")
 region = Rect2(0, 0, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ayql5"]
-atlas = ExtResource("1_takph")
 region = Rect2(192, 0, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1y36x"]
-atlas = ExtResource("1_takph")
 region = Rect2(384, 0, 192, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwo7f"]
-atlas = ExtResource("1_takph")
 region = Rect2(576, 0, 192, 160)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c8mxl"]

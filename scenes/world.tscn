@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://q3cnci6k0rpw"]
+[gd_scene load_steps=10 format=3 uid="uid://7hgee7vp3b2o"]
 
-[ext_resource type="Texture2D" uid="uid://b6tose6sla23h" path="res://art/tilesets/plains.png" id="1_i21it"]
-[ext_resource type="Texture2D" uid="uid://bf1y0v846m4ly" path="res://art/tilesets/grass.png" id="2_5iwr1"]
-[ext_resource type="Texture2D" uid="uid://cl3ojmivaqvfe" path="res://art/objects/objects.png" id="3_re3ec"]
+[ext_resource type="Texture2D" path="res://art/tilesets/plains.png" id="1_i21it"]
+[ext_resource type="Texture2D" path="res://art/tilesets/grass.png" id="2_5iwr1"]
+[ext_resource type="Texture2D" path="res://art/objects/objects.png" id="3_re3ec"]
 [ext_resource type="PackedScene" uid="uid://da4xxv2lsbn2i" path="res://scenes/player.tscn" id="4_g8dvc"]
 [ext_resource type="PackedScene" uid="uid://b4vcpj0a2svmr" path="res://scenes/enemy.tscn" id="5_hnt83"]
 

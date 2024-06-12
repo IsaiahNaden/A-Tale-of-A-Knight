@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnuv70u5lo0jg"]
+
+[ext_resource type="Texture2D" uid="uid://hr17axoybyfl" path="res://assets/characters/Skeleton enemy.png" id="1_ux77m"]
+[ext_resource type="Script" path="res://scenes/FiniteStateMachine.gd" id="2_6ve8y"]
+[ext_resource type="Script" path="res://scripts/state.gd" id="3_betvp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mxubw"]
+radius = 8.0
+
+[node name="skeleton" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ux77m")
+hframes = 13
+vframes = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="Sprite2D"]
+custom_minimum_size = Vector2(100, -100)
+offset_left = -45.0
+offset_top = 19.0
+offset_right = 44.0
+offset_bottom = 46.0
+max_value = 30.0
+value = 30.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("CapsuleShape2D_mxubw")
+
+[node name="debug" type="Label" parent="."]
+offset_left = -23.0
+offset_top = -36.0
+offset_right = 26.0
+offset_bottom = -13.0
+text = "debug
+"
+
+[node name="FiniteStateMachine" type="Node2D" parent="."]
+script = ExtResource("2_6ve8y")
+
+[node name="Follow" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_betvp")
+
+[node name="AttackSkeleton" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_betvp")
+
+[node name="DeathSkeleton" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_betvp")
