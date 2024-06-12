@@ -1,5 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://c8hljs8w7a5sh"]
+[gd_scene load_steps=39 format=3 uid="uid://c8hljs8w7a5sh"]
 
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_26fqj"]
 [ext_resource type="Texture2D" uid="uid://d0568dsqyphy0" path="res://assets/Backgrounds/Tilesets/TilesetField.png" id="1_kfnil"]
 [ext_resource type="Texture2D" uid="uid://bgmcwamawklrg" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="2_shkvj"]
 [ext_resource type="Texture2D" uid="uid://bx6s1xmiae67i" path="res://assets/Texture/TX Tileset Stone Ground.png" id="3_by601"]
@@ -8964,6 +8965,7 @@ sources/16 = SubResource("TileSetAtlasSource_gpayw")
 
 [node name="level_2" type="Node2D"]
 position = Vector2(-1503, -5)
+script = ExtResource("1_26fqj")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-4, 53)
@@ -8991,3 +8993,5 @@ limit_bottom = 1072
 
 [node name="level_second_to_third" parent="." instance=ExtResource("20_2svhu")]
 position = Vector2(1219, 77)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

@@ -99,3 +99,9 @@ func _on_button_pressed():
 	$stop_button.hide()
 	
 	
+
+
+func _on_save_game_pressed():
+	global.save_game_1()
+	global.save_game_2()
+	global.save_game_3()

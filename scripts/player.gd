@@ -58,8 +58,7 @@ func _physics_process(delta):
 	if health <= 0:
 		player_alive = false  #add respawn screen
 		health = 0
-		print("player has died")
-		self.queue_free()
+		get_tree().change_scene_to_file('res://scenes/respawn_screen.tscn')
 
 			
 	   

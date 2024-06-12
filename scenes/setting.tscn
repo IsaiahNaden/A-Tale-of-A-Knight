@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scenes/setting.gd" id="1_ia8b5"]
 [ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="2_o0hax"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_11mtm"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_k52id"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="5_21cnc"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="4_k52id"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="5_21cnc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgp80"]
 
@@ -130,7 +130,7 @@ offset_bottom = 699.0
 theme_override_constants/separation = 40
 
 [node name="BlackTexture" type="Sprite2D" parent="setting"]
-modulate = Color(1, 1, 1, 0.470588)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(259.5, 229.5)
 scale = Vector2(8.54911, 4.81696)
 texture = ExtResource("2_o0hax")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=53 format=3 uid="uid://sjfd70py787a"]
+[gd_scene load_steps=54 format=3 uid="uid://sjfd70py787a"]
 
 [ext_resource type="Texture2D" uid="uid://bgmcwamawklrg" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_iyb3u"]
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_rrggh"]
 [ext_resource type="Texture2D" uid="uid://ds3ycel3pa5p4" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="2_tamri"]
 [ext_resource type="Texture2D" uid="uid://b62ecpfslq606" path="res://assets/Forest BETA V3/Forest Props.png" id="3_xcir1"]
 [ext_resource type="Texture2D" uid="uid://djdgad12furxc" path="res://assets/Forest BETA V3/Forest Structures.png" id="4_54gyf"]
@@ -16696,6 +16697,7 @@ sources/25 = SubResource("TileSetAtlasSource_rndad")
 z_index = 1
 y_sort_enabled = true
 position = Vector2(4, 415)
+script = ExtResource("1_rrggh")
 metadata/_edit_vertical_guides_ = [23.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -16742,7 +16744,7 @@ script = SubResource("GDScript_f1ktg")
 
 [node name="king" parent="." instance=ExtResource("26_2t8la")]
 z_index = 5
-position = Vector2(365, -125)
+position = Vector2(1293, 283)
 
 [node name="enemy" parent="." instance=ExtResource("26_kdcjt")]
 z_index = 2
