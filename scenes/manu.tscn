@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://duyttffmb03wx" path="res://background/background.jpg" id="1_16ouh"]
 [ext_resource type="Script" path="res://scenes/manu.gd" id="1_w0fmo"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="2_ybg5i"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="3_bgfhf"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="4_tgq6v"]
-[ext_resource type="StyleBox" uid="uid://g5sbuuit4dj3" path="res://background/manu.tres" id="6_01dfw"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="3_bgfhf"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="4_tgq6v"]
+[ext_resource type="StyleBox" uid="uid://g5sbuuit4dj3" path="res://scenes/manu.tres" id="6_01dfw"]
 [ext_resource type="StyleBox" uid="uid://b07y6p24p8tn5" path="res://background/manu_press'.tres" id="7_fmlug"]
 [ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="8_8ilsq"]
 
