@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://poa2wgmkif4f"]
+[gd_scene load_steps=21 format=3 uid="uid://poa2wgmkif4f"]
 
 [ext_resource type="Script" path="res://scripts/dialogue1.gd" id="1_kd8r2"]
 [ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="1_x8w30"]
@@ -7,7 +7,6 @@
 [ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_53xl5"]
 [ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="5_bv6ys"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_okj5x"]
-[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="8_l5ky5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r05yx"]
 
@@ -50,15 +49,15 @@ position = Vector2(492.5, 115.5)
 scale = Vector2(1.915, 2.16667)
 texture = ExtResource("1_x8w30")
 
-[node name="Nobody" type="Sprite2D" parent="dialogue"]
-position = Vector2(-72.75, 278.25)
-scale = Vector2(0.9, 0.891111)
-texture = ExtResource("2_8x6r5")
-
 [node name="Dialog" type="Sprite2D" parent="dialogue"]
 position = Vector2(462.25, 74)
 scale = Vector2(4.02321, 0.793249)
 texture = ExtResource("3_j4r4h")
+
+[node name="Nobody" type="Sprite2D" parent="dialogue"]
+position = Vector2(-72.75, 278.25)
+scale = Vector2(0.9, 0.891111)
+texture = ExtResource("2_8x6r5")
 
 [node name="name" type="Label" parent="dialogue"]
 layout_mode = 2
@@ -208,9 +207,6 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_uf314")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_muvop")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4llf6")
 text = " next >"
-
-[node name="setting" parent="." instance=ExtResource("8_l5ky5")]
-visible = false
 
 [connection signal="pressed" from="profile/Done" to="." method="_on_done_pressed"]
 [connection signal="timeout" from="first" to="." method="_on_first_timeout"]

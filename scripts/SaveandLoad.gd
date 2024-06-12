@@ -1,23 +1,21 @@
 extends Node
 
-func _ready():
-	pass
 
-func _process(delta):
-	pass
-
-func SaveGame(name):
+func SaveGame():
 	var dir = DirAccess.open("user://")
 	if !dir.dir_exists("savedGames"):
 		dir.make_dir("savedGames")
 	dir = DirAccess.open("user://savedGames")
 	
-	var username = $GameManager.get_username()
-	var saveData = {
-		"username": $GameManager.get_username(),
-		"user_id": $GameManager.get_userid(),
-		"scene": $GameManager.LoadedLevel,
-		"spawnIndex": $GameManager.SpawnIndex
+	var username = $interface/dailgue1.username
+	var saveData = { 
+		username :{
+		"username": $interface/dailgue1.username,
+		"user_id": $interface/dailgue1.userid,
+		"position": $"../base_game/MainCharacter".position , 
+		"scene" : $GameManager.LoadLevel()
+
+		}
 	}
 
 	var saveJson = JSON.stringify(saveData)
@@ -29,7 +27,7 @@ func LoadGame(name):
 	var file = FileAccess.open("user://savedGames/" + name + ".json", FileAccess.READ)
 	if file.error != OK:
 		return
-	
+
 	var saveJson = file.get_as_text()
 	var json_parser = JSON.new()
 	var parse_result = json_parser.parse_string(saveJson)
@@ -42,6 +40,4 @@ func LoadGame(name):
 		$GameManager.user_id = saveData["user_id"]
 		$GameManager.LoadedLevel = saveData["scene"]
 		$GameManager.SpawnIndex = saveData["spawnIndex"]
-	else:
-		print("No data found for user:", name)
 	file.close()

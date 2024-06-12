@@ -24,7 +24,6 @@ func _ready():
 	$text_full.hide()
 	$text_full2.hide()
 	$">>>Two".hide()
-	$setting.hide()
 	$"next>".hide()
 
 func start_dialogue():
@@ -73,7 +72,7 @@ func _on__pressed():
 	$">>>Two".show()
 
 func _on_next_pressed():
-	queue_free()
+	get_tree().change_scene_to_file("res://scenes/level_1.tscn")
 
 
 func _on_two_pressed():

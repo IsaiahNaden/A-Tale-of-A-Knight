@@ -25,7 +25,6 @@ var current_char = 0
 
 func _ready():
 	start_dialogue()
-	$setting.hide()
 	$profile.hide()
 	$text_full.hide()
 	$text_full2.hide()

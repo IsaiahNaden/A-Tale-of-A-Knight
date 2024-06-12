@@ -1,5 +1,6 @@
-[gd_scene load_steps=52 format=3 uid="uid://boniygjfkwbaa"]
+[gd_scene load_steps=54 format=3 uid="uid://boniygjfkwbaa"]
 
+[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_022y7"]
 [ext_resource type="Texture2D" uid="uid://bgmcwamawklrg" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_iyb3u"]
 [ext_resource type="Texture2D" uid="uid://ds3ycel3pa5p4" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="2_tamri"]
 [ext_resource type="Texture2D" uid="uid://b62ecpfslq606" path="res://assets/Forest BETA V3/Forest Props.png" id="3_xcir1"]
@@ -23,9 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://bx6s1xmiae67i" path="res://assets/Texture/TX Tileset Stone Ground.png" id="21_6rooi"]
 [ext_resource type="Texture2D" uid="uid://daxhe4sqvy2cs" path="res://assets/Texture/TX Tileset Wall.png" id="22_ml0l1"]
 [ext_resource type="Texture2D" uid="uid://b2yvdv7ftadl3" path="res://assets/gentle animations/gentle waterfall A v01.png" id="23_fsmnu"]
-[ext_resource type="PackedScene" uid="uid://co7lr0pqtyw7v" path="res://scenes/main_character.tscn" id="24_0j5d7"]
-[ext_resource type="PackedScene" uid="uid://blteaycwa68jy" path="res://scenes/basic_sword.tscn" id="25_2h40v"]
-[ext_resource type="PackedScene" uid="uid://c5nhhagqr2d3c" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
+[ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="24_0j5d7"]
+[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="26_j4k54"]
+[ext_resource type="PackedScene" uid="uid://cheqyyhjj1s3" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
+[ext_resource type="AudioStream" uid="uid://csn4cbeiuyu68" path="res://background/chilling-time-200497.mp3" id="27_bn4sf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]
 texture = ExtResource("1_iyb3u")
@@ -16690,8 +16692,10 @@ sources/25 = SubResource("TileSetAtlasSource_rndad")
 [sub_resource type="GDScript" id="GDScript_f1ktg"]
 
 [node name="level_1_start" type="Node2D"]
+process_mode = 1
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("1_022y7")
 metadata/_edit_vertical_guides_ = [23.0]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -16727,10 +16731,16 @@ limit_right = 2096
 limit_bottom = 1072
 script = SubResource("GDScript_f1ktg")
 
-[node name="Basic Sword" parent="." instance=ExtResource("25_2h40v")]
-z_index = 1
-position = Vector2(427, 191)
-
 [node name="level_first_to_second" parent="." instance=ExtResource("26_ki325")]
 z_index = 1
 position = Vector2(1871, -337)
+
+[node name="setting" parent="." instance=ExtResource("26_j4k54")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("27_bn4sf")
+volume_db = -20.0
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
