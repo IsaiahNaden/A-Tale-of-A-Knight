@@ -1,0 +1,176 @@
+[gd_scene load_steps=21 format=3 uid="uid://c45hi1bwrm7om"]
+
+[ext_resource type="Texture2D" uid="uid://dkh7piu30wxwb" path="res://background/parchment.png" id="1_gg8s1"]
+[ext_resource type="Script" path="res://scripts/victory.gd" id="1_jckht"]
+[ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="4_4v3ij"]
+[ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="4_kied1"]
+[ext_resource type="Texture2D" uid="uid://dn46mksw2y115" path="res://background/victory.png" id="5_tlvwo"]
+[ext_resource type="Texture2D" uid="uid://cxbisisxgie6" path="res://background/princess.png" id="6_75f0x"]
+[ext_resource type="Texture2D" uid="uid://bvgoycmmwlh8a" path="res://background/King.png" id="7_2vrvs"]
+[ext_resource type="Texture2D" uid="uid://b7s4exxklok6b" path="res://background/Lovepik_com-401703592-dialog-box.png" id="8_m4twm"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="9_cpfgn"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="10_r632y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmasq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x2a1a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_343og"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cnr05"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jf2tv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s8jem"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ao6x0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vk7mb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrbtn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_of154"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jckht")
+
+[node name="background" type="CenterContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 140.0
+offset_top = 116.0
+offset_right = 1944.0
+offset_bottom = 819.0
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="Parchment2" type="Sprite2D" parent="background"]
+position = Vector2(817.463, 423.911)
+rotation = -0.000482241
+scale = Vector2(2.99234, 2.24883)
+texture = ExtResource("1_gg8s1")
+
+[node name="background" type="Label" parent="background"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kied1")
+theme_override_font_sizes/font_size = 30
+text = "
+"
+
+[node name="background2" type="CenterContainer" parent="."]
+offset_left = 242.0
+offset_top = 182.0
+offset_right = 1842.0
+offset_bottom = 753.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Parchment" type="Sprite2D" parent="background2"]
+position = Vector2(715, 358)
+rotation = -0.000264618
+scale = Vector2(2.99128, 2.24801)
+texture = ExtResource("1_gg8s1")
+
+[node name="background" type="Label" parent="background2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kied1")
+theme_override_font_sizes/font_size = 30
+text = "In the end , the Crescent Kingdom was restored. The realm, once shrouded in darkness, flourished anew. Villages were rebuilt, 
+fields were , and the laughter of children filled the air.
+The Hero, celebrated throughout the land, and Princess Eliza, with her inspiring resilience, worked together to ensure lasting 
+peace. Their story became a legend, a beacon of hope for generations to come.
+As the sun rose over the kingdom, it symbolized the dawn of a new era, united in courage and hope."
+
+[node name="message" type="Timer" parent="."]
+
+[node name="message2" type="Timer" parent="."]
+
+[node name="Dialog" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(957.25, 541)
+scale = Vector2(8.0654, 4.51477)
+texture = ExtResource("4_4v3ij")
+
+[node name="Victory" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(941, 506)
+texture = ExtResource("5_tlvwo")
+
+[node name="Princess" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(294, 851)
+scale = Vector2(6.44, 5.67708)
+texture = ExtResource("6_75f0x")
+
+[node name="King" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(153, 870)
+scale = Vector2(8.28409, 6.72059)
+texture = ExtResource("7_2vrvs")
+
+[node name="dialog_box" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(552, 758)
+scale = Vector2(0.347, 0.153)
+texture = ExtResource("8_m4twm")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 333.0
+offset_top = 740.0
+offset_right = 801.0
+offset_bottom = 778.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_kied1")
+theme_override_font_sizes/font_size = 30
+text = "Thanks , warrior. You are a good man !"
+
+[node name=">>>" type="Button" parent="."]
+offset_left = 1641.0
+offset_top = 50.0
+offset_right = 1792.0
+offset_bottom = 141.0
+theme_override_fonts/font = ExtResource("4_kied1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_wmasq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x2a1a")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_343og")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cnr05")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jf2tv")
+text = ">>>"
+
+[node name="next >" type="Button" parent="."]
+offset_left = 1646.0
+offset_top = 38.0
+offset_right = 1801.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("4_kied1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_s8jem")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ao6x0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vk7mb")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lrbtn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_of154")
+text = "next >"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 1648.0
+offset_top = 66.0
+offset_right = 1793.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("4_kied1")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("9_cpfgn")
+theme_override_styles/hover = ExtResource("9_cpfgn")
+theme_override_styles/pressed = ExtResource("10_r632y")
+theme_override_styles/focus = ExtResource("10_r632y")
+text = "Quit"
+
+[connection signal="timeout" from="message" to="." method="_on_message_timeout"]
+[connection signal="timeout" from="message2" to="." method="_on_message_2_timeout"]
+[connection signal="pressed" from=">>>" to="." method="_on__pressed"]
+[connection signal="pressed" from="next >" to="." method="_on_next__pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

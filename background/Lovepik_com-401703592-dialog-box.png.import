@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n372d5b8rytk"
-path="res://.godot/imported/nobody.png-46f14975f3c7a5b4137420e36a61bb9a.ctex"
+uid="uid://b7s4exxklok6b"
+path="res://.godot/imported/Lovepik_com-401703592-dialog-box.png-1c8fd10231028661b7112aadbbf9f006.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/nobody.png"
-dest_files=["res://.godot/imported/nobody.png-46f14975f3c7a5b4137420e36a61bb9a.ctex"]
+source_file="res://background/Lovepik_com-401703592-dialog-box.png"
+dest_files=["res://.godot/imported/Lovepik_com-401703592-dialog-box.png-1c8fd10231028661b7112aadbbf9f006.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/dialogue1.gd" id="1_kd8r2"]
 [ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="1_x8w30"]
-[ext_resource type="Texture2D" uid="uid://n372d5b8rytk" path="res://background/nobody.png" id="2_8x6r5"]
 [ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="3_j4r4h"]
+[ext_resource type="Texture2D" uid="uid://bvgoycmmwlh8a" path="res://background/King.png" id="4_3kftv"]
 [ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_53xl5"]
 [ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="5_bv6ys"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_okj5x"]
@@ -55,9 +55,9 @@ scale = Vector2(4.02321, 0.793249)
 texture = ExtResource("3_j4r4h")
 
 [node name="Nobody" type="Sprite2D" parent="dialogue"]
-position = Vector2(-72.75, 278.25)
-scale = Vector2(0.9, 0.891111)
-texture = ExtResource("2_8x6r5")
+position = Vector2(-59, 280)
+scale = Vector2(7.81705, 8.14925)
+texture = ExtResource("4_3kftv")
 
 [node name="name" type="Label" parent="dialogue"]
 layout_mode = 2
@@ -73,6 +73,7 @@ theme_override_fonts/font = ExtResource("6_okj5x")
 theme_override_font_sizes/font_size = 25
 
 [node name="profile" type="VBoxContainer" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

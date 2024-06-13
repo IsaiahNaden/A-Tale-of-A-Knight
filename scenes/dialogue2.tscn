@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/dialogue2.gd" id="1_8wxxf"]
 [ext_resource type="Texture2D" uid="uid://b656b8k7rct7w" path="res://background/room.jpg" id="2_xtq57"]
 [ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="3_6hojr"]
-[ext_resource type="Texture2D" uid="uid://n372d5b8rytk" path="res://background/nobody.png" id="3_qg6go"]
+[ext_resource type="Texture2D" uid="uid://bvgoycmmwlh8a" path="res://background/King.png" id="4_uyaay"]
 [ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="6_iyn3a"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_s12h8"]
 [ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="7_dv2kc"]
@@ -47,9 +47,9 @@ scale = Vector2(4.02743, 0.78481)
 texture = ExtResource("3_6hojr")
 
 [node name="Nobody" type="Sprite2D" parent="dialogue"]
-position = Vector2(-64, 287)
-scale = Vector2(0.87, 0.914445)
-texture = ExtResource("3_qg6go")
+position = Vector2(-59, 280)
+scale = Vector2(7.56598, 7.30214)
+texture = ExtResource("4_uyaay")
 
 [node name="name" type="Label" parent="dialogue"]
 layout_mode = 2
