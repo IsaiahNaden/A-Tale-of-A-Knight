@@ -37,7 +37,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43rk4"]
 
-[node name="setting_white" type="Control"]
+[node name="setting" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,6 +49,7 @@ script = ExtResource("1_lkgre")
 
 [node name="stop" type="VBoxContainer" parent="."]
 process_mode = 3
+layout_mode = 0
 offset_left = 50.0114
 offset_top = 51.2903
 offset_right = 483.011
@@ -126,6 +128,7 @@ theme_override_styles/focus = ExtResource("3_7d78f")
 text = "ll"
 
 [node name="setting" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_left = 342.0
 offset_top = 129.0
 offset_right = 971.0

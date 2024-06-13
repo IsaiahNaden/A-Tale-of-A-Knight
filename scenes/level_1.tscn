@@ -25,9 +25,9 @@
 [ext_resource type="Texture2D" uid="uid://daxhe4sqvy2cs" path="res://assets/Texture/TX Tileset Wall.png" id="22_ml0l1"]
 [ext_resource type="Texture2D" uid="uid://b2yvdv7ftadl3" path="res://assets/gentle animations/gentle waterfall A v01.png" id="23_fsmnu"]
 [ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="24_0j5d7"]
-[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="26_j4k54"]
 [ext_resource type="PackedScene" uid="uid://cheqyyhjj1s3" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
 [ext_resource type="AudioStream" uid="uid://csn4cbeiuyu68" path="res://background/chilling-time-200497.mp3" id="27_bn4sf"]
+[ext_resource type="PackedScene" uid="uid://deu3d0tx83j6f" path="res://scenes/setting_white.tscn" id="28_8a6vc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]
 texture = ExtResource("1_iyb3u")
@@ -16735,12 +16735,13 @@ script = SubResource("GDScript_f1ktg")
 z_index = 1
 position = Vector2(1871, -337)
 
-[node name="setting" parent="." instance=ExtResource("26_j4k54")]
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("27_bn4sf")
 volume_db = -20.0
 autoplay = true
+
+[node name="setting2" parent="." instance=ExtResource("28_8a6vc")]
+process_mode = 0
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
