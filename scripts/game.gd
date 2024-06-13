@@ -5,4 +5,3 @@ func _ready():
 	$interface/dialogue.hide()
 	$interface/dailgue1.hide()
 	$interface/dialogue2.hide()
-	$Node.hide()

@@ -12,3 +12,5 @@ res://scenes/dialogue2.tscn
 res://scenes/dialogue.tscn
 res://scenes/level_1.tscn
 res://scenes/victory.tscn
+res://scripts/game.gd
+res://scripts/dialogue1.gd

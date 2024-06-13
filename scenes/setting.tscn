@@ -60,7 +60,7 @@ texture = ExtResource("2_o0hax")
 [node name="pause" type="Label" parent="stop"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 150
+theme_override_font_sizes/font_size = 100
 text = "Pause"
 
 [node name="pause2" type="VBoxContainer" parent="stop"]
@@ -69,7 +69,7 @@ layout_mode = 2
 [node name="resume" type="Button" parent="stop/pause2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lgp80")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_yc7rf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ic1mp")
@@ -81,7 +81,7 @@ alignment = 0
 [node name="setting" type="Button" parent="stop/pause2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2m33l")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_8b5t7")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_tyqtr")
@@ -94,7 +94,7 @@ alignment = 0
 [node name="quit" type="Button" parent="stop/pause2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5y2ey")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_pik6y")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_msqem")
@@ -109,14 +109,14 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 1014.0
-offset_top = 30.0
-offset_right = 1110.0
-offset_bottom = 122.0
+offset_left = 1080.0
+offset_top = 4.0
+offset_right = 1152.0
+offset_bottom = 63.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = ExtResource("4_k52id")
 theme_override_styles/hover = ExtResource("4_k52id")
 theme_override_styles/pressed = ExtResource("5_21cnc")
@@ -134,8 +134,8 @@ script = ExtResource("5_oi4cb")
 
 [node name="BlackTexture" type="Sprite2D" parent="setting"]
 modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(234, 199)
-scale = Vector2(5.13839, 2.91071)
+position = Vector2(239.75, 199)
+scale = Vector2(5.18973, 2.91071)
 texture = ExtResource("2_o0hax")
 
 [node name="Fullscreen" type="HBoxContainer" parent="setting"]
