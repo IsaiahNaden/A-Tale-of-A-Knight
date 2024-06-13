@@ -3894,3 +3894,7 @@ volume_db = -20.0
 autoplay = true
 
 [node name="setting" parent="." instance=ExtResource("22_023yh")]
+offset_left = -10.0
+offset_top = -64.0
+offset_right = -10.0
+offset_bottom = -64.0

@@ -1,8 +1,7 @@
-res://scenes/victory.tscn
+res://scenes/setting.tscn
 res://scenes/game.tscn
 res://scenes/manu.tscn
 res://scenes/dialogue1.tscn
-res://scenes/setting.tscn
 res://scenes/player.tscn
 res://scenes/level_2.tscn
 res://scenes/level_3.tscn
@@ -12,4 +11,4 @@ res://scenes/main_character.tscn
 res://scenes/dialogue2.tscn
 res://scenes/dialogue.tscn
 res://scenes/level_1.tscn
-res://scripts/victory.gd
+res://scenes/victory.tscn

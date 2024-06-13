@@ -27,9 +27,8 @@ Globals="*res://scripts/Globals.gd"
 
 [display]
 
-window/size/mode=3
-window/size/initial_position_type=0
-window/stretch/aspect="expand"
+window/size/initial_position_type=2
+window/stretch/mode="viewport"
 
 [input]
 
