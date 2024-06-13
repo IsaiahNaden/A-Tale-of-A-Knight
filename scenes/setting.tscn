@@ -68,7 +68,6 @@ layout_mode = 2
 
 [node name="resume" type="Button" parent="stop/pause2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lgp80")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_yc7rf")
@@ -80,7 +79,6 @@ alignment = 0
 
 [node name="setting" type="Button" parent="stop/pause2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2m33l")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_8b5t7")
@@ -93,7 +91,6 @@ alignment = 0
 
 [node name="quit" type="Button" parent="stop/pause2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5y2ey")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_pik6y")
@@ -145,7 +142,6 @@ theme_override_constants/separation = 50
 [node name="full screen" type="Label" parent="setting/Fullscreen"]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "full screen "
@@ -165,7 +161,6 @@ theme_override_constants/separation = 50
 [node name="resolution" type="Label" parent="setting/resolution"]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "resolution"
