@@ -41,14 +41,3 @@ func _on_exit_pressed():
 var loadgame
 var path : String
 var SpawnIndex : int 
-func _on_loadgame_pressed():
-
-	$tips.hide()
-	$move.hide()
-	$other.hide()
-	$rules.hide()
-	$Background.hide()
-	$GameName.hide()
-	$VBoxContainer.hide()
-	$back.hide()
-	

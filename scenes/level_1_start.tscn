@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://c2hqaj7dlnh4p"]
+[gd_scene load_steps=53 format=3 uid="uid://cstbk8k6bqtfn"]
 
 [ext_resource type="Texture2D" uid="uid://8io38ubyl880" path="res://assets/Texture/TX Tileset Grass.png" id="1_bj5en"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="2_h7shu"]
@@ -24,7 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://cm1i1wh43nkpn" path="res://assets/AdventureBegins_Demo.png" id="20_7xrax"]
 [ext_resource type="Texture2D" uid="uid://b2yvdv7ftadl3" path="res://assets/gentle animations/gentle waterfall A v01.png" id="22_q054c"]
 [ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="22_upvti"]
+[ext_resource type="PackedScene" uid="uid://bow3j83f0b888" path="res://scenes/king.tscn" id="26_3w8q8"]
 [ext_resource type="PackedScene" uid="uid://c5313xc72yt17" path="res://scenes/player.tscn" id="26_fe67u"]
+[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="27_d2w0p"]
+[ext_resource type="AudioStream" uid="uid://c7gw246mf0s7c" path="res://background/shine-202649.mp3" id="27_k2s2r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]
 texture = ExtResource("7_4syo5")
@@ -16736,9 +16739,8 @@ sources/9 = SubResource("TileSetAtlasSource_8usov")
 sources/23 = SubResource("TileSetAtlasSource_h4qjl")
 sources/25 = SubResource("TileSetAtlasSource_rndad")
 
-[sub_resource type="GDScript" id="GDScript_f1ktg"]
-
 [node name="level_1_start" type="Node2D"]
+process_mode = 1
 z_index = 1
 y_sort_enabled = true
 metadata/_edit_vertical_guides_ = [23.0]
@@ -16765,15 +16767,21 @@ layer_6/name = "houses and abandoned items"
 layer_6/tile_data = PackedInt32Array(-1572770, 1048601, 5, -1572761, 917529, 0, -1572782, 786457, 6, -1507239, 25, 3, -1507242, 25, 3, -1507231, 131097, 3, -1507228, 131097, 3, -1507249, 720921, 3, -1310613, 25, 6, -1114006, 25, 6, -917401, 25, 6, -851870, 25, 6, -1376181, 25, 6, -1245107, 25, 6, -1048497, 25, 6, -851885, 25, 6, -1572790, 25, 6, -1572756, 25, 6, -851877, 589849, 5, -851896, 393220, 10, -851856, 393220, 14)
 
 [node name="MainCharacter" parent="." instance=ExtResource("22_upvti")]
-position = Vector2(425, -77)
+position = Vector2(425, -75)
 
 [node name="Camera2D" type="Camera2D" parent="MainCharacter"]
-limit_left = 0
-limit_top = -416
-limit_right = 2096
-limit_bottom = 1072
-script = SubResource("GDScript_f1ktg")
+position = Vector2(15.9649, 0.167305)
 
 [node name="player" parent="." instance=ExtResource("26_fe67u")]
 z_index = 1
 position = Vector2(427, 21.0001)
+
+[node name="king" parent="." instance=ExtResource("26_3w8q8")]
+position = Vector2(1305, 281)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("27_k2s2r")
+autoplay = true
+
+[node name="setting" parent="." instance=ExtResource("27_d2w0p")]

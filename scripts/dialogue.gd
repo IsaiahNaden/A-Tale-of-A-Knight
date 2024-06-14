@@ -45,7 +45,7 @@ func start_dialogue():
 func stop_background ():
 	$next.show()
 	$">>>".hide()
-	get_tree().change_scene_to_file("res://scenes/dialogue1.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_1_start.tscn")
 
 
 func _on_start_background_timeout():
@@ -77,7 +77,7 @@ func _on_end_background_timeout():
 
 
 func _on_next_pressed():
-	get_tree().change_scene_to_file("res://scenes/dialogue1.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_1_start.tscn")
 
 
 func _on__pressed():
@@ -86,7 +86,4 @@ func _on__pressed():
 	$background.hide()
 	$background2.show()
 
-
-func _on_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/dialogue1.tscn")
  

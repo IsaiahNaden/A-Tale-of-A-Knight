@@ -35,7 +35,7 @@ func _on_quit_pressed():
 	get_tree().quit()
 	
 func _process(delta):
-	if Input.is_action_just_pressed("esc") :
+	if Input.is_action_just_pressed("ecs") :
 		get_tree().paused = !get_tree().paused
 		$stop.visible = !$stop.visible
 
