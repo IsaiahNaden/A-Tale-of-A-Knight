@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://d2k7qmpyqy6jm"]
 
 [ext_resource type="Script" path="res://scripts/setting.gd" id="1_ia8b5"]
-[ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="2_o0hax"]
+[ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="2_dftql"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_11mtm"]
 [ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_k52id"]
 [ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="5_21cnc"]
@@ -53,9 +53,9 @@ offset_bottom = 577.29
 
 [node name="BlackTexture" type="Sprite2D" parent="stop"]
 modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(522.864, 269.085)
-scale = Vector2(5.13281, 2.86049)
-texture = ExtResource("2_o0hax")
+position = Vector2(529.489, 280.21)
+scale = Vector2(5.17411, 2.92411)
+texture = ExtResource("2_dftql")
 
 [node name="pause" type="Label" parent="stop"]
 layout_mode = 2
@@ -68,7 +68,6 @@ layout_mode = 2
 
 [node name="resume" type="Button" parent="stop/pause2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lgp80")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_yc7rf")
@@ -80,7 +79,6 @@ alignment = 0
 
 [node name="setting" type="Button" parent="stop/pause2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2m33l")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_8b5t7")
@@ -93,7 +91,6 @@ alignment = 0
 
 [node name="quit" type="Button" parent="stop/pause2"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5y2ey")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_pik6y")
@@ -134,9 +131,9 @@ script = ExtResource("5_oi4cb")
 
 [node name="BlackTexture" type="Sprite2D" parent="setting"]
 modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(239.75, 199)
-scale = Vector2(5.18973, 2.91071)
-texture = ExtResource("2_o0hax")
+position = Vector2(238, 199.5)
+scale = Vector2(5.16071, 2.88839)
+texture = ExtResource("2_dftql")
 
 [node name="Fullscreen" type="HBoxContainer" parent="setting"]
 layout_mode = 2
@@ -145,7 +142,6 @@ theme_override_constants/separation = 50
 [node name="full screen" type="Label" parent="setting/Fullscreen"]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "full screen "
@@ -165,7 +161,6 @@ theme_override_constants/separation = 50
 [node name="resolution" type="Label" parent="setting/resolution"]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "resolution"
@@ -180,7 +175,6 @@ theme_override_fonts/font = ExtResource("3_11mtm")
 
 [node name="volume" type="Label" parent="setting"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "Volume"
@@ -199,7 +193,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 373.0
 offset_top = 545.0
-offset_right = 1003.0
+offset_right = 895.0
 offset_bottom = 631.0
 grow_horizontal = 2
 grow_vertical = 0
