@@ -127,8 +127,8 @@ offset_bottom = 238.0
 theme_override_constants/separation = 20
 
 [node name="BlackTexture" type="Sprite2D" parent="tips"]
-position = Vector2(578, 326.5)
-scale = Vector2(5.15178, 2.91518)
+position = Vector2(576, 326)
+scale = Vector2(5.13393, 2.91072)
 texture = ExtResource("8_8ilsq")
 
 [node name="Name" type="Label" parent="tips"]

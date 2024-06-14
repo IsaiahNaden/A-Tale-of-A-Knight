@@ -43,13 +43,13 @@ offset_right = 1187.2
 offset_bottom = 358.169
 
 [node name="41094850" type="Sprite2D" parent="dialogue"]
-position = Vector2(243.8, 64.8307)
-scale = Vector2(1.15, 1.30321)
+position = Vector2(243.8, 59.831)
+scale = Vector2(1.152, 1.3012)
 texture = ExtResource("1_x8w30")
 
 [node name="Dialog" type="Sprite2D" parent="dialogue"]
-position = Vector2(396.8, 52.8307)
-scale = Vector2(3.53903, 0.544304)
+position = Vector2(397.612, 52.8307)
+scale = Vector2(3.54589, 0.544304)
 texture = ExtResource("3_j4r4h")
 
 [node name="Nobody" type="Sprite2D" parent="dialogue"]

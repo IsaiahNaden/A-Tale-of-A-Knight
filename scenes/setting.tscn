@@ -53,8 +53,8 @@ offset_bottom = 577.29
 
 [node name="BlackTexture" type="Sprite2D" parent="stop"]
 modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(529.489, 280.21)
-scale = Vector2(5.17411, 2.92411)
+position = Vector2(525.989, 272.71)
+scale = Vector2(5.13393, 2.89286)
 texture = ExtResource("2_dftql")
 
 [node name="pause" type="Label" parent="stop"]
@@ -131,8 +131,8 @@ script = ExtResource("5_oi4cb")
 
 [node name="BlackTexture" type="Sprite2D" parent="setting"]
 modulate = Color(1, 1, 1, 0.470588)
-position = Vector2(238, 199.5)
-scale = Vector2(5.16071, 2.88839)
+position = Vector2(234, 196.5)
+scale = Vector2(5.14286, 2.89732)
 texture = ExtResource("2_dftql")
 
 [node name="Fullscreen" type="HBoxContainer" parent="setting"]

@@ -41,9 +41,9 @@ grow_vertical = 2
 size_flags_vertical = 0
 
 [node name="Parchment2" type="Sprite2D" parent="background"]
-position = Vector2(906.426, 418.209)
+position = Vector2(902.983, 419.268)
 rotation = -0.000482241
-scale = Vector2(1.80285, 1.34259)
+scale = Vector2(1.79871, 1.347)
 texture = ExtResource("3_uwxhc")
 
 [node name="background" type="Label" parent="background"]
@@ -63,9 +63,9 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Parchment" type="Sprite2D" parent="background2"]
-position = Vector2(890, 338)
+position = Vector2(891.457, 338)
 rotation = -0.000264618
-scale = Vector2(1.80235, 1.34962)
+scale = Vector2(1.7978, 1.34962)
 texture = ExtResource("3_uwxhc")
 
 [node name="background" type="Label" parent="background2"]

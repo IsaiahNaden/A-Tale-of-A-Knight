@@ -37,13 +37,13 @@ offset_bottom = 399.245
 size_flags_vertical = 4
 
 [node name="room" type="Sprite2D" parent="dialogue"]
-position = Vector2(247.444, 60.7552)
-scale = Vector2(1.148, 1.2992)
+position = Vector2(246.444, 57.755)
+scale = Vector2(1.15, 1.3012)
 texture = ExtResource("2_xtq57")
 
 [node name="Dialog" type="Sprite2D" parent="dialogue"]
-position = Vector2(395.444, 63.7551)
-scale = Vector2(3.48629, 0.582278)
+position = Vector2(400.881, 63.7551)
+scale = Vector2(3.53217, 0.582278)
 texture = ExtResource("3_6hojr")
 
 [node name="Nobody" type="Sprite2D" parent="dialogue"]
