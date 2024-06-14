@@ -100,25 +100,25 @@ scale = Vector2(0.825, 0.74)
 texture = ExtResource("5_tlvwo")
 
 [node name="Princess" type="Sprite2D" parent="."]
-position = Vector2(245, 522)
-scale = Vector2(6.44, 5.67708)
+position = Vector2(195.5, 548.786)
+scale = Vector2(4.46, 4.51245)
 texture = ExtResource("6_75f0x")
 
 [node name="King" type="Sprite2D" parent="."]
-position = Vector2(108, 531)
-scale = Vector2(8.28409, 6.72059)
+position = Vector2(89.6563, 555.625)
+scale = Vector2(7.17235, 5.27206)
 texture = ExtResource("7_2vrvs")
 
 [node name="dialog_box" type="Sprite2D" parent="."]
-position = Vector2(552, 412)
-scale = Vector2(0.347, 0.172)
+position = Vector2(500.5, 464)
+scale = Vector2(0.3705, 0.087)
 texture = ExtResource("8_m4twm")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 332.0
-offset_top = 395.0
-offset_right = 804.0
-offset_bottom = 433.0
+offset_left = 274.0
+offset_top = 444.0
+offset_right = 746.0
+offset_bottom = 482.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_kied1")
 theme_override_font_sizes/font_size = 30

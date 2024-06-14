@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="13_ywou6"]
 [ext_resource type="PackedScene" uid="uid://btn3l86455we1" path="res://scenes/level_second_to_third.tscn" id="20_2svhu"]
 [ext_resource type="AudioStream" uid="uid://cxrp7er6qjy61" path="res://background/deep-ambient-11051.mp3" id="20_rph55"]
-[ext_resource type="PackedScene" uid="uid://deu3d0tx83j6f" path="res://scenes/setting_white.tscn" id="21_6v1ll"]
+[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="21_kqhih"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q16hc"]
 texture = ExtResource("1_kfnil")
@@ -8996,4 +8996,4 @@ position = Vector2(1224, 73)
 stream = ExtResource("20_rph55")
 autoplay = true
 
-[node name="setting2" parent="." instance=ExtResource("21_6v1ll")]
+[node name="setting2" parent="." instance=ExtResource("21_kqhih")]
