@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://d0vwg2o7vy0ad"]
+[gd_scene load_steps=48 format=3 uid="uid://d0vwg2o7vy0ad"]
 
 [ext_resource type="Texture2D" uid="uid://cqyg7uxct5j4r" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="1_g0g8c"]
 [ext_resource type="Texture2D" uid="uid://doja3h710vt02" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="2_iwh67"]
@@ -20,9 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="12_dh50d"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="12_i7hf8"]
 [ext_resource type="Texture2D" uid="uid://duo3amkr0g4q8" path="res://assets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/PIT - DAY.png" id="13_1mlrp"]
-[ext_resource type="PackedScene" uid="uid://m6ljeuednggo" path="res://scenes/teleport_basement.tscn" id="21_1mmau"]
+[ext_resource type="PackedScene" uid="uid://g6ssm6svc36s" path="res://scenes/teleport_basement.tscn" id="21_1mmau"]
 [ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="22_023yh"]
-[ext_resource type="AudioStream" path="res://background/shine-202649.mp3" id="23_q1qyc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijqbg"]
 texture = ExtResource("1_g0g8c")
@@ -3889,7 +3888,6 @@ texture = SubResource("GradientTexture2D_3kfr4")
 position = Vector2(884, 199)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("23_q1qyc")
 autoplay = true
 
 [node name="setting" parent="." instance=ExtResource("22_023yh")]

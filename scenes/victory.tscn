@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="4_4v3ij"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="4_kied1"]
 [ext_resource type="Texture2D" uid="uid://cifpn6x1gj4e4" path="res://art/character/princess.png" id="6_75f0x"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="9_cpfgn"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="10_r632y"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="9_cpfgn"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="10_r632y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmasq"]
 
