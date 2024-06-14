@@ -1,7 +1,6 @@
-[gd_scene load_steps=49 format=3 uid="uid://cwxtpofsl4qhe"]
+[gd_scene load_steps=49 format=3 uid="uid://d0vwg2o7vy0ad"]
 
 [ext_resource type="Texture2D" uid="uid://cqyg7uxct5j4r" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="1_g0g8c"]
-[ext_resource type="Script" path="res://scripts/level_4.gd" id="1_vhro6"]
 [ext_resource type="Texture2D" uid="uid://doja3h710vt02" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInteriorFloor.png" id="2_iwh67"]
 [ext_resource type="Texture2D" uid="uid://dwxxk50j6u01w" path="res://assets/tilesets/floors/carpet.png" id="3_opvuv"]
 [ext_resource type="Texture2D" uid="uid://dtxtb8d7sg2t3" path="res://assets/tilesets/floors/flooring.png" id="4_5m7dw"]
@@ -18,11 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://bx6s1xmiae67i" path="res://assets/Texture/TX Tileset Stone Ground.png" id="10_vqjmr"]
 [ext_resource type="Texture2D" uid="uid://c3nbhcqmma5uy" path="res://assets/Items/Treasure/LittleTreasureChest.png" id="11_0tyts"]
 [ext_resource type="Texture2D" uid="uid://daxhe4sqvy2cs" path="res://assets/Texture/TX Tileset Wall.png" id="11_8yojb"]
+[ext_resource type="PackedScene" uid="uid://bwpv5528mrm8x" path="res://scenes/main_character.tscn" id="12_dh50d"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="12_i7hf8"]
 [ext_resource type="Texture2D" uid="uid://duo3amkr0g4q8" path="res://assets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/PIT - DAY.png" id="13_1mlrp"]
 [ext_resource type="PackedScene" uid="uid://m6ljeuednggo" path="res://scenes/teleport_basement.tscn" id="21_1mmau"]
-[ext_resource type="PackedScene" uid="uid://cfitma21jjg3q" path="res://scenes/player.tscn" id="21_cwktu"]
-[ext_resource type="PackedScene" path="res://scenes/princess.tscn" id="22_jdnqk"]
+[ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="22_023yh"]
+[ext_resource type="AudioStream" path="res://background/shine-202649.mp3" id="23_q1qyc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijqbg"]
 texture = ExtResource("1_g0g8c")
@@ -3776,6 +3776,16 @@ sources/19 = SubResource("TileSetAtlasSource_ylf6d")
 sources/20 = SubResource("TileSetAtlasSource_mvlpu")
 sources/21 = SubResource("TileSetAtlasSource_jy0pb")
 
+[sub_resource type="Gradient" id="Gradient_0suet"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8yjyk"]
+gradient = SubResource("Gradient_0suet")
+fill = 1
+fill_from = Vector2(0.502392, 0.488038)
+fill_to = Vector2(0.502392, 0)
+
 [sub_resource type="Environment" id="Environment_bla25"]
 background_mode = 3
 tonemap_mode = 3
@@ -3795,19 +3805,9 @@ fill = 1
 fill_from = Vector2(0.516746, 0.502392)
 fill_to = Vector2(0.521531, 0.00956938)
 
-[sub_resource type="Gradient" id="Gradient_0suet"]
-interpolation_mode = 2
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_8yjyk"]
-gradient = SubResource("Gradient_0suet")
-fill = 1
-fill_from = Vector2(0.502392, 0.488038)
-fill_to = Vector2(0.502392, 0)
-
-[node name="level_4" type="Node2D"]
-position = Vector2(9, 61)
-script = ExtResource("1_vhro6")
+[node name="level_3" type="Node2D"]
+process_mode = 1
+position = Vector2(11, 64)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(80, 34)
@@ -3822,39 +3822,54 @@ layer_2/name = "teleport basement"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(1048577, 1114117, 27, 1114113, 1114117, 28, 1179649, 1114117, 29, 1048578, 1114117, 27, 1114114, 1114117, 28, 1179650, 1114117, 29, 1048579, 1114117, 27, 1114115, 1114117, 28, 1179651, 1114117, 29, 1048580, 1114117, 27, 1114116, 1114117, 28, 1179652, 1114117, 29, 1048581, 1114117, 27, 1114117, 1114117, 28, 1179653, 1114117, 29, 1048582, 1114117, 27, 1114118, 1114117, 28, 1179654, 1114117, 29, 655388, 262149, 1610612761, 589852, 327685, 1610612761, 524316, 393221, 1610612761, 655389, 262149, 1610612762, 589853, 327685, 1610612762, 524317, 393221, 1610612762, 655390, 262149, 1610612763, 589854, 327685, 1610612763, 524318, 393221, 1610612763)
 
+[node name="MainCharacter" parent="." instance=ExtResource("12_dh50d")]
+position = Vector2(255, 346)
+
+[node name="Camera2D" type="Camera2D" parent="MainCharacter"]
+z_index = 1
+position = Vector2(-1, 5)
+limit_left = 0
+limit_top = 0
+limit_right = 944
+limit_bottom = 512
+
+[node name="PointLight2D" type="PointLight2D" parent="MainCharacter/Camera2D"]
+position = Vector2(4, 3)
+scale = Vector2(1.3125, 1.59375)
+texture = SubResource("GradientTexture2D_8yjyk")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bla25")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-position = Vector2(1, 18)
 color = Color(0.133333, 0.133333, 0.133333, 1)
-blend_mode = 1
+blend_mode = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -8.0
+offset_left = -7.0
 offset_top = 297.0
 offset_right = 91.0
-offset_bottom = 450.0
+offset_bottom = 447.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 74.0
 offset_top = 394.0
 offset_right = 195.0
-offset_bottom = 450.0
+offset_bottom = 447.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 669.0
 offset_top = 316.0
 offset_right = 772.0
-offset_bottom = 450.0
+offset_bottom = 452.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="."]
 offset_left = 584.0
-offset_top = -62.0
-offset_right = 928.0
+offset_top = -63.0
+offset_right = 927.0
 offset_bottom = 36.0
 color = Color(0, 0, 0, 1)
 
@@ -3873,24 +3888,12 @@ texture = SubResource("GradientTexture2D_3kfr4")
 [node name="Teleport basement" parent="." instance=ExtResource("21_1mmau")]
 position = Vector2(884, 199)
 
-[node name="player" parent="." instance=ExtResource("21_cwktu")]
-z_index = 5
-position = Vector2(296, 335)
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_q1qyc")
+autoplay = true
 
-[node name="PointLight2D" type="PointLight2D" parent="player"]
-position = Vector2(0, -8.34032)
-scale = Vector2(0.667599, 1.32923)
-texture = SubResource("GradientTexture2D_8yjyk")
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-z_index = 1
-position = Vector2(-0.50865, -0.834059)
-scale = Vector2(0.508647, 0.834028)
-zoom = Vector2(4, 4)
-limit_left = 0
-limit_top = 0
-limit_right = 928
-limit_bottom = 512
-
-[node name="princess" parent="." instance=ExtResource("22_jdnqk")]
-position = Vector2(143, 356)
+[node name="setting" parent="." instance=ExtResource("22_023yh")]
+offset_left = -10.0
+offset_top = -64.0
+offset_right = -10.0
+offset_bottom = -64.0

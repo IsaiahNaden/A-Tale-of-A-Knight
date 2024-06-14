@@ -1,0 +1,224 @@
+[gd_scene load_steps=22 format=3 uid="uid://dao4tddfuausy"]
+
+[ext_resource type="Script" path="res://scripts/setting_white.gd" id="1_lkgre"]
+[ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="2_71hj8"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="3_7d78f"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="4_jmp5k"]
+[ext_resource type="Script" path="res://scripts/music.gd" id="5_vkp2f"]
+[ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="6_j6xy4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ub6l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_12lko"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ff2og"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftusm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6liec"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mbdd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ltdf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_scmay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56rwq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o43sq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cuoic"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fnuil"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i3dmo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmmg7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_43rk4"]
+
+[node name="setting" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lkgre")
+
+[node name="stop" type="VBoxContainer" parent="."]
+process_mode = 3
+layout_mode = 0
+offset_left = 50.0114
+offset_top = 51.2903
+offset_right = 483.011
+offset_bottom = 577.29
+
+[node name="BlackTexture" type="Sprite2D" parent="stop"]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(522.864, 269.085)
+scale = Vector2(5.13281, 2.86049)
+texture = ExtResource("2_71hj8")
+
+[node name="pause" type="Label" parent="stop"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Pause"
+
+[node name="pause2" type="VBoxContainer" parent="stop"]
+layout_mode = 2
+
+[node name="resume" type="Button" parent="stop/pause2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7ub6l")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_12lko")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ff2og")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ftusm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6liec")
+text = "resume"
+alignment = 0
+
+[node name="setting" type="Button" parent="stop/pause2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8mbdd")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3ltdf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_scmay")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_56rwq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o43sq")
+text = "setting
+"
+alignment = 0
+
+[node name="quit" type="Button" parent="stop/pause2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cuoic")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fnuil")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_i3dmo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_wmmg7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_43rk4")
+text = "quit"
+alignment = 0
+
+[node name="stop_button" type="Button" parent="."]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -92.0
+offset_top = 21.0
+offset_right = -20.0
+offset_bottom = 80.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = ExtResource("3_7d78f")
+theme_override_styles/hover = ExtResource("3_7d78f")
+theme_override_styles/pressed = ExtResource("4_jmp5k")
+theme_override_styles/focus = ExtResource("3_7d78f")
+text = "ll"
+
+[node name="setting" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 129.0
+offset_right = 971.0
+offset_bottom = 606.0
+theme_override_constants/separation = 40
+script = ExtResource("5_vkp2f")
+
+[node name="BlackTexture" type="Sprite2D" parent="setting"]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(239.75, 199)
+scale = Vector2(5.18973, 2.91071)
+texture = ExtResource("2_71hj8")
+
+[node name="Fullscreen" type="HBoxContainer" parent="setting"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="full screen" type="Label" parent="setting/Fullscreen"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_j6xy4")
+theme_override_font_sizes/font_size = 50
+text = "full screen "
+
+[node name="VSeparator" type="VSeparator" parent="setting/Fullscreen"]
+layout_mode = 2
+
+[node name="screenmode" type="OptionButton" parent="setting/Fullscreen"]
+custom_minimum_size = Vector2(265, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_j6xy4")
+
+[node name="resolution" type="HBoxContainer" parent="setting"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="resolution" type="Label" parent="setting/resolution"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_j6xy4")
+theme_override_font_sizes/font_size = 50
+text = "resolution"
+
+[node name="VSeparator" type="VSeparator" parent="setting/resolution"]
+layout_mode = 2
+
+[node name="resolutionmode" type="OptionButton" parent="setting/resolution"]
+custom_minimum_size = Vector2(265, 64)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_j6xy4")
+
+[node name="volume" type="Label" parent="setting"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_j6xy4")
+theme_override_font_sizes/font_size = 50
+text = "Volume"
+
+[node name="HSlider" type="HSlider" parent="setting"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 373.0
+offset_top = 545.0
+offset_right = 1003.0
+offset_bottom = 631.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_j6xy4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("3_7d78f")
+theme_override_styles/hover = ExtResource("3_7d78f")
+theme_override_styles/pressed = ExtResource("4_jmp5k")
+theme_override_styles/focus = ExtResource("4_jmp5k")
+text = "Back"
+
+[connection signal="pressed" from="stop/pause2/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="stop/pause2/setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="stop/pause2/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="stop_button" to="." method="_on_stop_button_pressed"]
+[connection signal="value_changed" from="setting/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

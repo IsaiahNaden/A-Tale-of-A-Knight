@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://sjfd70py787a"]
+[gd_scene load_steps=54 format=3 uid="uid://boniygjfkwbaa"]
 
 [ext_resource type="Texture2D" uid="uid://bgmcwamawklrg" path="res://assets/Backgrounds/Tilesets/TilesetFloor.png" id="1_iyb3u"]
 [ext_resource type="Script" path="res://scripts/level_1.gd" id="1_rrggh"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b2yvdv7ftadl3" path="res://assets/gentle animations/gentle waterfall A v01.png" id="23_fsmnu"]
 [ext_resource type="PackedScene" uid="uid://bow3j83f0b888" path="res://scenes/king.tscn" id="26_2t8la"]
 [ext_resource type="PackedScene" uid="uid://b4vcpj0a2svmr" path="res://scenes/enemy.tscn" id="26_kdcjt"]
-[ext_resource type="PackedScene" uid="uid://bcagl4aov5hsh" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
+[ext_resource type="PackedScene" uid="uid://cheqyyhjj1s3" path="res://scenes/level_first_to_second.tscn" id="26_ki325"]
 [ext_resource type="PackedScene" uid="uid://cfitma21jjg3q" path="res://scenes/player.tscn" id="27_6chb6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gd2rb"]

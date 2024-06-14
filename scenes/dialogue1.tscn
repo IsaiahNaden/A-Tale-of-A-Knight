@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scenes/dialogue1.gd" id="1_kd8r2"]
 [ext_resource type="Texture2D" uid="uid://cubwrycbb6ynd" path="res://scenes/room.jpg" id="1_x8w30"]
 [ext_resource type="Texture2D" uid="uid://rk7xo1ldt11f" path="res://scenes/dialog.png" id="3_j4r4h"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="4_53xl5"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="5_bv6ys"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="4_53xl5"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="5_bv6ys"]
 [ext_resource type="FontFile" uid="uid://c3equ80x54e0l" path="res://scenes/Jaro-Regular-VariableFont_opsz.ttf" id="6_okj5x"]
 [ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="8_l5ky5"]
 

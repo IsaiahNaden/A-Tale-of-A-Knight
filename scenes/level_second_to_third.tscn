@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7theumw5lf2j"]
+[gd_scene load_steps=4 format=3 uid="uid://btn3l86455we1"]
 
 [ext_resource type="Texture2D" uid="uid://ds3ycel3pa5p4" path="res://assets/Backgrounds/Tilesets/TilesetHouse.png" id="1_dtr0g"]
 [ext_resource type="Script" path="res://scenes/level_second_to_third.gd" id="1_jx7yv"]
