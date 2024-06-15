@@ -52,6 +52,7 @@ position = Vector2(0, -4)
 script = ExtResource("1_w0fmo")
 
 [node name="Background" type="Sprite2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(577.5, 327.5)
 scale = Vector2(2.03724, 1.81793)
 texture = ExtResource("1_16ouh")
@@ -61,34 +62,74 @@ offset_left = 217.0
 offset_top = 98.0
 offset_right = 989.0
 offset_bottom = 223.0
+=======
+position = Vector2(958.5, 541)
+scale = Vector2(3.3883, 3.01401)
+texture = ExtResource("1_16ouh")
+
+[node name="GameName" type="Label" parent="."]
+offset_left = 441.0
+offset_top = 49.0
+offset_right = 1747.0
+offset_bottom = 254.0
+>>>>>>> main
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 150
 text = "A-Tale-of-A-Knight"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+<<<<<<< HEAD
 offset_left = 327.0
 offset_top = 289.0
 offset_right = 849.0
 offset_bottom = 448.0
+=======
+offset_left = 539.0
+offset_top = 463.0
+offset_right = 1431.0
+offset_bottom = 874.0
+>>>>>>> main
 theme_override_constants/separation = 30
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
+<<<<<<< HEAD
 theme_override_font_sizes/font_size = 30
+=======
+theme_override_font_sizes/font_size = 75
+>>>>>>> main
 theme_override_styles/normal = ExtResource("3_bgfhf")
 theme_override_styles/hover = ExtResource("3_bgfhf")
 theme_override_styles/pressed = ExtResource("4_tgq6v")
 theme_override_styles/focus = ExtResource("4_tgq6v")
 text = "New Game"
 
+<<<<<<< HEAD
+=======
+[node name="loadgame" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ybg5i")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = ExtResource("3_bgfhf")
+theme_override_styles/hover = ExtResource("3_bgfhf")
+theme_override_styles/pressed = ExtResource("4_tgq6v")
+theme_override_styles/focus = ExtResource("4_tgq6v")
+text = "Load Game"
+
+>>>>>>> main
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
+<<<<<<< HEAD
 theme_override_font_sizes/font_size = 30
+=======
+theme_override_font_sizes/font_size = 75
+>>>>>>> main
 theme_override_styles/normal = ExtResource("3_bgfhf")
 theme_override_styles/hover = ExtResource("3_bgfhf")
 theme_override_styles/pressed = ExtResource("4_tgq6v")
@@ -110,19 +151,28 @@ theme_override_styles/focus = ExtResource("7_fmlug")
 text = "!"
 
 [node name="tips" type="VBoxContainer" parent="."]
+<<<<<<< HEAD
 offset_right = 1154.0
+=======
+offset_right = 1958.0
+>>>>>>> main
 offset_bottom = 239.0
 theme_override_constants/separation = 20
 
 [node name="BlackTexture" type="Sprite2D" parent="tips"]
+<<<<<<< HEAD
 position = Vector2(576.5, 326)
 scale = Vector2(5.13839, 2.91071)
+=======
+position = Vector2(958, 539.5)
+scale = Vector2(8.54464, 4.81696)
+>>>>>>> main
 texture = ExtResource("8_8ilsq")
 
 [node name="Name" type="Label" parent="tips"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ybg5i")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 100
 text = "A-Tale-of-A-Knight"
 horizontal_alignment = 1
 
@@ -130,15 +180,26 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_ybg5i")
+<<<<<<< HEAD
 theme_override_font_sizes/font_size = 35
+=======
+theme_override_font_sizes/font_size = 75
+>>>>>>> main
 text = "How To Play  ?"
 horizontal_alignment = 1
 
 [node name="move" type="Label" parent="."]
+<<<<<<< HEAD
 offset_left = 4.0
 offset_top = 158.0
 offset_right = 506.0
 offset_bottom = 422.0
+=======
+offset_left = 34.0
+offset_top = 355.0
+offset_right = 536.0
+offset_bottom = 619.0
+>>>>>>> main
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 20
@@ -150,10 +211,17 @@ text = "Control your character
 e = attack"
 
 [node name="other" type="Label" parent="."]
+<<<<<<< HEAD
 offset_left = 230.0
 offset_top = 156.0
 offset_right = 578.0
 offset_bottom = 395.0
+=======
+offset_left = 430.0
+offset_top = 360.0
+offset_right = 778.0
+offset_bottom = 599.0
+>>>>>>> main
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 20
 text = "Setting
@@ -163,22 +231,38 @@ resume game = Esc
 "
 
 [node name="rules" type="Label" parent="."]
+<<<<<<< HEAD
 offset_left = 6.0
 offset_top = 384.0
 offset_right = 1833.0
 offset_bottom = 642.0
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 20
+=======
+offset_left = 51.0
+offset_top = 687.0
+offset_right = 1878.0
+offset_bottom = 945.0
+theme_override_fonts/font = ExtResource("2_ybg5i")
+theme_override_font_sizes/font_size = 35
+>>>>>>> main
 text = "Move the character and defeat the moster ! Clear it and go to next level to find the princess. The princess in a huge castle, but it's 
 possible  there have something inside the castle  ...... Go! Bring the princess go back home ....
 The princess will  fall in love with you......
 Maybe la ......"
 
 [node name="back" type="Button" parent="."]
+<<<<<<< HEAD
 offset_left = 365.0
 offset_top = 597.0
 offset_right = 760.0
 offset_bottom = 651.0
+=======
+offset_left = 651.0
+offset_top = 990.0
+offset_right = 1275.0
+offset_bottom = 1077.0
+>>>>>>> main
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_f21ij")
@@ -186,6 +270,22 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_uunms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_co30v")
 theme_override_styles/focus = SubResource("StyleBoxFlat_hryob")
 text = "I know already !"
+
+[node name="loadgame" type="VBoxContainer" parent="."]
+visible = false
+offset_right = 1918.0
+offset_bottom = 1060.0
+
+[node name="BlackTexture" type="Sprite2D" parent="loadgame"]
+position = Vector2(957, 538.5)
+scale = Vector2(8.54464, 4.80804)
+texture = ExtResource("8_8ilsq")
+
+[node name="Label" type="Label" parent="loadgame"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ybg5i")
+theme_override_font_sizes/font_size = 100
+text = "  Your Game ;"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

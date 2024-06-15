@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=52 format=3 uid="uid://cstbk8k6bqtfn"]
+=======
+[gd_scene load_steps=51 format=3 uid="uid://cstbk8k6bqtfn"]
+>>>>>>> main
 
 [ext_resource type="Texture2D" uid="uid://8io38ubyl880" path="res://assets/Texture/TX Tileset Grass.png" id="1_bj5en"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="2_h7shu"]
