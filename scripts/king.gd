@@ -21,5 +21,5 @@ func _physics_process(_delta):
 
 func _on_area_2d_area_entered(area):
 	global.game_first_loadin = false
-	get_tree().change_scene_to_file("res://scenes/dialogue1.tscn")
+	get_tree().change_scene_to_file("res://scenes/dialogue2.tscn")
 	

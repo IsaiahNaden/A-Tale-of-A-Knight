@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://g6ssm6svc36s"]
+[gd_scene load_steps=4 format=3 uid="uid://g6ssm6svc36s"]
 
 [ext_resource type="Texture2D" uid="uid://c5h0yyefl1kgr" path="res://assets/Forest BETA V3/Settlement.png" id="1_ybirn"]
+[ext_resource type="Script" path="res://scripts/teleport_basement.gd" id="2_y5r1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3syoy"]
 size = Vector2(38, 42)
@@ -14,7 +15,10 @@ region_rect = Rect2(58.15, 331.343, 57.9783, 62.8099)
 
 [node name="Area2D" type="Area2D" parent="." groups=["Teleport basement"]]
 position = Vector2(0, 2)
+script = ExtResource("2_y5r1f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_3syoy")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,5 +1,7 @@
 extends Node2D
 
+var global
+
 func _ready():
 	$tips.hide()
 	$move.hide()
@@ -41,7 +43,7 @@ var loadgame
 var path : String
 var spawnIndex : int 
 func _on_loadgame_pressed():
-	loadgame = $"../../Saveandload/GameManager".LoadLevel(path , spawnIndex)
+	global.load_game_1()
 	
 	$tips.hide()
 	$move.hide()

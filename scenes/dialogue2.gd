@@ -2,8 +2,7 @@ extends Node2D
 
 
 var message =[
-" Your reputation precedes you. We have heard tales of your valor and skill. 
-  You are indeed the champion we prayed for.",
+" You will see a portal in the north east corner. Please save my dear daughter!",
 " May the gods be with you. Your bravery is the beacon of hope we 
   desperately need. 
   Go forth with our blessings and the support of the entire kingdom."
