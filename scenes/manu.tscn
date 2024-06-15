@@ -121,7 +121,10 @@ theme_override_styles/focus = ExtResource("7_fmlug")
 text = "!"
 
 [node name="tips" type="VBoxContainer" parent="."]
+<<<<<<< HEAD
 visible = false
+=======
+>>>>>>> main
 offset_right = 1958.0
 offset_bottom = 239.0
 theme_override_constants/separation = 20
@@ -147,7 +150,10 @@ text = "How To Play  ?"
 horizontal_alignment = 1
 
 [node name="move" type="Label" parent="."]
+<<<<<<< HEAD
 visible = false
+=======
+>>>>>>> main
 offset_left = 34.0
 offset_top = 355.0
 offset_right = 536.0
@@ -163,7 +169,10 @@ text = "Control your character
 e = attack"
 
 [node name="other" type="Label" parent="."]
+<<<<<<< HEAD
 visible = false
+=======
+>>>>>>> main
 offset_left = 430.0
 offset_top = 360.0
 offset_right = 778.0
@@ -177,7 +186,10 @@ resume game = Esc
 "
 
 [node name="rules" type="Label" parent="."]
+<<<<<<< HEAD
 visible = false
+=======
+>>>>>>> main
 offset_left = 51.0
 offset_top = 687.0
 offset_right = 1878.0
@@ -190,7 +202,10 @@ The princess will  fall in love with you......
 Maybe la ......"
 
 [node name="back" type="Button" parent="."]
+<<<<<<< HEAD
 visible = false
+=======
+>>>>>>> main
 offset_left = 651.0
 offset_top = 990.0
 offset_right = 1275.0

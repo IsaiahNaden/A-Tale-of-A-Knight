@@ -16694,10 +16694,18 @@ sources/25 = SubResource("TileSetAtlasSource_rndad")
 [sub_resource type="GDScript" id="GDScript_f1ktg"]
 
 [node name="level_1_start" type="Node2D"]
+<<<<<<< HEAD
 z_index = 1
 y_sort_enabled = true
 position = Vector2(4, 415)
 script = ExtResource("1_rrggh")
+=======
+process_mode = 1
+z_index = 1
+y_sort_enabled = true
+position = Vector2(4, 415)
+script = ExtResource("1_022y7")
+>>>>>>> main
 metadata/_edit_vertical_guides_ = [23.0]
 
 [node name="TileMap" type="TileMap" parent="."]

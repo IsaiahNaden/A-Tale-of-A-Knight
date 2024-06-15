@@ -2,20 +2,13 @@ extends CharacterBody2D
 
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
-var health = 100
+var health = 120
 var player_alive = true
 
 var attack_ip = false
 
 
-const normal_speed = 100
-const boosted_speed = 200
-var current_speed = normal_speed
-
-var speed_boost_active = false
-
-var invulnerable = false
-
+const speed = 100
 var current_dir = "none"
 
 var speed_boost_timer: Timer
@@ -68,59 +61,26 @@ func _physics_process(delta):
 		
 
 func player_movement(delta):
-	
-	if Input.is_action_just_pressed("ui_select"):
-		speed_boost_active = !speed_boost_active
-		if speed_boost_active:
-			speed_boost_timer.start()
-			speed_boost_label.visible = true
-			speed_boost_label_timer.start()
-		else:
-			speed_boost_timer.stop()
-			speed_boost_label.visible = false
-		
-	if speed_boost_active:
-		current_speed = boosted_speed
-	else:
-		current_speed = normal_speed
-		
-	if Input.is_action_just_pressed("ui_invulnerability"):
-		invulnerable = !invulnerable
-		if invulnerable:
-			invulnerable = true
-			invulnerability_timer.start()
-			invulnerability_label.visible = true
-			invulnerability_label_timer.start()
-			$AnimatedSprite2D.modulate = Color(1, 1, 1, 0.5)
-			print("Player is now invulnerable")
-		else:
-			invulnerable = false
-			invulnerability_timer.stop()
-			invulnerability_label.visible = false
-			$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
-			print("Player is no longer invulnerable")
-	
 
-	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
-		velocity.x = current_speed
+		velocity.x = speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_left"):
 		current_dir = "left"
 		play_anim(1)
-		velocity.x = -current_speed
+		velocity.x = -speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_down"):
 		current_dir = "down"
 		play_anim(1)
-		velocity.y = current_speed
+		velocity.y = speed
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
 		play_anim(1)
-		velocity.y = -current_speed
+		velocity.y = -speed
 		velocity.x = 0
 	else:
 		play_anim(0)
@@ -177,18 +137,17 @@ func _on_player_hitbox_body_exited(body):
 		enemy_inattack_range = false
 
 func enemy_attack():
-	if enemy_inattack_range and enemy_attack_cooldown and not invulnerable == true:
+	if enemy_inattack_range and enemy_attack_cooldown == true:
 		health = health - 20
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print("player health = ", health)
+		print(health)
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true
 	
 func attack():
 	var dir = current_dir
-	
 	
 	if Input.is_action_just_pressed("attack"):
 		global.player_current_attack = true
