@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cheqyyhjj1s3"]
+
+[ext_resource type="Script" path="res://scripts/level_first_to_second.gd" id="1_mlcct"]
+[ext_resource type="Texture2D" uid="uid://51ao0kvujq2r" path="res://assets/Texture/portal.png" id="2_opeo0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ga678"]
+radius = 21.095
+
+[node name="level_first_to_second" type="Area2D"]
+position = Vector2(30, 28)
+script = ExtResource("1_mlcct")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, -1)
+texture = ExtResource("2_opeo0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 7)
+shape = SubResource("CircleShape2D_ga678")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

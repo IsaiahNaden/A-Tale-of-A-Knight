@@ -1,0 +1,21 @@
+
+[gd_scene load_steps=4 format=3 uid="uid://blteaycwa68jy"]
+>>>>>>> WorldMap
+
+[ext_resource type="Texture2D" uid="uid://sdxyp86r43mv" path="res://assets/Items/Weapons/Sword2/Sprite.png" id="1_7256m"]
+
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyls4"]
+size = Vector2(5, 15)
+
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7256m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fyls4")
+
+
+=======
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+>>>>>>> WorldMap

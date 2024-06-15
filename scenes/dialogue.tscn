@@ -1,0 +1,127 @@
+[gd_scene load_steps=14 format=3 uid="uid://qf8vpqbnf03m"]
+
+[ext_resource type="Script" path="res://scripts/dialogue.gd" id="1_137sj"]
+[ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="3_268d6"]
+[ext_resource type="Texture2D" uid="uid://dkh7piu30wxwb" path="res://background/parchment.png" id="3_uwxhc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sl6ip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8gnlu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1txwc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4p1q7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5tfhr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7v6rh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0wmn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqshs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4dj5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vsmcw"]
+
+[node name="dialogue" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_137sj")
+metadata/_edit_horizontal_guides_ = [-46.0]
+
+[node name="background" type="CenterContainer" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -326.426
+offset_top = -95.2094
+offset_right = 1477.57
+offset_bottom = 607.791
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="Parchment2" type="Sprite2D" parent="background"]
+position = Vector2(902.983, 419.268)
+rotation = -0.000482241
+scale = Vector2(1.79871, 1.347)
+texture = ExtResource("3_uwxhc")
+
+[node name="background" type="Label" parent="background"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_268d6")
+theme_override_font_sizes/font_size = 20
+text = "
+"
+
+[node name="background2" type="CenterContainer" parent="."]
+offset_left = -316.0
+offset_top = -14.0
+offset_right = 1453.0
+offset_bottom = 504.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Parchment" type="Sprite2D" parent="background2"]
+position = Vector2(891.457, 338)
+rotation = -0.000264618
+scale = Vector2(1.7978, 1.34962)
+texture = ExtResource("3_uwxhc")
+
+[node name="background" type="Label" parent="background2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_268d6")
+theme_override_font_sizes/font_size = 20
+text = "In a medieval realm, nestled amidst towering forests and rugged mountains, stood an ancient castle, the bastion of the Crescent 
+Kingdom.Princess Eliza, cherished daughter of the monarchs, was renowned for her grace and kindness.
+Yet, the tranquility of the kingdom was shattered when the malevolent sorcerer Malock unleashed his dark forces. Under the cover 
+of night, Malock's minions stormed the castle, seizing Princess Eliza and plunging the realm into chaos.
+Desperate to rescue their beloved daughter, the king and queen issued a heartfelt plea throughout the land, seeking a valiant 
+champion to undertake the perilous quest.
+You, a noble warrior, answered the call, venturing forth into the untamed wilderness. Through dense forests and treacherous 
+mountains,you journeyed to the heart of darkness where Malock's stronghold, the Shadow Citadel,loomed.
+Within the shadowy depths of the fortress, you faced fierce adversaries, navigated cunning traps, and braved arcane sorcery. 
+Yet, your resolve remained unshaken as you pressed onward, driven by the hope of freeing Princess Eliza from Malock's clutches.
+But beware, for Malock's malevolence knows no bounds, and his sinister schemes lurk at every turn. Only through courage, 
+cunning, and unwavering determination can you hope to overcome the darkness and rescue the princess from her dire fate.
+In this age of knights and sorcery, you are the kingdom's last hope. Will you rise to the challenge and become the hero the
+realm so desperately needs? The fate of Princess Eliza and the Crescent Kingdom rests in your hands.
+"
+
+[node name="start_background" type="Timer" parent="."]
+
+[node name="end_background" type="Timer" parent="."]
+
+[node name="next" type="Button" parent="."]
+offset_left = 1008.0
+offset_top = 2.0
+offset_right = 1154.0
+offset_bottom = 79.0
+theme_override_fonts/font = ExtResource("3_268d6")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sl6ip")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8gnlu")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_1txwc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4p1q7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5tfhr")
+text = "next>"
+
+[node name=">>>" type="Button" parent="."]
+offset_left = 1046.0
+offset_top = 6.0
+offset_right = 1105.0
+offset_bottom = 77.0
+theme_override_fonts/font = ExtResource("3_268d6")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7v6rh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_k0wmn")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_dqshs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4dj5k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vsmcw")
+text = ">>>"
+
+[connection signal="timeout" from="start_background" to="." method="_on_start_background_timeout"]
+[connection signal="timeout" from="end_background" to="." method="_on_end_background_timeout"]
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from=">>>" to="." method="_on__pressed"]

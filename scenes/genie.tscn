@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://evdv7wnldrjw"]
+
+[ext_resource type="Script" path="res://scripts/genie.gd" id="1_7rhhc"]
+[ext_resource type="Texture2D" uid="uid://d3k7emfdu7dbg" path="res://art/character/Genie 1B[anim].png" id="2_t8tou"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dke03"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(0, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roe6m"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(160, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eijqf"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(320, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woc1q"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(480, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wluxd"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_opfe8"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eop1e"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r4ha"]
+atlas = ExtResource("2_t8tou")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vt6l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dke03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roe6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eijqf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woc1q")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wluxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_opfe8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eop1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r4ha")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="genie" type="CharacterBody2D"]
+script = ExtResource("1_7rhhc")
+
+[node name="genie_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6vt6l")
+animation = &"idle"
+frame_progress = 0.939279

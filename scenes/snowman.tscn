@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://d1j43tehahhl0"]
+
+[ext_resource type="Script" path="res://scripts/snowman.gd" id="1_qpnbv"]
+[ext_resource type="Texture2D" uid="uid://7wg1m81a6kio" path="res://art/character/Snowloff B[anim].png" id="2_a1m7g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1wfi"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(0, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5uaf"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(160, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8o22"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(320, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqqc0"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(480, 640, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wylda"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pxpu"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c7ch"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmecb"]
+atlas = ExtResource("2_a1m7g")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nc1hs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1wfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5uaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8o22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqqc0")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wylda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pxpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c7ch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmecb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="snowman" type="CharacterBody2D"]
+script = ExtResource("1_qpnbv")
+
+[node name="snowman_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nc1hs")
+animation = &"attack"
+frame = 3
+frame_progress = 0.463462

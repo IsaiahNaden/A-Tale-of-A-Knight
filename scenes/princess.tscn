@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://glxy0asup244"]
+
+[ext_resource type="Script" path="res://scripts/princess.gd" id="1_04mpd"]
+[ext_resource type="Texture2D" uid="uid://cifpn6x1gj4e4" path="res://art/character/princess.png" id="2_sivtk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5we5f"]
+atlas = ExtResource("2_sivtk")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddufv"]
+atlas = ExtResource("2_sivtk")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulsd5"]
+atlas = ExtResource("2_sivtk")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3m34i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5we5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddufv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulsd5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="princess" type="CharacterBody2D"]
+script = ExtResource("1_04mpd")
+
+[node name="princess_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_3m34i")
+animation = &"idle"

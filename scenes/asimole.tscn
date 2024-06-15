@@ -1,0 +1,116 @@
+[gd_scene load_steps=15 format=3 uid="uid://df1a45v1tilib"]
+
+[ext_resource type="Script" path="res://scripts/asimole.gd" id="1_joqrb"]
+[ext_resource type="Texture2D" uid="uid://by1jvgdapuwpa" path="res://art/character/Asimole 1D[anim].png" id="1_takph"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t3lv"]
+atlas = ExtResource("1_takph")
+region = Rect2(0, 640, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyamd"]
+atlas = ExtResource("1_takph")
+region = Rect2(192, 640, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r6gb"]
+atlas = ExtResource("1_takph")
+region = Rect2(384, 640, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpqyh"]
+atlas = ExtResource("1_takph")
+region = Rect2(576, 640, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_algj8"]
+atlas = ExtResource("1_takph")
+region = Rect2(0, 0, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ayql5"]
+atlas = ExtResource("1_takph")
+region = Rect2(192, 0, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y36x"]
+atlas = ExtResource("1_takph")
+region = Rect2(384, 0, 192, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwo7f"]
+atlas = ExtResource("1_takph")
+region = Rect2(576, 0, 192, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c8mxl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t3lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyamd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r6gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpqyh")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_algj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ayql5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1y36x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwo7f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3mh0q"]
+radius = 132.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uuehe"]
+radius = 92.0217
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ogow"]
+radius = 52.6118
+
+[node name="asimole" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_joqrb")
+
+[node name="asimole_animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_c8mxl")
+animation = &"idle"
+frame_progress = 0.15366
+
+[node name="detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+shape = SubResource("CircleShape2D_3mh0q")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+position = Vector2(-6, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(6, 4)
+shape = SubResource("CircleShape2D_uuehe")
+
+[node name="take_damage_cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_8ogow")
+
+[connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
+[connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
