@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cvvotfofqel2y"]
+[gd_scene load_steps=49 format=3 uid="uid://cwxtpofsl4qhe"]
 
 [ext_resource type="Texture2D" uid="uid://cqyg7uxct5j4r" path="res://assets/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="1_g0g8c"]
 [ext_resource type="Script" path="res://scripts/level_4.gd" id="1_vhro6"]
@@ -20,9 +20,9 @@
 [ext_resource type="Texture2D" uid="uid://daxhe4sqvy2cs" path="res://assets/Texture/TX Tileset Wall.png" id="11_8yojb"]
 [ext_resource type="Texture2D" uid="uid://bxm136a2ifvfi" path="res://assets/Texture/TX Struct.png" id="12_i7hf8"]
 [ext_resource type="Texture2D" uid="uid://duo3amkr0g4q8" path="res://assets/TILESET-VILLAGE-TOP-DOWN/TILESET VILLAGE TOP DOWN/PIT - DAY.png" id="13_1mlrp"]
-[ext_resource type="PackedScene" uid="uid://g6ssm6svc36s" path="res://scenes/teleport_basement.tscn" id="21_1mmau"]
+[ext_resource type="PackedScene" uid="uid://m6ljeuednggo" path="res://scenes/teleport_basement.tscn" id="21_1mmau"]
 [ext_resource type="PackedScene" uid="uid://cfitma21jjg3q" path="res://scenes/player.tscn" id="21_cwktu"]
-[ext_resource type="PackedScene" uid="uid://glxy0asup244" path="res://scenes/princess.tscn" id="22_jdnqk"]
+[ext_resource type="PackedScene" path="res://scenes/princess.tscn" id="22_jdnqk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ijqbg"]
 texture = ExtResource("1_g0g8c")
