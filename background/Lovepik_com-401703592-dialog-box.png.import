@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c6x7bcablerw2"
+=======
+uid="uid://b7s4exxklok6b"
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 path="res://.godot/imported/Lovepik_com-401703592-dialog-box.png-1c8fd10231028661b7112aadbbf9f006.ctex"
 metadata={
 "vram_texture": false

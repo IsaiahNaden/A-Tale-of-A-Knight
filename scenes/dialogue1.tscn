@@ -1,4 +1,5 @@
 [gd_scene load_steps=19 format=3 uid="uid://poa2wgmkif4f"]
+[gd_scene load_steps=19 format=3 uid="uid://poa2wgmkif4f"]
 
 [ext_resource type="Script" path="res://scenes/dialogue1.gd" id="1_kd8r2"]
 [ext_resource type="Texture2D" uid="uid://djk8d620vlmet" path="res://background/pngegg.png" id="2_tgol4"]
@@ -34,7 +35,13 @@
 
 [node name="dailgue1" type="Node2D"]
 process_mode = 3
+process_mode = 3
 script = ExtResource("1_kd8r2")
+
+[node name="Pngegg" type="Sprite2D" parent="."]
+position = Vector2(1346.25, 1239.75)
+scale = Vector2(0.567483, 0.400745)
+texture = ExtResource("2_tgol4")
 
 [node name="Pngegg" type="Sprite2D" parent="."]
 position = Vector2(1346.25, 1239.75)
@@ -81,6 +88,10 @@ text = "Ah, brave warrior, you have answered the call in our kingdom's darkest h
 Your courage is a beacon of hope amidst the shadows that now encroach upon us."
 
 [node name="text_full2" type="Label" parent="."]
+offset_left = 740.0
+offset_top = 913.0
+offset_right = 1538.0
+offset_bottom = 980.0
 offset_left = 740.0
 offset_top = 913.0
 offset_right = 1538.0

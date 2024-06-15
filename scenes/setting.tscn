@@ -45,6 +45,7 @@ script = ExtResource("1_ia8b5")
 [node name="stop" type="VBoxContainer" parent="."]
 process_mode = 3
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = 85.0
 offset_top = 131.0
 offset_right = 518.0
@@ -55,11 +56,27 @@ modulate = Color(1, 1, 1, 0.470588)
 position = Vector2(873, 413)
 scale = Vector2(8.54911, 4.81696)
 texture = ExtResource("2_o0hax")
+=======
+offset_left = 50.0114
+offset_top = 51.2903
+offset_right = 483.011
+offset_bottom = 577.29
+
+[node name="BlackTexture" type="Sprite2D" parent="stop"]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(525.989, 272.71)
+scale = Vector2(5.13393, 2.89286)
+texture = ExtResource("2_dftql")
+>>>>>>> main
 
 [node name="pause" type="Label" parent="stop"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
+<<<<<<< HEAD
 theme_override_font_sizes/font_size = 150
+=======
+theme_override_font_sizes/font_size = 100
+>>>>>>> main
 text = "Pause"
 
 [node name="pause2" type="VBoxContainer" parent="stop"]
@@ -67,8 +84,12 @@ layout_mode = 2
 
 [node name="resume" type="Button" parent="stop/pause2"]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 75
+=======
+theme_override_font_sizes/font_size = 50
+>>>>>>> main
 theme_override_styles/normal = SubResource("StyleBoxEmpty_lgp80")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_yc7rf")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ic1mp")
@@ -79,8 +100,12 @@ alignment = 0
 
 [node name="setting" type="Button" parent="stop/pause2"]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 75
+=======
+theme_override_font_sizes/font_size = 50
+>>>>>>> main
 theme_override_styles/normal = SubResource("StyleBoxEmpty_2m33l")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_8b5t7")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_tyqtr")
@@ -92,8 +117,12 @@ alignment = 0
 
 [node name="quit" type="Button" parent="stop/pause2"]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 75
+=======
+theme_override_font_sizes/font_size = 50
+>>>>>>> main
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5y2ey")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_pik6y")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_msqem")
@@ -108,6 +137,7 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
+<<<<<<< HEAD
 offset_left = 1819.0
 offset_right = 1915.0
 offset_bottom = 77.0
@@ -115,6 +145,16 @@ grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
+=======
+offset_left = 1080.0
+offset_top = 4.0
+offset_right = 1152.0
+offset_bottom = 63.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 21
+>>>>>>> main
 theme_override_styles/normal = ExtResource("4_k52id")
 theme_override_styles/hover = ExtResource("4_k52id")
 theme_override_styles/pressed = ExtResource("5_21cnc")
@@ -123,6 +163,7 @@ text = "ll"
 
 [node name="setting" type="VBoxContainer" parent="."]
 layout_mode = 0
+<<<<<<< HEAD
 offset_left = 698.0
 offset_top = 310.0
 offset_right = 1327.0
@@ -134,6 +175,20 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(259.5, 229.5)
 scale = Vector2(8.54911, 4.81696)
 texture = ExtResource("2_o0hax")
+=======
+offset_left = 342.0
+offset_top = 129.0
+offset_right = 971.0
+offset_bottom = 606.0
+theme_override_constants/separation = 40
+script = ExtResource("5_oi4cb")
+
+[node name="BlackTexture" type="Sprite2D" parent="setting"]
+modulate = Color(1, 1, 1, 0.470588)
+position = Vector2(234, 196.5)
+scale = Vector2(5.14286, 2.89732)
+texture = ExtResource("2_dftql")
+>>>>>>> main
 
 [node name="Fullscreen" type="HBoxContainer" parent="setting"]
 layout_mode = 2
@@ -142,7 +197,10 @@ theme_override_constants/separation = 50
 [node name="full screen" type="Label" parent="setting/Fullscreen"]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> main
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "full screen "
@@ -162,7 +220,10 @@ theme_override_constants/separation = 50
 [node name="resolution" type="Label" parent="setting/resolution"]
 custom_minimum_size = Vector2(260, 0)
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> main
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "resolution"
@@ -177,7 +238,10 @@ theme_override_fonts/font = ExtResource("3_11mtm")
 
 [node name="volume" type="Label" parent="setting"]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> main
 theme_override_fonts/font = ExtResource("3_11mtm")
 theme_override_font_sizes/font_size = 50
 text = "Volume"
@@ -185,6 +249,7 @@ text = "Volume"
 [node name="HSlider" type="HSlider" parent="setting"]
 layout_mode = 2
 max_value = 1.0
+<<<<<<< HEAD
 step = 0.001
 
 [node name="Button" type="Button" parent="."]
@@ -194,10 +259,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+<<<<<<< HEAD
 offset_left = 694.0
 offset_top = 897.0
 offset_right = 1324.0
 offset_bottom = 983.0
+=======
+offset_left = 373.0
+offset_top = 545.0
+offset_right = 895.0
+offset_bottom = 631.0
+>>>>>>> main
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -215,3 +287,7 @@ text = "Back"
 [connection signal="pressed" from="stop_button" to="." method="_on_stop_pressed"]
 [connection signal="value_changed" from="setting/HSlider" to="." method="_on_h_slider_value_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+<<<<<<< HEAD
+=======
+[connection signal="pressed" from="Button" to="setting" method="_on_button_pressed"]
+>>>>>>> main

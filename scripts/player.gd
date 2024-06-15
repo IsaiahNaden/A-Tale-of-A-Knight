@@ -2,20 +2,13 @@ extends CharacterBody2D
 
 var enemy_inattack_range = false
 var enemy_attack_cooldown = true
-var health = 100
+var health = 120
 var player_alive = true
 
 var attack_ip = false
 
 
-const normal_speed = 100
-const boosted_speed = 200
-var current_speed = normal_speed
-
-var speed_boost_active = false
-
-var invulnerable = false
-
+const speed = 100
 var current_dir = "none"
 
 var speed_boost_timer: Timer
@@ -119,22 +112,22 @@ func player_movement(delta):
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
 		play_anim(1)
-		velocity.x = current_speed
+		velocity.x = speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_left"):
 		current_dir = "left"
 		play_anim(1)
-		velocity.x = -current_speed
+		velocity.x = -speed
 		velocity.y = 0
 	elif Input.is_action_pressed("ui_down"):
 		current_dir = "down"
 		play_anim(1)
-		velocity.y = current_speed
+		velocity.y = speed
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_up"):
 		current_dir = "up"
 		play_anim(1)
-		velocity.y = -current_speed
+		velocity.y = -speed
 		velocity.x = 0
 	else:
 		play_anim(0)
@@ -196,7 +189,7 @@ func enemy_attack():
 		health -= damage
 		enemy_attack_cooldown = false
 		$attack_cooldown.start()
-		print("player health = ", health)
+		print(health)
 
 func _on_attack_cooldown_timeout():
 	enemy_attack_cooldown = true

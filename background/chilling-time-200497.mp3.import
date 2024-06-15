@@ -2,7 +2,11 @@
 
 importer="mp3"
 type="AudioStreamMP3"
+<<<<<<< HEAD
 uid="uid://efprmnu52gpx"
+=======
+uid="uid://csn4cbeiuyu68"
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 path="res://.godot/imported/chilling-time-200497.mp3-a6ef37fd0b259ebf7b7a45249786d524.mp3str"
 
 [deps]
@@ -12,7 +16,11 @@ dest_files=["res://.godot/imported/chilling-time-200497.mp3-a6ef37fd0b259ebf7b7a
 
 [params]
 
+<<<<<<< HEAD
 loop=false
+=======
+loop=true
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 loop_offset=0
 bpm=0
 beat_count=0
