@@ -1,8 +1,8 @@
+Button
+Label
 TileMap
 Camera2D
 ColorRect
-Button
-Label
 Sprite2D
 CanvasLayer
 CollisionPolygon2D

@@ -11,54 +11,16 @@ var attack_ip = false
 const speed = 100
 var current_dir = "none"
 
-var speed_boost_timer: Timer
-var speed_boost_label: Label
-var speed_boost_label_timer: Timer
-var speed_boost_inactive_label_timer: Timer
-var speed_boost_inactive_label: Label
-
-var invulnerability_timer: Timer
-var invulnerability_label: Label
-var invulnerability_label_timer: Timer
-var invulnerability_inactive_label: Label
-var invulnerability_inactive_label_timer: Timer
-
-
-
-func _ready():
-	speed_boost_timer = $speed_boost_timer
-	speed_boost_label = $SpeedBoostLabel
-	speed_boost_label_timer = $speed_boost_label_timer
-	speed_boost_inactive_label = $SpeedBoostInactiveLabel
-	speed_boost_inactive_label_timer = $speed_boost_inactive_label_timer
-	speed_boost_label.visible = false
-	speed_boost_inactive_label.visible = false
-	
-	invulnerability_timer = $invulnerability_timer
-	invulnerability_label = $InvulnerabilityLabel
-	invulnerability_label_timer = $invulnerability_label_timer
-	invulnerability_inactive_label = $InvulnerabilityInactiveLabel
-	invulnerability_inactive_label_timer = $invulnerability_inactive_label_timer
-	invulnerability_label.visible = false
-	invulnerability_inactive_label.visible = false
-	
 func _physics_process(delta):
 	player_movement(delta)
 	enemy_attack()
 	attack()
-	update_health()
 	
 	if health <= 0:
 		player_alive = false  #add respawn screen
 		health = 0
-		get_tree().change_scene_to_file('res://scenes/respawn_screen.tscn')
-
-			
-	   
- 
-		
-		
-		
+		print("player has died")
+		self.queue_free()
 
 func player_movement(delta):
 
@@ -172,66 +134,3 @@ func _on_deal_attack_timer_timeout():
 	$deal_attack_timer.start()
 	global.player_current_attack = false
 	attack_ip = false
-
-
-
-		
-func update_health():
-	var healthbar = $healthbar
-	
-	healthbar.value = health
-	
-	if health >=100:
-		healthbar.visible = false
-	else:
-		healthbar.visible = true
-
-
-func _on_regen_timer_timeout():
-	if health < 100:
-		health = health + 20
-		if health > 100:
-			health = 100
-	if health <= 0:
-		health = 0
-
-
-func _on_speed_boost_timer_timeout():
-	speed_boost_active = false
-	speed_boost_inactive_label.visible = true
-	speed_boost_inactive_label_timer.start()
-
-
-
-func _on_speed_boost_label_timer_timeout():
-	speed_boost_label.visible = false
-
-
-
-func _on_speed_boost_inactive_label_timer_timeout():
-	speed_boost_inactive_label.visible = false
-
-
-
-func _on_invulnerability_timer_timeout():
-	invulnerable = false
-	invulnerability_inactive_label.visible = true
-	invulnerability_inactive_label_timer.start()
-	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
-
-
-
-
-func _on_invulnerability_label_timer_timeout():
-	invulnerability_label.visible = false
-
-
-func _on_invulnerability_inactive_label_timer_timeout():
-	invulnerability_inactive_label.visible = false
-
-
-
-func _on_player_hitbox_area_entered(area):
-	if area.is_in_group('Teleport basement'):
-		position.x = 570
-		position.y = 180

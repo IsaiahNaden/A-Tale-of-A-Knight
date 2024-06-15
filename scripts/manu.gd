@@ -1,43 +1,50 @@
 extends Node2D
 
 func _ready():
-	$tips.hide()
+	$BlackTexture.hide()
+	$tips_tittle.hide()
 	$move.hide()
-	$other.hide()
-	$rules.hide()
-	$Background.show()
-	$GameName.show()
-	$VBoxContainer.show()
+	$move2.hide()
 	$back.hide()
+	$move3.hide()
 	
 
-func _on_how_to_play_pressed():
-	$Background.hide()
-	$GameName.hide()
-	$VBoxContainer.hide()
-	$tips.show()
-	$move.show()
-	$other.show()
-	$rules.show()
-	$back.show()
-	
-func _on_back_pressed():
-	$tips.hide()
-	$move.hide()
-	$other.hide()
-	$rules.hide()
-	$Background.show()
-	$GameName.show()
-	$VBoxContainer.show()
-	$back.hide()
-	
-func _on_button_pressed():
+
+func _on_start_pressed():
 	get_tree().change_scene_to_file("res://scenes/dialogue.tscn")
 
-func _on_exit_pressed():
+
+func _on_tips_pressed():
+	$Tips.hide()
+	$Background.hide()
+	$Game_name.hide()
+	$Start.hide()
+	$Start2.hide()
+	$back.show()
+	$BlackTexture.show()
+	$tips_tittle.show()
+	$move.show()
+	$move2.show()
+	$move3.show()
+	
+	
+
+
+func _on_start_2_pressed():
 	get_tree().quit()
 
 
-var loadgame
-var path : String
-var SpawnIndex : int 
+func _on_back_pressed():
+	
+	$Tips.show()
+	$Background.show()
+	$Game_name.show()
+	$Start.show()
+	$Start2.show()
+	$back.hide()
+	$BlackTexture.hide()
+	$tips_tittle.hide()
+	$move.hide()
+	$move2.hide()
+	$move3.hide()
+	

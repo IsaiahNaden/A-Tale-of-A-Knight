@@ -77,8 +77,4 @@ func _on__3_pressed():
 	$"next>".show()
 	$dialogue3.hide()
 	$dialogue4.show()
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
