@@ -20,6 +20,7 @@ offset_bottom = -121.0
 color = Color(0.0642497, 0.344937, 0.52187, 1)
 
 [node name="Label" type="Label" parent="Sprite2D/ColorRect"]
+layout_mode = 0
 offset_left = 21.0
 offset_top = 3.0
 offset_right = 502.0
@@ -39,6 +40,7 @@ offset_bottom = -49.0
 color = Color(0.789459, 0.230293, 0, 1)
 
 [node name="menu" type="Button" parent="Sprite2D/ColorRect2"]
+layout_mode = 0
 offset_top = 2.0
 offset_right = 199.0
 offset_bottom = 55.0
@@ -56,6 +58,7 @@ offset_bottom = 15.0
 color = Color(0.729355, 0.239171, 0, 1)
 
 [node name="respawn" type="Button" parent="Sprite2D/ColorRect3"]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 204.0
 offset_bottom = 48.0
