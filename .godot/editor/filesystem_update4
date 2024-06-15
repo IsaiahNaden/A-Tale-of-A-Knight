@@ -3,10 +3,7 @@ res://scenes/level_2.tscn
 res://scenes/manu.tscn
 res://scenes/level_1_start.tscn
 res://scenes/king.tscn
-res://scripts/king.gd
-res://scripts/dialogue.gd
 res://scenes/dialogue.tscn
 res://scenes/main_character.tscn
 res://scenes/setting.tscn
-res://scripts/setting.gd
-res://scripts/manu.gd
+res://scripts/main_character.gd
