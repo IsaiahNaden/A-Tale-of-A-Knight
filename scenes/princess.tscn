@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://glxy0asup244"]
+[gd_scene load_steps=8 format=3 uid="uid://glxy0asup244"]
 
 [ext_resource type="Script" path="res://scripts/princess.gd" id="1_04mpd"]
 [ext_resource type="Texture2D" uid="uid://cifpn6x1gj4e4" path="res://art/character/princess.png" id="2_sivtk"]
@@ -37,9 +37,20 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_elu8a"]
+size = Vector2(32, 35)
+
 [node name="princess" type="CharacterBody2D"]
 script = ExtResource("1_04mpd")
 
 [node name="princess_animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3m34i")
 animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_elu8a")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

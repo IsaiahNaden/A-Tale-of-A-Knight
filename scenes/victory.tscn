@@ -4,12 +4,12 @@
 [ext_resource type="Script" path="res://scripts/victory.gd" id="1_jckht"]
 [ext_resource type="Texture2D" uid="uid://d1wimca0mlx68" path="res://background/dialog.png" id="4_4v3ij"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="4_kied1"]
-[ext_resource type="Texture2D" uid="uid://dn46mksw2y115" path="res://background/victory.png" id="5_tlvwo"]
-[ext_resource type="Texture2D" uid="uid://cxbisisxgie6" path="res://background/princess.png" id="6_75f0x"]
-[ext_resource type="Texture2D" uid="uid://bvgoycmmwlh8a" path="res://background/King.png" id="7_2vrvs"]
-[ext_resource type="Texture2D" uid="uid://b7s4exxklok6b" path="res://background/Lovepik_com-401703592-dialog-box.png" id="8_m4twm"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="9_cpfgn"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="10_r632y"]
+[ext_resource type="Texture2D" uid="uid://b52l8pd4e7u1h" path="res://background/victory.png" id="5_tlvwo"]
+[ext_resource type="Texture2D" uid="uid://dvulpsn20jirg" path="res://background/princess.png" id="6_75f0x"]
+[ext_resource type="Texture2D" uid="uid://xsay1pxplqab" path="res://background/King.png" id="7_2vrvs"]
+[ext_resource type="Texture2D" uid="uid://c6x7bcablerw2" path="res://background/Lovepik_com-401703592-dialog-box.png" id="8_m4twm"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="9_cpfgn"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="10_r632y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmasq"]
 
@@ -32,6 +32,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_of154"]
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(1.7, 1.7)
 script = ExtResource("1_jckht")
 
 [node name="background" type="CenterContainer" parent="."]

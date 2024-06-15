@@ -252,13 +252,6 @@ max_value = 1.0
 <<<<<<< HEAD
 step = 0.001
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -80.0
-autoplay = true
-=======
-step = 0.05
->>>>>>> main
-
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7

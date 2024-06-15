@@ -1,5 +1,7 @@
 extends Control
 
+var global
+
 func _ready():
 	$stop.hide()
 	$stop_button.show()
@@ -105,3 +107,4 @@ func _on_save_game_pressed():
 	global.save_game_1()
 	global.save_game_2()
 	global.save_game_3()
+
