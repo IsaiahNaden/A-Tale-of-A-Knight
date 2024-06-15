@@ -43,6 +43,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c6idd"]
 size = Vector2(24, 27)
 
+<<<<<<< HEAD
+=======
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cox53"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6yms5"]
@@ -75,7 +77,9 @@ size = Vector2(24, 27)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rnudf"]
 
+>>>>>>> main
 [node name="king" type="CharacterBody2D"]
+process_mode = 3
 process_mode = 3
 script = ExtResource("1_mbavs")
 
@@ -85,6 +89,132 @@ animation = &"idle"
 frame_progress = 0.439983
 
 [node name="Area2D" type="Area2D" parent="."]
+<<<<<<< HEAD
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_c6idd")
+
+[node name="dialogue" type="VBoxContainer" parent="."]
+offset_left = 22.0299
+offset_top = -28.9802
+offset_right = 545.03
+offset_bottom = 40.0198
+
+[node name="Dialog" type="Sprite2D" parent="dialogue"]
+position = Vector2(165.97, 34.9802)
+scale = Vector2(1.43684, 0.28903)
+texture = ExtResource("3_ivlg6")
+
+[node name="Label" type="Label" parent="dialogue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+text = "King :"
+
+[node name="dialogue" type="Label" parent="dialogue"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+text = "Ah, brave warrior, you have answered the call
+ in our kingdom's darkest hour. "
+
+[node name=">>>_1" type="Button" parent="."]
+offset_left = 321.0
+offset_top = -30.0
+offset_right = 357.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cox53")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6yms5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_42q8k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hhqwj")
+text = ">>>"
+
+[node name="dialogue2" type="Label" parent="."]
+offset_left = 22.0
+offset_top = -5.0
+offset_right = 331.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_xf0hm")
+text = "Brave warrior, please beware of the dangerous
+ road you are to embark on."
+
+[node name=">>>_2" type="Button" parent="."]
+offset_left = 321.0
+offset_top = -30.0
+offset_right = 357.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uwclk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_o6nai")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v0diu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4r6cw")
+text = ">>>"
+
+[node name="dialogue3" type="Label" parent="."]
+offset_left = 23.0
+offset_top = -5.0
+offset_right = 453.0
+offset_bottom = 38.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+text = "May the gods be with you. Your bravery is the
+ beacon of hope we ndesperately need. 
+"
+
+[node name=">>>_3" type="Button" parent="."]
+offset_left = 319.0
+offset_top = -30.0
+offset_right = 358.0
+offset_bottom = 1.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j3dty")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_x5xiv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_2mqfh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5wdlf")
+text = ">>>
+"
+
+[node name="dialogue4" type="Label" parent="."]
+offset_left = 20.0
+offset_top = -5.0
+offset_right = 450.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+text = " Go forth with our blessings and the support of the 
+entire kingdom."
+
+[node name="next>" type="Button" parent="."]
+offset_left = 319.0
+offset_top = -26.0
+offset_right = 358.0
+offset_bottom = -6.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_jsir1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gsbji")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3pg1f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7ikhv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rnudf")
+text = "next >"
+
+[node name="GoodLuck" type="Label" parent="."]
+offset_left = -63.0
+offset_top = -41.0
+offset_right = 75.0
+offset_bottom = -17.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = " Good Luck man !"
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+=======
 position = Vector2(-1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -218,3 +348,4 @@ text = " Good Luck man !"
 [connection signal="pressed" from="next>" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="next>" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+>>>>>>> main

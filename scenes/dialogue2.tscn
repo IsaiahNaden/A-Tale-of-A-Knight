@@ -1,12 +1,12 @@
 [gd_scene load_steps=16 format=3 uid="uid://dcae2k6asb6bg"]
 
 [ext_resource type="Script" path="res://scenes/dialogue2.gd" id="1_8wxxf"]
-[ext_resource type="Texture2D" path="res://scenes/room.jpg" id="2_xtq57"]
-[ext_resource type="Texture2D" path="res://scenes/dialog.png" id="3_6hojr"]
-[ext_resource type="StyleBox" path="res://scenes/new_style_box_flat.tres" id="6_iyn3a"]
-[ext_resource type="FontFile" path="res://scenes/Jaro-Regular-VariableFont_opsz.ttf" id="6_s12h8"]
+[ext_resource type="Texture2D" uid="uid://cubwrycbb6ynd" path="res://scenes/room.jpg" id="2_xtq57"]
+[ext_resource type="Texture2D" uid="uid://rk7xo1ldt11f" path="res://scenes/dialog.png" id="3_6hojr"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="6_iyn3a"]
+[ext_resource type="FontFile" uid="uid://c3equ80x54e0l" path="res://scenes/Jaro-Regular-VariableFont_opsz.ttf" id="6_s12h8"]
 [ext_resource type="PackedScene" uid="uid://d2k7qmpyqy6jm" path="res://scenes/setting.tscn" id="6_w844k"]
-[ext_resource type="StyleBox" path="res://scenes/press.tres" id="7_dv2kc"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="7_dv2kc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ni2w"]
 

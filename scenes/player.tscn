@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://c5313xc72yt17"]
+[gd_scene load_steps=40 format=3 uid="uid://cfitma21jjg3q"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ud55d"]
 
@@ -238,7 +238,7 @@ radius = 2.63008
 [sub_resource type="CircleShape2D" id="CircleShape2D_46ao1"]
 radius = 17.5772
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 y_sort_enabled = true
 position = Vector2(18, 36)
 scale = Vector2(1.966, 1.199)
@@ -270,6 +270,80 @@ wait_time = 0.5
 [node name="deal_attack_timer" type="Timer" parent="."]
 wait_time = 0.5
 
+<<<<<<< HEAD
+[node name="healthbar" type="ProgressBar" parent="."]
+modulate = Color(0.223529, 0.129412, 0.964706, 1)
+offset_left = -5.0
+offset_top = -22.0
+offset_right = 107.0
+offset_bottom = 5.0
+scale = Vector2(0.1, 0.1)
+show_percentage = false
+
+[node name="regen_timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="speed_boost_timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="SpeedBoostLabel" type="Label" parent="."]
+offset_left = -32.5534
+offset_top = -32.5271
+offset_right = 114.447
+offset_bottom = -9.5271
+scale = Vector2(0.5, 0.5)
+text = "Speed Boost Active
+"
+
+[node name="speed_boost_label_timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="SpeedBoostInactiveLabel" type="Label" parent="."]
+offset_left = -32.5534
+offset_top = -33.3611
+offset_right = 128.447
+offset_bottom = -10.3611
+scale = Vector2(0.5, 0.5)
+text = "Speed Boost Inactive"
+
+[node name="speed_boost_inactive_label_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="invulnerability_timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="InvulnerabilityLabel" type="Label" parent="."]
+visible = false
+offset_left = -34.588
+offset_top = -33.3611
+offset_right = 129.412
+offset_bottom = -10.3611
+scale = Vector2(0.5, 0.5)
+text = "Invulnerability Active"
+
+[node name="invulnerability_label_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="InvulnerabilityInactiveLabel" type="Label" parent="."]
+visible = false
+offset_left = -35.0966
+offset_top = -32.5271
+offset_right = 141.903
+offset_bottom = -9.52711
+scale = Vector2(0.5, 0.5)
+text = "Invulnerability Inactive"
+
+[node name="invulnerability_inactive_label_timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="area_entered" from="player_hitbox" to="." method="_on_player_hitbox_area_entered"]
+=======
+>>>>>>> main
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
