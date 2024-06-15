@@ -51,7 +51,7 @@ func _ready():
 	invulnerability_inactive_label = $InvulnerabilityInactiveLabel
 	invulnerability_inactive_label_timer = $invulnerability_inactive_label_timer
 	invulnerability_label.visible = false
-	invulnerability_inactive_label.visible = false
+	
 	
 	teleport_destination = Vector2(100, 100)
 	
@@ -306,8 +306,8 @@ func _on_speed_boost_inactive_label_timer_timeout():
 
 func _on_invulnerability_timer_timeout():
 	invulnerable = false
-	invulnerability_inactive_label.visible = true
-	invulnerability_inactive_label_timer.start()
+	
+	
 	$AnimatedSprite2D.modulate = Color(1, 1, 1, 1)
 
 

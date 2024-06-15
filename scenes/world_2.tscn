@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://67452o7ambwi"]
+[gd_scene load_steps=23 format=3 uid="uid://67452o7ambwi"]
 
 [ext_resource type="Script" path="res://scripts/world_2.gd" id="1_fjctb"]
 [ext_resource type="Texture2D" uid="uid://bx6s1xmiae67i" path="res://assets/Texture/TX Tileset Stone Ground.png" id="2_qqewh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8io38ubyl880" path="res://assets/Texture/TX Tileset Grass.png" id="5_0h7jy"]
 [ext_resource type="PackedScene" uid="uid://da4xxv2lsbn2i" path="res://scenes/player.tscn" id="8_d1su7"]
 [ext_resource type="PackedScene" uid="uid://b4vcpj0a2svmr" path="res://scenes/enemy.tscn" id="9_32fnn"]
+[ext_resource type="PackedScene" uid="uid://d4la4681h785n" path="res://scenes/zombie.tscn" id="9_sh223"]
 [ext_resource type="Script" path="res://scripts/global.gd" id="11_hm1nf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2fkli"]
@@ -4391,10 +4392,10 @@ layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("8_d1su7")]
-position = Vector2(50, 143)
+position = Vector2(51, 163)
 
 [node name="enemy" parent="." groups=["enemies"] instance=ExtResource("9_32fnn")]
-position = Vector2(351, 53)
+position = Vector2(344, 54)
 
 [node name="collisions" type="StaticBody2D" parent="."]
 
@@ -4411,7 +4412,7 @@ shape = SubResource("RectangleShape2D_ga3xn")
 position = Vector2(374, 211)
 
 [node name="enemy4" parent="." groups=["enemies"] instance=ExtResource("9_32fnn")]
-position = Vector2(306, 197)
+position = Vector2(220, 204)
 
 [node name="enemy5" parent="." groups=["enemies"] instance=ExtResource("9_32fnn")]
 position = Vector2(374, 144)
@@ -4425,6 +4426,10 @@ offset_top = 3.0
 offset_right = 293.0
 offset_bottom = 30.0
 max_value = 10.0
+
+[node name="zombie" parent="." instance=ExtResource("9_sh223")]
+position = Vector2(203, 96)
+scale = Vector2(0.75, 0.75)
 
 [connection signal="body_entered" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_entered"]
 [connection signal="body_exited" from="cliffside_transition_point" to="." method="_on_cliffside_transition_point_body_exited"]

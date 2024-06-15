@@ -378,14 +378,6 @@ text = "Invulnerability Active"
 wait_time = 3.0
 one_shot = true
 
-[node name="InvulnerabilityInactiveLabel" type="Label" parent="."]
-offset_left = -35.0966
-offset_top = -32.5271
-offset_right = 141.903
-offset_bottom = -9.52711
-scale = Vector2(0.5, 0.5)
-text = "Invulnerability Inactive"
-
 [node name="invulnerability_inactive_label_timer" type="Timer" parent="."]
 wait_time = 3.0
 

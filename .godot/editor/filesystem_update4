@@ -6,3 +6,25 @@ res://scenes/boss.tscn
 res://scripts/boss.gd
 res://scripts/enemy.gd
 res://scripts/player.gd
+res://scenes/necromancer.tscn
+res://scenes/state.gd
+res://scenes/FiniteStateMachine.gd
+res://scenes/boss_room.tscn
+res://scenes/Idle.gd
+res://scenes/player (2).tscn
+res://scenes/player (2).gd
+res://scenes/Summon.gd
+res://scenes/skeleton.tscn
+res://scenes/Follow.gd
+res://scenes/skeleton.gd
+res://scenes/AttackSkeleton.gd
+res://projectile.gd
+res://scenes/Attack.gd
+res://scenes/necromancer.gd
+res://projectile.tscn
+res://scenes/Stagger.gd
+res://scenes/Death.gd
+res://bullet.tscn
+res://zombie.tscn
+res://zombie.gd
+res://scenes/zombie.tscn

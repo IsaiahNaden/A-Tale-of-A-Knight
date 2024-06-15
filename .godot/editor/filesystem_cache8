@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718199440
+::res://::1718443362
 icon.svg::CompressedTexture2D::434307766447290347::1718095960::1718095960::1::::<><>::
 ::res://assets/::1718175238
 AdventureBegins_Demo.png::CompressedTexture2D::5669314646914705723::1718095959::1718096613::1::::<><>::
@@ -143,7 +143,7 @@ mordred_.png::CompressedTexture2D::4223701605051812980::1718095960::1718096615::
 morganLeFay_.png::CompressedTexture2D::9034381682737549756::1718095960::1718096615::1::::<><>::
 percival_.png::CompressedTexture2D::8108470919983344882::1718095960::1718096615::1::::<><>::
 staff_ [merlin].png::CompressedTexture2D::7027414648212570731::1718095960::1718096619::1::::<><>::
-::res://assets/characters/::1718175047
+::res://assets/characters/::1718440187
 Enemy-Melee-Attack-S.png::CompressedTexture2D::3554097820211421730::1718107714::1718107739::1::::<><>::
 Enemy-Melee-Idle-S.png::CompressedTexture2D::6408058164593470741::1718107724::1718107752::1::::<><>::
 Knight1_Attack.png::CompressedTexture2D::8132463316323229889::1718105952::1718105964::1::::<><>::
@@ -154,6 +154,7 @@ player.png::CompressedTexture2D::1385965700652796014::1718095960::1718096619::1:
 Skeleton enemy.png::CompressedTexture2D::528052150700864413::1718175017::1718175019::1::::<><>::
 skeleton.png::CompressedTexture2D::6509925871046155278::1718095960::1718096619::1::::<><>::
 slime.png::CompressedTexture2D::8617290130811830349::1718095960::1718096618::1::::<><>::
+Zombie 1D[anim].png::CompressedTexture2D::2989018186672361118::1718440165::1718440187::1::::<><>::
 ::res://assets/Effects/::1718095960
 ::res://assets/Effects/Explosion/::1718095960
 ::res://assets/Effects/Fire/::1718095960
@@ -515,15 +516,15 @@ room.jpg::CompressedTexture2D::4626091931858915394::1718095960::1718096612::1:::
 Snowloff B[anim].png::CompressedTexture2D::2291870722045776190::1718095960::1718096613::1::::<><>::
 Treant 1E[anim].png::CompressedTexture2D::4127209111050202465::1718095960::1718096613::1::::<><>::
 Zombie 1B[anim].png::CompressedTexture2D::7880078805105064074::1718095960::1718096613::1::::<><>::
-::res://scenes/::1718201083
+::res://scenes/::1718443362
 asimole.tscn::PackedScene::7563933488246697133::1718186017::0::1::::<><>::res://scripts/asimole.gd
 basic_sword.tscn::PackedScene::-1::1718095960::0::1::::<><>::
-cliff_side.tscn::PackedScene::456400742676803274::1718201083::0::1::::<><>::res://scripts/cliff_side.gd<>uid://da4xxv2lsbn2i::::res://scenes/player.tscn<>uid://b4vcpj0a2svmr::::res://scenes/enemy.tscn<>uid://df1a45v1tilib::::res://scenes/asimole.tscn<>uid://cpudwd1ytdntk::::res://scenes/zombie.tscn<>uid://bqtqhinn4h7ek::::res://scenes/demonpot.tscn
-demonpot.tscn::PackedScene::3549649772569337722::1718097984::0::1::::<><>::res://scripts/demonpot.gd<>res://art/character/Demonpot D[anim].png
+cliff_side.tscn::PackedScene::456400742676803274::1718439058::0::1::::<><>::res://scripts/cliff_side.gd<>uid://da4xxv2lsbn2i::::res://scenes/player.tscn<>uid://b4vcpj0a2svmr::::res://scenes/enemy.tscn<>uid://df1a45v1tilib::::res://scenes/asimole.tscn<>uid://bqtqhinn4h7ek::::res://scenes/demonpot.tscn
 dialogue1.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 dialogue2.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 dialogue.tscn::PackedScene::-1::1718095960::0::1::::<><>::
-enemy.tscn::PackedScene::4465397814292476797::1718201082::0::1::::<><>::res://scripts/enemy.gd<>uid://bqvvqbpfbbdp7::::res://assets/characters/Enemy-Melee-Attack-S.png<>uid://cxkd1txt07fcn::::res://assets/characters/Enemy-Melee-Idle-S.png
+enemy.tscn::PackedScene::4465397814292476797::1718442998::0::1::::<><>::res://scripts/enemy.gd<>uid://bqvvqbpfbbdp7::::res://assets/characters/Enemy-Melee-Attack-S.png<>uid://cxkd1txt07fcn::::res://assets/characters/Enemy-Melee-Idle-S.png
+Follow.gd::GDScript::-1::1718435078::0::1::::<>State<>::
 game.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 genie.tscn::PackedScene::7792644581792657285::1718097984::0::1::::<><>::res://scripts/genie.gd<>res://art/character/Genie 1B[anim].png
 healthbar.tscn::PackedScene::-1::1718095960::0::1::::<><>::
@@ -536,16 +537,15 @@ level_first_to_second.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 level_second_to_third.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 main_character.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 manu.tscn::PackedScene::-1::1718095960::0::1::::<><>::
-player.tscn::PackedScene::7220567715264449178::1718201082::0::1::::<><>::res://scripts/player.gd<>uid://dn4oqn7fmbpmf::::res://assets/characters/Knight1_Attack.png<>uid://cf1em3geurm7t::::res://assets/characters/Knight1_Move.png<>uid://cxts2aoymoaco::::res://assets/characters/Knight1_Idle.png
+player.tscn::PackedScene::7220567715264449178::1718442997::0::1::::<><>::res://scripts/player.gd<>uid://dn4oqn7fmbpmf::::res://assets/characters/Knight1_Attack.png<>uid://cf1em3geurm7t::::res://assets/characters/Knight1_Move.png<>uid://cxts2aoymoaco::::res://assets/characters/Knight1_Idle.png
 princess.tscn::PackedScene::445281880939137755::1718097984::0::1::::<><>::res://scripts/princess.gd<>res://art/character/princess.png
 setting.tscn::PackedScene::-1::1718095960::0::1::::<><>::
-skeleton.tscn::PackedScene::5727917437373054844::1718187990::0::1::::<><>::uid://hr17axoybyfl::::res://assets/characters/Skeleton enemy.png<>res://scenes/FiniteStateMachine.gd<>res://scripts/state.gd
 snowman.tscn::PackedScene::9004563184915449667::1718097984::0::1::::<><>::res://scripts/snowman.gd<>res://art/character/Snowloff B[anim].png
 teleport_basement.tscn::PackedScene::-1::1718095960::0::1::::<><>::
 world.tscn::PackedScene::2260865346330106520::1718097981::0::1::::<><>::res://art/tilesets/plains.png<>res://art/tilesets/grass.png<>res://art/objects/objects.png<>uid://da4xxv2lsbn2i::::res://scenes/player.tscn<>uid://b4vcpj0a2svmr::::res://scenes/enemy.tscn
-world_2.tscn::PackedScene::2243730048728413912::1718201082::0::1::::<><>::res://scripts/world_2.gd<>uid://bx6s1xmiae67i::::res://assets/Texture/TX Tileset Stone Ground.png<>uid://iteeurq1w3k3::::res://assets/Texture/TX Plant.png<>uid://bvu7nef0oy7db::::res://assets/Texture/TX Props.png<>uid://8io38ubyl880::::res://assets/Texture/TX Tileset Grass.png<>uid://da4xxv2lsbn2i::::res://scenes/player.tscn<>uid://b4vcpj0a2svmr::::res://scenes/enemy.tscn<>res://scripts/global.gd
-zombie.tscn::PackedScene::5867183214333029900::1718097984::0::1::::<><>::res://scripts/zombie.gd<>res://art/character/Zombie 1B[anim].png
-::res://scripts/::1718201011
+world_2.tscn::PackedScene::2243730048728413912::1718443362::0::1::::<><>::res://scripts/world_2.gd<>uid://bx6s1xmiae67i::::res://assets/Texture/TX Tileset Stone Ground.png<>uid://iteeurq1w3k3::::res://assets/Texture/TX Plant.png<>uid://bvu7nef0oy7db::::res://assets/Texture/TX Props.png<>uid://8io38ubyl880::::res://assets/Texture/TX Tileset Grass.png<>uid://da4xxv2lsbn2i::::res://scenes/player.tscn<>uid://b4vcpj0a2svmr::::res://scenes/enemy.tscn<>uid://d4la4681h785n::::res://scenes/zombie.tscn<>res://scripts/global.gd
+zombie.tscn::PackedScene::9217500140294514301::1718443349::0::1::::<><>::res://scripts/zombie.gd<>uid://bit5xs6eksf2e::::res://assets/characters/Zombie 1D[anim].png
+::res://scripts/::1718443349
 asimole.gd::GDScript::-1::1718095952::0::1::::<>CharacterBody2D<>::
 basic_sword.gd::GDScript::-1::1718095960::0::1::::<>Area2D<>::
 cliff_side.gd::GDScript::-1::1718095952::0::1::::<>Node2D<>::
@@ -564,7 +564,7 @@ level_first_to_second.gd::GDScript::-1::1718095960::0::1::::<>Area2D<>::
 level_second_to_third.gd::GDScript::-1::1718095960::0::1::::<>Area2D<>::
 main_character.gd::GDScript::-1::1718095960::0::1::::<>CharacterBody2D<>::
 manu.gd::GDScript::-1::1718095960::0::1::::<>Node2D<>::
-player.gd::GDScript::-1::1718201011::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1718269064::0::1::::<>CharacterBody2D<>::
 princess.gd::GDScript::-1::1718095952::0::1::::<>CharacterBody2D<>::
 SaveandLoad.gd::GDScript::-1::1718095960::0::1::::<>Node<>::
 SaveLoadManager.gd::GDScript::-1::1718095960::0::1::::<>Node<>::
@@ -572,4 +572,4 @@ setting.gd::GDScript::-1::1718095960::0::1::::<>Control<>::
 snowman.gd::GDScript::-1::1718095952::0::1::::<>CharacterBody2D<>::
 userdata.json::JSON::-1::1718095960::0::1::::<><>::
 world_2.gd::GDScript::-1::1718095952::0::1::::<>Node2D<>::
-zombie.gd::GDScript::-1::1718095952::0::1::::<>CharacterBody2D<>::
+zombie.gd::GDScript::-1::1718442914::0::1::::<>CharacterBody2D<>::
