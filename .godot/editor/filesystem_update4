@@ -1,8 +1,12 @@
-res://scenes/level_3.tscn
-res://scenes/level_2.tscn
 res://scenes/manu.tscn
+<<<<<<< HEAD
 res://scenes/level_1_start.tscn
 res://scenes/king.tscn
 res://scenes/dialogue.tscn
 res://scenes/main_character.tscn
 res://scenes/setting.tscn
+=======
+res://scenes/level_2.tscn
+res://scenes/level_1_start.tscn
+res://scenes/level_3.tscn
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a

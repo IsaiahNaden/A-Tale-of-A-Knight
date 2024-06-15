@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://dtgiby6u0ej0v"]
 
 [ext_resource type="Texture2D" uid="uid://dea4htl4ter1" path="res://background/background.jpg" id="1_16ouh"]
-[ext_resource type="Script" path="res://scripts/manu.gd" id="1_w0fmo"]
+[ext_resource type="Script" path="res://scenes/manu.gd" id="1_w0fmo"]
 [ext_resource type="FontFile" uid="uid://dmcupxn2vy5sx" path="res://background/Jaro-Regular-VariableFont_opsz.ttf" id="2_ybg5i"]
-[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://background/new_style_box_flat.tres" id="3_bgfhf"]
-[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://background/press.tres" id="4_tgq6v"]
-[ext_resource type="StyleBox" uid="uid://g5sbuuit4dj3" path="res://background/manu.tres" id="6_01dfw"]
+[ext_resource type="StyleBox" uid="uid://cnkd4fdmriu21" path="res://scenes/new_style_box_flat.tres" id="3_bgfhf"]
+[ext_resource type="StyleBox" uid="uid://dt483lgrpdu4m" path="res://scenes/press.tres" id="4_tgq6v"]
+[ext_resource type="StyleBox" uid="uid://g5sbuuit4dj3" path="res://scenes/manu.tres" id="6_01dfw"]
 [ext_resource type="StyleBox" uid="uid://b07y6p24p8tn5" path="res://background/manu_press'.tres" id="7_fmlug"]
 [ext_resource type="Texture2D" uid="uid://cwhgest3ym4my" path="res://background/black_texture.jpeg" id="8_8ilsq"]
 
@@ -110,7 +110,15 @@ theme_override_styles/focus = ExtResource("7_fmlug")
 text = "!"
 
 [node name="tips" type="VBoxContainer" parent="."]
+<<<<<<< HEAD
 offset_right = 1154.0
+=======
+<<<<<<< HEAD
+visible = false
+=======
+>>>>>>> main
+offset_right = 1958.0
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 offset_bottom = 239.0
 theme_override_constants/separation = 20
 
@@ -135,10 +143,21 @@ text = "How To Play  ?"
 horizontal_alignment = 1
 
 [node name="move" type="Label" parent="."]
+<<<<<<< HEAD
 offset_left = 4.0
 offset_top = 158.0
 offset_right = 506.0
 offset_bottom = 422.0
+=======
+<<<<<<< HEAD
+visible = false
+=======
+>>>>>>> main
+offset_left = 34.0
+offset_top = 355.0
+offset_right = 536.0
+offset_bottom = 619.0
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 20
@@ -150,10 +169,21 @@ text = "Control your character
 e = attack"
 
 [node name="other" type="Label" parent="."]
+<<<<<<< HEAD
 offset_left = 230.0
 offset_top = 156.0
 offset_right = 578.0
 offset_bottom = 395.0
+=======
+<<<<<<< HEAD
+visible = false
+=======
+>>>>>>> main
+offset_left = 430.0
+offset_top = 360.0
+offset_right = 778.0
+offset_bottom = 599.0
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 20
 text = "Setting
@@ -163,10 +193,21 @@ resume game = Esc
 "
 
 [node name="rules" type="Label" parent="."]
+<<<<<<< HEAD
 offset_left = 6.0
 offset_top = 384.0
 offset_right = 1833.0
 offset_bottom = 642.0
+=======
+<<<<<<< HEAD
+visible = false
+=======
+>>>>>>> main
+offset_left = 51.0
+offset_top = 687.0
+offset_right = 1878.0
+offset_bottom = 945.0
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 20
 text = "Move the character and defeat the moster ! Clear it and go to next level to find the princess. The princess in a huge castle, but it's 
@@ -175,10 +216,21 @@ The princess will  fall in love with you......
 Maybe la ......"
 
 [node name="back" type="Button" parent="."]
+<<<<<<< HEAD
 offset_left = 365.0
 offset_top = 597.0
 offset_right = 760.0
 offset_bottom = 651.0
+=======
+<<<<<<< HEAD
+visible = false
+=======
+>>>>>>> main
+offset_left = 651.0
+offset_top = 990.0
+offset_right = 1275.0
+offset_bottom = 1077.0
+>>>>>>> 6a965bd5fb7b38f39fda0851850ffe2e8b3a245a
 theme_override_fonts/font = ExtResource("2_ybg5i")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_f21ij")
