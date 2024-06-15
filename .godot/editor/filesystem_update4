@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 res://scenes/manu.tscn
-res://scenes/dialogue.tscn
-res://scenes/dialogue1.tscn
-res://scenes/dialogue2.tscn
-res://scenes/level_1.tscn
 res://scenes/level_2.tscn
-res://scenes/level_4.tscn
-res://scenes/player.tscn
-res://scenes/king.tscn
-res://scenes/respawn_screen.tscn
-=======
+res://scenes/level_1_start.tscn
 res://scenes/level_3.tscn
-res://scenes/level_2.tscn
-res://scenes/manu.tscn
->>>>>>> 5a2d8cce77930eb4b76ae1513db0a75e92405196
